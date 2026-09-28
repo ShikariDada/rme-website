@@ -1,0 +1,67 @@
+{
+  "businessName": "Rajasthan Marble Enterprises",
+  "shortName": "RME",
+  "logo": null,
+  "phone": "+919219733022",
+  "phoneDisplay": "+91 92197 33022",
+  "whatsappNumber": "+919219733022",
+  "quoteEmail": "quotes@rajasthanmarble.example",
+  "address": {
+    "line1": "Rajasthan Marble Enterprises",
+    "line2": "",
+    "locality": "Goverdhan Chauraha",
+    "city": "Mathura",
+    "state": "Uttar Pradesh",
+    "postalCode": "281001",
+    "country": "IN"
+  },
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Rajasthan+Marble+Enterprises+Goverdhan+Chauraha+Mathura+281001",
+  "businessProfileUrl": "",
+  "hours": [
+    {
+      "day": "monday",
+      "closed": true
+    },
+    {
+      "day": "tuesday",
+      "opens": "10:00",
+      "closes": "20:00",
+      "closed": false
+    },
+    {
+      "day": "wednesday",
+      "opens": "10:00",
+      "closes": "20:00",
+      "closed": false
+    },
+    {
+      "day": "thursday",
+      "opens": "10:00",
+      "closes": "20:00",
+      "closed": false
+    },
+    {
+      "day": "friday",
+      "opens": "10:00",
+      "closes": "20:00",
+      "closed": false
+    },
+    {
+      "day": "saturday",
+      "opens": "10:00",
+      "closes": "20:00",
+      "closed": false
+    },
+    {
+      "day": "sunday",
+      "opens": "11:00",
+      "closes": "18:00",
+      "closed": false
+    }
+  ],
+  "priceTaxLabel": "inclusive",
+  "defaultQuoteResponseCopy": "We usually respond to quote requests within one business day during showroom hours.",
+  "socialLinks": [],
+  "seoDefaultTitle": "Rajasthan Marble Enterprises — Marble, Tiles & Granite in Mathura",
+  "seoDefaultDescription": "Browse tiles, marble and granite with honest prices and stock status, calculate quantity, preview in your own room and get a fast quote from our Mathura showroom."
+}

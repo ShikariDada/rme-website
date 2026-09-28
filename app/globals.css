@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens (spec §8). Centralised — components must use these tokens,
+ * never raw hex values. If the real brand logo dictates different colours,
+ * change them here in one place.
+ */
+
+:root {
+  --color-bg: #f6f3ed;
+  --color-surface: #ffffff;
+  --color-surface-muted: #ece7de;
+  --color-text: #1e1d1a;
+  --color-text-muted: #6c675f;
+  --color-border: #d9d2c7;
+  --color-accent: #785a3b;
+  --color-accent-hover: #62482f;
+  --color-accent-soft: #e8ded1;
+  --color-danger: #9b3a32;
+  --color-success: #35654b;
+  --color-focus: #4a67a1;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-surface-muted: var(--color-surface-muted);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-border: var(--color-border);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-accent-soft: var(--color-accent-soft);
+  --color-danger: var(--color-danger);
+  --color-success: var(--color-success);
+  --color-focus: var(--color-focus);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-inter), system-ui, -apple-system, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1rem;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.25rem;
+  --text-base: 1rem;
+  --text-base--line-height: 1.5rem;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl: 1.375rem;
+  --text-xl--line-height: 1.875rem;
+  --text-2xl: 1.75rem;
+  --text-2xl--line-height: 2.125rem;
+  --text-3xl: clamp(2.125rem, 5vw, 3.5rem);
+  --text-3xl--line-height: 1.1;
+  --text-hero: clamp(2.625rem, 7vw, 4.875rem);
+  --text-hero--line-height: 1.04;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+  font-weight: 560;
+  letter-spacing: -0.015em;
+}
+
+/* Visible, consistent keyboard focus (WCAG 2.2). */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Utility for visually hidden but screen-reader available content. */
+.sr-only-focusable:not(:focus):not(:focus-within) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Safe area for the sticky mobile conversion bar (spec §7). */
+.pb-safe-bar {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
+}

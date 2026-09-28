@@ -1,0 +1,58 @@
+[
+  {
+    "id": "faq-1",
+    "question": "Are your prices per square foot or per box?",
+    "answer": "Both, where it makes sense. Tile prices are shown per square foot with the per-box figure alongside; slabs are per square foot; consumables per piece or set. All prices carry the date they were last verified.",
+    "scope": "site",
+    "sortOrder": 1
+  },
+  {
+    "id": "faq-2",
+    "question": "Is the listed price what I will actually pay?",
+    "answer": "Tiles with an exact price are current showroom rates including GST. Materials with a range (many natural stones) vary by lot and thickness — we confirm the exact figure when you pick your slab.",
+    "scope": "site",
+    "sortOrder": 2
+  },
+  {
+    "id": "faq-3",
+    "question": "What does 'Ready stock' mean?",
+    "answer": "It is in our godown today and you can take delivery or inspect it immediately. 'Limited' means the current batch is nearly gone, and 'Order basis' means we order it from the manufacturer, typically within 10–12 days.",
+    "scope": "site",
+    "sortOrder": 3
+  },
+  {
+    "id": "faq-4",
+    "question": "Do you deliver? What is the delivery area?",
+    "answer": "We deliver around Mathura city and nearby towns through local transport — the exact charge depends on distance and quantity. Ask on WhatsApp with your location for a firm figure.",
+    "scope": "site",
+    "sortOrder": 4
+  },
+  {
+    "id": "faq-5",
+    "question": "Can I get samples before deciding?",
+    "answer": "Yes — visit the showroom and take tile samples. For slabs we mark your chosen lot. There is no sample charge for standard tiles; for premium slabs we may ask for a refundable deposit.",
+    "scope": "site",
+    "sortOrder": 5
+  },
+  {
+    "id": "faq-6",
+    "question": "Why does natural marble/stone look different from the photo?",
+    "answer": "Natural stone varies in shade, vein and pattern between lots — no photograph can guarantee the exact grain you receive. We show you the actual slab before cutting; that inspection is the guarantee.",
+    "scope": "site",
+    "sortOrder": 6
+  },
+  {
+    "id": "faq-7",
+    "question": "Do you provide installation or a mason reference?",
+    "answer": "We can refer experienced local fixers for tiles and stone. Installation is coordinated directly between you and the fixing team; material estimates come from us.",
+    "scope": "site",
+    "sortOrder": 7
+  },
+  {
+    "id": "faq-8",
+    "question": "How accurate is the tile calculator?",
+    "answer": "It is a planning tool using the box coverage printed for each product. Real wastage depends on room shape and laying pattern — confirm the final quantity with your installer before ordering.",
+    "scope": "site",
+    "sortOrder": 8
+  }
+]

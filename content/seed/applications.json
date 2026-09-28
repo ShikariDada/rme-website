@@ -1,0 +1,66 @@
+[
+  {
+    "id": "app-bathroom",
+    "name": "Bathroom",
+    "slug": "bathroom",
+    "kind": "room",
+    "description": "Anti-slip flooring considerations and easy-clean wall tiles for Indian bathrooms.",
+    "recommendedMaterialTypes": [
+      "tile",
+      "granite"
+    ]
+  },
+  {
+    "id": "app-kitchen",
+    "name": "Kitchen",
+    "slug": "kitchen",
+    "kind": "room",
+    "description": "Stain-resistant floors and splashback-friendly wall tiles.",
+    "recommendedMaterialTypes": [
+      "tile",
+      "granite"
+    ]
+  },
+  {
+    "id": "app-living-room",
+    "name": "Living Room",
+    "slug": "living-room",
+    "kind": "room",
+    "description": "Large-format marble-look vitrified tiles and premium natural stone.",
+    "recommendedMaterialTypes": [
+      "tile",
+      "marble"
+    ]
+  },
+  {
+    "id": "app-bedroom",
+    "name": "Bedroom",
+    "slug": "bedroom",
+    "kind": "room",
+    "description": "Warm wood-look tiles and smooth vitrified floors.",
+    "recommendedMaterialTypes": [
+      "tile"
+    ]
+  },
+  {
+    "id": "app-outdoor",
+    "name": "Outdoor & Parking",
+    "slug": "outdoor",
+    "kind": "use-case",
+    "description": "Textured, weather-resistant surfaces for terraces, parking and pathways.",
+    "recommendedMaterialTypes": [
+      "tile",
+      "granite"
+    ]
+  },
+  {
+    "id": "app-elevation",
+    "name": "Elevation & Facade",
+    "slug": "elevation",
+    "kind": "surface",
+    "description": "Exterior elevation tiles that hold up to Mathura sun and dust.",
+    "recommendedMaterialTypes": [
+      "tile"
+    ]
+  }
+]

@@ -1,0 +1,209 @@
+[
+  {
+    "id": "living-room",
+    "name": "Living Room",
+    "image": "/rooms/living-room.png",
+    "width": 1600,
+    "height": 1200,
+    "surfaces": [
+      {
+        "id": "floor",
+        "name": "Floor",
+        "type": "floor",
+        "planeQuad": [
+          [
+            0,
+            0.55
+          ],
+          [
+            1,
+            0.5833333333333334
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "maskUrl": "/rooms/living-room-floor-mask.png",
+        "calibration": {
+          "p1": [
+            0.02,
+            0.98
+          ],
+          "p2": [
+            0.5,
+            0.985
+          ],
+          "realLengthMm": 4200,
+          "quality": "user-measured"
+        }
+      },
+      {
+        "id": "back-wall",
+        "name": "Back wall",
+        "type": "wall",
+        "planeQuad": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0.5283333333333333
+          ],
+          [
+            0,
+            0.5283333333333333
+          ]
+        ],
+        "maskUrl": "/rooms/living-room-back-wall-mask.png"
+      }
+    ]
+  },
+  {
+    "id": "bathroom",
+    "name": "Bathroom",
+    "image": "/rooms/bathroom.png",
+    "width": 1600,
+    "height": 1200,
+    "surfaces": [
+      {
+        "id": "floor",
+        "name": "Floor",
+        "type": "floor",
+        "planeQuad": [
+          [
+            0,
+            0.5833333333333334
+          ],
+          [
+            1,
+            0.6
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "maskUrl": "/rooms/bathroom-floor-mask.png",
+        "calibration": {
+          "p1": [
+            0.55,
+            0.95
+          ],
+          "p2": [
+            0.95,
+            0.97
+          ],
+          "realLengthMm": 2100,
+          "quality": "user-measured"
+        }
+      },
+      {
+        "id": "back-wall",
+        "name": "Back wall",
+        "type": "wall",
+        "planeQuad": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0.565
+          ],
+          [
+            0,
+            0.565
+          ]
+        ],
+        "maskUrl": "/rooms/bathroom-back-wall-mask.png"
+      }
+    ]
+  },
+  {
+    "id": "kitchen",
+    "name": "Kitchen",
+    "image": "/rooms/kitchen.png",
+    "width": 1600,
+    "height": 1200,
+    "surfaces": [
+      {
+        "id": "floor",
+        "name": "Floor",
+        "type": "floor",
+        "planeQuad": [
+          [
+            0,
+            0.5666666666666667
+          ],
+          [
+            1,
+            0.5916666666666667
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "maskUrl": "/rooms/kitchen-floor-mask.png",
+        "calibration": {
+          "p1": [
+            0.05,
+            0.97
+          ],
+          "p2": [
+            0.42,
+            0.98
+          ],
+          "realLengthMm": 3600,
+          "quality": "user-measured"
+        }
+      },
+      {
+        "id": "back-wall",
+        "name": "Back wall splash",
+        "type": "wall",
+        "planeQuad": [
+          [
+            0.4625,
+            0.05
+          ],
+          [
+            0.7375,
+            0.05
+          ],
+          [
+            0.7375,
+            0.35833333333333334
+          ],
+          [
+            0.4625,
+            0.35833333333333334
+          ]
+        ],
+        "maskUrl": "/rooms/kitchen-back-wall-mask.png"
+      }
+    ]
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "id": "brand-varmora",
+    "name": "Varmora",
+    "slug": "varmora",
+    "logo": null,
+    "description": "Varmora Granito is one of India's large tile and ceramic brands. Our showroom stocks a curated range of Varmora vitrified tiles and wall tiles for immediate inspection.",
+    "officialUrl": "https://varmora.com/",
+    "isFeatured": true,
+    "isAuthorizedDealerClaimAllowed": true,
+    "authorizationEvidenceNote": "DEMO SEED — the owner must still obtain written Varmora authorisation and asset permission before launch.",
+    "assetUsageApproved": true,
+    "sortOrder": 1
+  },
+  {
+    "id": "brand-house",
+    "name": "House Selection",
+    "slug": "house-selection",
+    "description": "Curated by our team: materials we confidently recommend for local homes and projects, sourced from vetted manufacturers.",
+    "isFeatured": false,
+    "isAuthorizedDealerClaimAllowed": false,
+    "assetUsageApproved": true,
+    "sortOrder": 2
+  }
+]

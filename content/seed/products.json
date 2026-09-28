@@ -1,0 +1,1724 @@
+[
+  {
+    "id": "prod-001",
+    "status": "active",
+    "newArrival": false,
+    "featured": true,
+    "relatedProductSlugs": [
+      "bianco-carrara-matt-600x1200",
+      "emperador-brown-polished-800x1600"
+    ],
+    "categorySlugs": [
+      "tiles"
+    ],
+    "name": "Bianco Carrara Gloss Vitrified Tile 600x1200",
+    "slug": "bianco-carrara-gloss-600x1200",
+    "sku": "VMT-BCG-6012",
+    "familyKey": "bianco-carrara",
+    "brandId": "brand-varmora",
+    "brandName": "Varmora",
+    "materialType": "tile",
+    "applicationSlugs": [
+      "living-room",
+      "bedroom"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "exact",
+      "unit": "sq_ft",
+      "amount": 68,
+      "boxAmount": 1054,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-18T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Bianco Carrara Gloss Vitrified Tile 600x1200 — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/marble-bianco-face-1.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 512
+      },
+      {
+        "alt": "Bianco Carrara Gloss Vitrified Tile 600x1200 — product photo",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/marble-bianco-face-2.png",
+        "kind": "closeup",
+        "width": 1024,
+        "height": 512
+      }
+    ],
+    "colorFamily": [
+      "white",
+      "grey"
+    ],
+    "look": [
+      "marble"
+    ],
+    "finish": [
+      "gloss"
+    ],
+    "tile": {
+      "widthMm": 600,
+      "heightMm": 1200,
+      "thicknessMm": 9,
+      "bodyType": "GVT",
+      "use": [
+        "floor",
+        "wall"
+      ],
+      "tilesPerBox": 2,
+      "coverageSqFtPerBox": 15.5,
+      "faces": 4
+    },
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "A bright marble-look vitrified tile with soft grey veining on a polished gloss surface. The most popular choice for living rooms in our showroom — it reads like marble at a vitrified tile price."
+          }
+        ]
+      },
+      {
+        "_type": "callout",
+        "variant": "info",
+        "text": "Printed marble effect. Natural marble, by definition, varies more from piece to piece — see our marble category if you want the real thing."
+      }
+    ],
+    "visualizerMaterialId": "vm-bianco-gloss"
+  },
+  {
+    "id": "prod-002",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [
+      "bianco-carrara-gloss-600x1200"
+    ],
+    "categorySlugs": [
+      "tiles"
+    ],
+    "name": "Bianco Carrara Matt Vitrified Tile 600x1200",
+    "slug": "bianco-carrara-matt-600x1200",
+    "sku": "VMT-BCM-6012",
+    "familyKey": "bianco-carrara",
+    "brandId": "brand-varmora",
+    "brandName": "Varmora",
+    "materialType": "tile",
+    "applicationSlugs": [
+      "living-room",
+      "kitchen",
+      "bathroom"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "exact",
+      "unit": "sq_ft",
+      "amount": 66,
+      "boxAmount": 1023,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-18T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Bianco Carrara Matt Vitrified Tile 600x1200 — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/marble-bianco-face-3.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 512
+      }
+    ],
+    "colorFamily": [
+      "white",
+      "grey"
+    ],
+    "look": [
+      "marble"
+    ],
+    "finish": [
+      "matt"
+    ],
+    "tile": {
+      "widthMm": 600,
+      "heightMm": 1200,
+      "thicknessMm": 9,
+      "bodyType": "GVT",
+      "use": [
+        "floor",
+        "wall"
+      ],
+      "tilesPerBox": 2,
+      "coverageSqFtPerBox": 15.5,
+      "faces": 4
+    },
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "The matt version of our best-selling Bianco Carrara — calmer under interior lighting and more forgiving of water spots. Commonly used across full homes."
+          }
+        ]
+      }
+    ],
+    "visualizerMaterialId": "vm-bianco-matt"
+  },
+  {
+    "id": "prod-003",
+    "status": "active",
+    "newArrival": true,
+    "featured": true,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "tiles"
+    ],
+    "name": "Emperador Brown Polished Tile 800x1600",
+    "slug": "emperador-brown-polished-800x1600",
+    "sku": "VMT-EBP-8016",
+    "brandId": "brand-varmora",
+    "brandName": "Varmora",
+    "materialType": "tile",
+    "applicationSlugs": [
+      "living-room"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "exact",
+      "unit": "sq_ft",
+      "amount": 118,
+      "boxAmount": 3258,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "limited",
+      "publicNote": "Two boxes remain in current batch",
+      "verifiedAt": "2026-09-17T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Emperador Brown Polished Tile 800x1600 — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/marble-emperador-face-1.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 512
+      }
+    ],
+    "colorFamily": [
+      "brown",
+      "beige"
+    ],
+    "look": [
+      "marble"
+    ],
+    "finish": [
+      "polished"
+    ],
+    "tile": {
+      "widthMm": 800,
+      "heightMm": 1600,
+      "thicknessMm": 9,
+      "bodyType": "GVT",
+      "use": [
+        "floor",
+        "wall"
+      ],
+      "tilesPerBox": 2,
+      "coverageSqFtPerBox": 27.55,
+      "faces": 4
+    },
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "Large-format warm brown marble-look tile with dramatic light veining. Makes a statement floor; needs a flat subfloor and two-person handling."
+          }
+        ]
+      }
+    ],
+    "visualizerMaterialId": "vm-emperador"
+  },
+  {
+    "id": "prod-004",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "tiles"
+    ],
+    "name": "Emerald Green Polished Tile 600x1200",
+    "slug": "emerald-green-polished-600x1200",
+    "sku": "VMT-EGP-6012",
+    "brandId": "brand-varmora",
+    "brandName": "Varmora",
+    "materialType": "tile",
+    "applicationSlugs": [
+      "living-room",
+      "elevation"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "from",
+      "unit": "sq_ft",
+      "amount": 128,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "order_basis",
+      "verifiedAt": "2026-09-12T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Emerald Green Polished Tile 600x1200 — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/marble-emerald-face-1.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 512
+      }
+    ],
+    "colorFamily": [
+      "green"
+    ],
+    "look": [
+      "marble"
+    ],
+    "finish": [
+      "polished"
+    ],
+    "tile": {
+      "widthMm": 600,
+      "heightMm": 1200,
+      "thicknessMm": 9,
+      "bodyType": "GVT",
+      "use": [
+        "floor",
+        "wall"
+      ],
+      "tilesPerBox": 2,
+      "coverageSqFtPerBox": 15.5,
+      "faces": 3
+    },
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "Deep green marble effect with fine light veining. Popular as an accent wall behind TVs and in pooja rooms."
+          }
+        ]
+      }
+    ],
+    "visualizerMaterialId": "vm-emerald"
+  },
+  {
+    "id": "prod-005",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "tiles"
+    ],
+    "name": "Portoro Black Gold Tile 800x1600",
+    "slug": "portoro-black-gold-800x1600",
+    "sku": "VMT-PBG-8016",
+    "brandId": "brand-varmora",
+    "brandName": "Varmora",
+    "materialType": "tile",
+    "applicationSlugs": [
+      "living-room",
+      "elevation"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "from",
+      "unit": "sq_ft",
+      "amount": 155,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "order_basis",
+      "verifiedAt": "2026-09-12T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Portoro Black Gold Tile 800x1600 — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/granite-steel-grey-face-2.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "colorFamily": [
+      "black",
+      "gold"
+    ],
+    "look": [
+      "marble"
+    ],
+    "finish": [
+      "polished"
+    ],
+    "tile": {
+      "widthMm": 800,
+      "heightMm": 1600,
+      "thicknessMm": 9,
+      "bodyType": "GVT",
+      "use": [
+        "wall"
+      ],
+      "tilesPerBox": 2,
+      "coverageSqFtPerBox": 27.55
+    },
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "Black base with metallic gold-toned veining — a luxury accent wall tile. Order basis: 10–12 days from confirmation."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod-006",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "tiles"
+    ],
+    "name": "Onyx Ice Gloss Tile 600x1200",
+    "slug": "onyx-ice-gloss-600x1200",
+    "sku": "VMT-OIG-6012",
+    "brandId": "brand-varmora",
+    "brandName": "Varmora",
+    "materialType": "tile",
+    "applicationSlugs": [
+      "bathroom",
+      "living-room"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "exact",
+      "unit": "sq_ft",
+      "amount": 72,
+      "boxAmount": 1116,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-18T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Onyx Ice Gloss Tile 600x1200 — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/marble-emerald-face-2.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 512
+      }
+    ],
+    "colorFamily": [
+      "white",
+      "beige"
+    ],
+    "look": [
+      "marble"
+    ],
+    "finish": [
+      "gloss"
+    ],
+    "tile": {
+      "widthMm": 600,
+      "heightMm": 1200,
+      "thicknessMm": 9,
+      "bodyType": "GVT",
+      "use": [
+        "wall",
+        "floor"
+      ],
+      "tilesPerBox": 2,
+      "coverageSqFtPerBox": 15.5
+    }
+  },
+  {
+    "id": "prod-007",
+    "status": "active",
+    "newArrival": false,
+    "featured": true,
+    "relatedProductSlugs": [
+      "concrete-grey-matt-600x600"
+    ],
+    "categorySlugs": [
+      "tiles"
+    ],
+    "name": "Ivory Matt Vitrified Floor Tile 600x600",
+    "slug": "ivory-matt-vitrified-600x600",
+    "sku": "HSE-IVM-6060",
+    "brandId": "brand-house",
+    "brandName": "House Selection",
+    "materialType": "tile",
+    "applicationSlugs": [
+      "bedroom",
+      "kitchen",
+      "living-room"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "exact",
+      "unit": "sq_ft",
+      "amount": 42,
+      "boxAmount": 651,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-18T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Ivory Matt Vitrified Floor Tile 600x600 — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/vitrified-ivory-face-1.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "colorFamily": [
+      "beige",
+      "ivory"
+    ],
+    "look": [
+      "solid"
+    ],
+    "finish": [
+      "matt"
+    ],
+    "tile": {
+      "widthMm": 600,
+      "heightMm": 600,
+      "thicknessMm": 8,
+      "bodyType": "Vitrified",
+      "use": [
+        "floor"
+      ],
+      "tilesPerBox": 4,
+      "coverageSqFtPerBox": 15.5
+    },
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "The workhorse floor tile of Indian homes: warm ivory tone, matt finish, easy to clean and kind to budgets. Also a common rental-property choice."
+          }
+        ]
+      }
+    ],
+    "visualizerMaterialId": "vm-ivory"
+  },
+  {
+    "id": "prod-008",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "tiles"
+    ],
+    "name": "Concrete Grey Matt Tile 600x600",
+    "slug": "concrete-grey-matt-600x600",
+    "sku": "HSE-CGM-6060",
+    "brandId": "brand-house",
+    "brandName": "House Selection",
+    "materialType": "tile",
+    "applicationSlugs": [
+      "living-room",
+      "kitchen"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "range",
+      "unit": "sq_ft",
+      "min": 45,
+      "max": 55,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-16T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Concrete Grey Matt Tile 600x600 — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/porcelain-concrete-face-1.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "colorFamily": [
+      "grey"
+    ],
+    "look": [
+      "concrete"
+    ],
+    "finish": [
+      "matt"
+    ],
+    "tile": {
+      "widthMm": 600,
+      "heightMm": 600,
+      "thicknessMm": 8,
+      "bodyType": "Vitrified",
+      "use": [
+        "floor"
+      ],
+      "tilesPerBox": 4,
+      "coverageSqFtPerBox": 15.5
+    },
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "Cement-look tile in a soft grey. Range pricing: the exact rate depends on the batch in stock — ask us for today's figure."
+          }
+        ]
+      }
+    ],
+    "visualizerMaterialId": "vm-concrete"
+  },
+  {
+    "id": "prod-009",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "tiles"
+    ],
+    "name": "Steel Grey Gloss Floor Tile 600x600",
+    "slug": "steel-grey-gloss-600x600",
+    "sku": "HSE-SGG-6060",
+    "brandId": "brand-house",
+    "brandName": "House Selection",
+    "materialType": "tile",
+    "applicationSlugs": [
+      "kitchen",
+      "outdoor"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "exact",
+      "unit": "sq_ft",
+      "amount": 52,
+      "boxAmount": 806,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-15T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Steel Grey Gloss Floor Tile 600x600 — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/granite-steel-grey-face-1.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "colorFamily": [
+      "grey",
+      "black"
+    ],
+    "look": [
+      "stone"
+    ],
+    "finish": [
+      "gloss"
+    ],
+    "tile": {
+      "widthMm": 600,
+      "heightMm": 600,
+      "thicknessMm": 8,
+      "bodyType": "Vitrified",
+      "use": [
+        "floor"
+      ],
+      "tilesPerBox": 4,
+      "coverageSqFtPerBox": 15.5
+    },
+    "visualizerMaterialId": "vm-steel-grey-tile"
+  },
+  {
+    "id": "prod-010",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "tiles"
+    ],
+    "name": "Desert Brown Rustic Tile 600x600",
+    "slug": "desert-brown-rustic-600x600",
+    "sku": "HSE-DBR-6060",
+    "brandId": "brand-house",
+    "brandName": "House Selection",
+    "materialType": "tile",
+    "applicationSlugs": [
+      "outdoor",
+      "kitchen"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "exact",
+      "unit": "sq_ft",
+      "amount": 44,
+      "boxAmount": 682,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-15T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Desert Brown Rustic Tile 600x600 — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/granite-desert-brown-face-1.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "colorFamily": [
+      "brown"
+    ],
+    "look": [
+      "stone"
+    ],
+    "finish": [
+      "textured"
+    ],
+    "tile": {
+      "widthMm": 600,
+      "heightMm": 600,
+      "thicknessMm": 8,
+      "bodyType": "Vitrified",
+      "use": [
+        "floor"
+      ],
+      "tilesPerBox": 4,
+      "coverageSqFtPerBox": 15.5
+    },
+    "visualizerMaterialId": "vm-desert-brown"
+  },
+  {
+    "id": "prod-011",
+    "status": "active",
+    "newArrival": true,
+    "featured": true,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "tiles"
+    ],
+    "name": "Oak Wood-Look Strip Tile 300x900",
+    "slug": "oak-wood-look-300x900",
+    "sku": "HSE-OWL-3090",
+    "brandId": "brand-house",
+    "brandName": "House Selection",
+    "materialType": "tile",
+    "applicationSlugs": [
+      "bedroom",
+      "living-room"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "exact",
+      "unit": "sq_ft",
+      "amount": 89,
+      "boxAmount": 801,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-18T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Oak Wood-Look Strip Tile 300x900 — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/wood-oak-face-1.png",
+        "kind": "texture",
+        "width": 340,
+        "height": 1024
+      }
+    ],
+    "colorFamily": [
+      "brown",
+      "beige"
+    ],
+    "look": [
+      "wood"
+    ],
+    "finish": [
+      "matt"
+    ],
+    "tile": {
+      "widthMm": 300,
+      "heightMm": 900,
+      "thicknessMm": 8,
+      "bodyType": "GVT",
+      "use": [
+        "floor"
+      ],
+      "tilesPerBox": 3,
+      "coverageSqFtPerBox": 8.71
+    },
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "Wood-grain porcelain strip tile — the warmth of timber with tile maintenance. Lay in a running bond with a 2 mm joint."
+          }
+        ]
+      }
+    ],
+    "visualizerMaterialId": "vm-oak"
+  },
+  {
+    "id": "prod-012",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "tiles"
+    ],
+    "name": "Outdoor Anti-Skid Beige Tile 600x1200",
+    "slug": "outdoor-anti-skid-beige-600x1200",
+    "sku": "HSE-OAB-6012",
+    "brandId": "brand-house",
+    "brandName": "House Selection",
+    "materialType": "tile",
+    "applicationSlugs": [
+      "outdoor",
+      "elevation"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "exact",
+      "unit": "sq_ft",
+      "amount": 58,
+      "boxAmount": 899,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-14T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Outdoor Anti-Skid Beige Tile 600x1200 — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/outdoor-antiskid-face-1.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 512
+      }
+    ],
+    "colorFamily": [
+      "beige",
+      "brown"
+    ],
+    "look": [
+      "stone"
+    ],
+    "finish": [
+      "textured"
+    ],
+    "tile": {
+      "widthMm": 600,
+      "heightMm": 1200,
+      "thicknessMm": 9,
+      "bodyType": "GVT",
+      "use": [
+        "floor"
+      ],
+      "tilesPerBox": 2,
+      "coverageSqFtPerBox": 15.5
+    },
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "Textured-surface tile for terraces, balconies and parking areas. The embossed finish improves grip when wet."
+          }
+        ]
+      },
+      {
+        "_type": "callout",
+        "variant": "warn",
+        "text": "We describe the surface finish honestly; we do not publish certified slip-rating values unless the manufacturer documents them for the batch."
+      }
+    ],
+    "visualizerMaterialId": "vm-outdoor"
+  },
+  {
+    "id": "prod-013",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "tiles"
+    ],
+    "name": "Kitchen Wall Gloss Grey Tile 300x600",
+    "slug": "kitchen-wall-gloss-grey-300x600",
+    "sku": "HSE-KWG-3060",
+    "brandId": "brand-house",
+    "brandName": "House Selection",
+    "materialType": "tile",
+    "applicationSlugs": [
+      "kitchen",
+      "bathroom"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "exact",
+      "unit": "sq_ft",
+      "amount": 32,
+      "boxAmount": 158,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-18T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Kitchen Wall Gloss Grey Tile 300x600 — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/wall-gloss-grey-face-1.png",
+        "kind": "texture",
+        "width": 512,
+        "height": 1024
+      }
+    ],
+    "colorFamily": [
+      "grey",
+      "white"
+    ],
+    "look": [
+      "solid"
+    ],
+    "finish": [
+      "gloss"
+    ],
+    "tile": {
+      "widthMm": 300,
+      "heightMm": 600,
+      "thicknessMm": 7,
+      "bodyType": "Ceramic",
+      "use": [
+        "wall"
+      ],
+      "tilesPerBox": 8,
+      "coverageSqFtPerBox": 15.5
+    },
+    "visualizerMaterialId": "vm-wall-grey"
+  },
+  {
+    "id": "prod-014",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "tiles"
+    ],
+    "name": "XL Slab Grey Polished 1200x2400",
+    "slug": "xl-slab-grey-polished-1200x2400",
+    "sku": "HSE-XLG-1224",
+    "brandId": "brand-house",
+    "brandName": "House Selection",
+    "materialType": "tile",
+    "applicationSlugs": [
+      "living-room"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "from",
+      "unit": "sq_ft",
+      "amount": 165,
+      "taxLabel": "exclusive"
+    },
+    "availability": {
+      "status": "order_basis",
+      "verifiedAt": "2026-09-12T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "XL Slab Grey Polished 1200x2400 — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/porcelain-concrete-face-2.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "colorFamily": [
+      "grey"
+    ],
+    "look": [
+      "concrete",
+      "stone"
+    ],
+    "finish": [
+      "polished"
+    ],
+    "tile": {
+      "widthMm": 1200,
+      "heightMm": 2400,
+      "thicknessMm": 11,
+      "bodyType": "Porcelain slab",
+      "use": [
+        "floor",
+        "wall"
+      ],
+      "tilesPerBox": 1,
+      "coverageSqFtPerBox": 31
+    },
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "Two-metre porcelain slab with near-invisible joints. Professional handling and adhesive system required — ask us about laying service."
+          }
+        ]
+      }
+    ],
+    "visualizerMaterialId": "vm-xl-slab"
+  },
+  {
+    "id": "prod-015",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "tiles"
+    ],
+    "name": "Terracotta Matt Tile 600x600",
+    "slug": "terracotta-matt-600x600",
+    "sku": "HSE-TCM-6060",
+    "brandId": "brand-house",
+    "brandName": "House Selection",
+    "materialType": "tile",
+    "applicationSlugs": [
+      "outdoor",
+      "kitchen"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "exact",
+      "unit": "sq_ft",
+      "amount": 38,
+      "boxAmount": 590,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "limited",
+      "publicNote": "Batch-dependent shade — inspect before purchase",
+      "verifiedAt": "2026-09-10T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Terracotta Matt Tile 600x600 — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/granite-desert-brown-face-2.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "colorFamily": [
+      "brown",
+      "terracotta"
+    ],
+    "look": [
+      "solid"
+    ],
+    "finish": [
+      "matt"
+    ],
+    "tile": {
+      "widthMm": 600,
+      "heightMm": 600,
+      "thicknessMm": 8,
+      "bodyType": "Ceramic",
+      "use": [
+        "floor"
+      ],
+      "tilesPerBox": 4,
+      "coverageSqFtPerBox": 15.5
+    }
+  },
+  {
+    "id": "prod-016",
+    "status": "active",
+    "newArrival": false,
+    "featured": true,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "marble"
+    ],
+    "name": "Makrana White Marble",
+    "slug": "makrana-white-marble",
+    "sku": "NAT-MKW-SLAB",
+    "materialType": "marble",
+    "applicationSlugs": [
+      "living-room",
+      "bathroom"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "range",
+      "unit": "sq_ft",
+      "min": 120,
+      "max": 220,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-16T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Makrana White Marble — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/marble-bianco-face-2.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 512
+      }
+    ],
+    "colorFamily": [
+      "white"
+    ],
+    "look": [
+      "marble"
+    ],
+    "finish": [
+      "polished",
+      "honed"
+    ],
+    "stone": {
+      "thicknessOptionsMm": [
+        16,
+        18,
+        20
+      ],
+      "slabSizeText": "Cut-size slabs; typical 5×8 ft and up",
+      "origin": "Makrana, Rajasthan",
+      "variationNote": "Strong lot-to-lot variation in veining and base tone — select your actual slab in the showroom."
+    },
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "The classic Indian white marble used in heritage buildings for centuries. Softer than vitrified tile and develops a living patina; needs periodic polishing."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod-017",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "marble"
+    ],
+    "name": "Indian Statuario Marble",
+    "slug": "indian-statuario-marble",
+    "sku": "NAT-INS-SLAB",
+    "materialType": "marble",
+    "applicationSlugs": [
+      "living-room"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "range",
+      "unit": "sq_ft",
+      "min": 250,
+      "max": 400,
+      "taxLabel": "exclusive"
+    },
+    "availability": {
+      "status": "order_basis",
+      "verifiedAt": "2026-09-12T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Indian Statuario Marble — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/marble-bianco-face-4.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 512
+      }
+    ],
+    "colorFamily": [
+      "white",
+      "grey"
+    ],
+    "look": [
+      "marble"
+    ],
+    "finish": [
+      "polished"
+    ],
+    "stone": {
+      "thicknessOptionsMm": [
+        16,
+        18,
+        20
+      ],
+      "slabSizeText": "Cut-size slabs; typical 5×8 ft and up",
+      "origin": "Rajasthan belt",
+      "variationNote": "Bookmatch pairs selected on request; veining direction matters for layout."
+    }
+  },
+  {
+    "id": "prod-018",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "marble"
+    ],
+    "name": "Rainforest Brown Marble",
+    "slug": "rainforest-brown-marble",
+    "sku": "NAT-RFB-SLAB",
+    "materialType": "marble",
+    "applicationSlugs": [
+      "bathroom",
+      "elevation"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "range",
+      "unit": "sq_ft",
+      "min": 95,
+      "max": 150,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-12T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Rainforest Brown Marble — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/marble-emperador-face-3.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 512
+      }
+    ],
+    "colorFamily": [
+      "brown"
+    ],
+    "look": [
+      "marble"
+    ],
+    "finish": [
+      "polished",
+      "honed"
+    ],
+    "stone": {
+      "thicknessOptionsMm": [
+        16,
+        18,
+        20
+      ],
+      "slabSizeText": "Cut-size slabs; typical 5×8 ft and up",
+      "origin": "Bidasar, Rajasthan",
+      "variationNote": "Dramatic branch-like veining; every slab is distinct."
+    }
+  },
+  {
+    "id": "prod-019",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "marble"
+    ],
+    "name": "Pink Onyx Marble",
+    "slug": "pink-onyx-marble",
+    "sku": "NAT-PKO-SLAB",
+    "materialType": "marble",
+    "applicationSlugs": [
+      "living-room"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "quote",
+      "unit": "sq_ft"
+    },
+    "availability": {
+      "status": "order_basis",
+      "verifiedAt": "2026-09-12T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Pink Onyx Marble — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/marble-emperador-face-4.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 512
+      }
+    ],
+    "colorFamily": [
+      "pink",
+      "beige"
+    ],
+    "look": [
+      "marble"
+    ],
+    "finish": [
+      "polished"
+    ],
+    "stone": {
+      "thicknessOptionsMm": [
+        16,
+        18,
+        20
+      ],
+      "slabSizeText": "Cut-size slabs; typical 5×8 ft and up",
+      "origin": "Imported lots — ask for current stock",
+      "variationNote": "Price varies strongly by lot, translucency and size. Backlit panel work quoted separately."
+    }
+  },
+  {
+    "id": "prod-020",
+    "status": "active",
+    "newArrival": false,
+    "featured": true,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "granite"
+    ],
+    "name": "Black Galaxy Granite",
+    "slug": "black-galaxy-granite",
+    "sku": "NAT-BGG-SLAB",
+    "materialType": "granite",
+    "applicationSlugs": [
+      "kitchen"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "range",
+      "unit": "sq_ft",
+      "min": 140,
+      "max": 190,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-17T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Black Galaxy Granite — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/granite-steel-grey-face-1.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "colorFamily": [
+      "black"
+    ],
+    "look": [
+      "stone"
+    ],
+    "finish": [
+      "polished"
+    ],
+    "stone": {
+      "thicknessOptionsMm": [
+        16,
+        18,
+        20
+      ],
+      "slabSizeText": "Cut-size slabs; typical 5×8 ft and up",
+      "origin": "Ongole belt, Andhra Pradesh",
+      "variationNote": "Density of golden flecks varies by lot."
+    }
+  },
+  {
+    "id": "prod-021",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "granite"
+    ],
+    "name": "Steel Grey Granite",
+    "slug": "steel-grey-granite",
+    "sku": "NAT-SGG-SLAB",
+    "materialType": "granite",
+    "applicationSlugs": [
+      "kitchen",
+      "outdoor"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "range",
+      "unit": "sq_ft",
+      "min": 85,
+      "max": 120,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-17T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Steel Grey Granite — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/granite-steel-grey-face-2.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "colorFamily": [
+      "grey"
+    ],
+    "look": [
+      "stone"
+    ],
+    "finish": [
+      "polished",
+      "flamed"
+    ],
+    "stone": {
+      "thicknessOptionsMm": [
+        16,
+        18,
+        20
+      ],
+      "slabSizeText": "Cut-size slabs; typical 5×8 ft and up",
+      "origin": "Andhra Pradesh",
+      "variationNote": "Flamed finish recommended for outdoor steps."
+    }
+  },
+  {
+    "id": "prod-022",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "granite"
+    ],
+    "name": "Kashmir White Granite",
+    "slug": "kashmir-white-granite",
+    "sku": "NAT-KWG-SLAB",
+    "materialType": "granite",
+    "applicationSlugs": [
+      "kitchen",
+      "bathroom"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "range",
+      "unit": "sq_ft",
+      "min": 130,
+      "max": 180,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "limited",
+      "verifiedAt": "2026-09-13T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Kashmir White Granite — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/vitrified-ivory-face-2.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "colorFamily": [
+      "white",
+      "grey"
+    ],
+    "look": [
+      "stone"
+    ],
+    "finish": [
+      "polished"
+    ],
+    "stone": {
+      "thicknessOptionsMm": [
+        16,
+        18,
+        20
+      ],
+      "slabSizeText": "Cut-size slabs; typical 5×8 ft and up",
+      "origin": "Tamil Nadu",
+      "variationNote": "Occasional garnet spots; slab selection recommended."
+    }
+  },
+  {
+    "id": "prod-023",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "granite"
+    ],
+    "name": "Tan Brown Granite",
+    "slug": "tan-brown-granite",
+    "sku": "NAT-TBR-SLAB",
+    "materialType": "granite",
+    "applicationSlugs": [
+      "kitchen",
+      "outdoor"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "range",
+      "unit": "sq_ft",
+      "min": 90,
+      "max": 130,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-13T10:30:00+05:30"
+    },
+    "images": [
+      {
+        "alt": "Tan Brown Granite — tile surface texture",
+        "rightsStatus": "owned",
+        "source": "demo-generated",
+        "url": "/textures/granite-desert-brown-face-1.png",
+        "kind": "texture",
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "colorFamily": [
+      "brown",
+      "black"
+    ],
+    "look": [
+      "stone"
+    ],
+    "finish": [
+      "polished"
+    ],
+    "stone": {
+      "thicknessOptionsMm": [
+        16,
+        18,
+        20
+      ],
+      "slabSizeText": "Cut-size slabs; typical 5×8 ft and up",
+      "origin": "Rajasthan / Telangana belt"
+    }
+  },
+  {
+    "id": "prod-024",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "adhesive"
+    ],
+    "name": "High-Polymer Tile Adhesive (Grey) 20 kg",
+    "slug": "high-polymer-tile-adhesive-grey-20kg",
+    "sku": "ACC-ADH-20KG",
+    "materialType": "adhesive",
+    "applicationSlugs": [],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "exact",
+      "unit": "piece",
+      "amount": 380,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-18T10:30:00+05:30"
+    },
+    "images": [],
+    "colorFamily": [
+      "grey"
+    ],
+    "look": [],
+    "finish": [],
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "C2-class polymer-modified adhesive suitable for large-format vitrified tiles up to 1200x2400 on prepared substrates. Coverage depends on notched trowel size."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod-025",
+    "status": "active",
+    "newArrival": false,
+    "featured": false,
+    "relatedProductSlugs": [],
+    "categorySlugs": [
+      "adhesive"
+    ],
+    "name": "Stain-Proof Epoxy Grout (Kit)",
+    "slug": "epoxy-grout-kit",
+    "sku": "ACC-EPO-KIT",
+    "materialType": "adhesive",
+    "applicationSlugs": [
+      "kitchen",
+      "bathroom"
+    ],
+    "pricing": {
+      "currency": "INR",
+      "updatedAt": "2026-09-18T10:30:00+05:30",
+      "mode": "exact",
+      "unit": "set",
+      "amount": 850,
+      "taxLabel": "inclusive"
+    },
+    "availability": {
+      "status": "ready_stock",
+      "verifiedAt": "2026-09-18T10:30:00+05:30"
+    },
+    "images": [],
+    "colorFamily": [
+      "white",
+      "grey"
+    ],
+    "look": [],
+    "finish": [],
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "Three-part epoxy grout kit for kitchens, bathrooms and outdoor joints. Resists staining and is the standard pairing with marble-look large formats."
+          }
+        ]
+      }
+    ]
+  }
+]

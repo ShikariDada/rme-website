@@ -1,0 +1,47 @@
+{
+  "name": "mathura-marble-tile",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Marble & tile retail website (showcase + lead generation) with in-house visualizer. Demo build — see docs/OWNER_FACTS.md.",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "generate:assets": "node scripts/generate-demo-assets.mjs",
+    "build:seed": "node scripts/build-seed.mjs",
+    "import:products": "tsx scripts/import-products.ts",
+    "audit:content": "tsx scripts/audit-content.ts"
+  },
+  "dependencies": {
+    "@sanity/client": "^7.1.0",
+    "@sanity/image-url": "^2.1.1",
+    "next": "16.3.5",
+    "onnxruntime-web": "^1.30.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "resend": "^6.28.1",
+    "three": "^0.186.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.6.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.186.0",
+    "next-sanity": "^13.3.4",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

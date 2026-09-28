@@ -1,0 +1,371 @@
+[
+  {
+    "id": "guide-tile-size",
+    "title": "Tile size guide for Indian rooms",
+    "slug": "tile-size-guide-indian-rooms",
+    "excerpt": "Which tile size suits which room, what 2x2 and 2x4 actually mean, and where large formats pay off — and where they don't.",
+    "categorySlugs": [
+      "tiles"
+    ],
+    "productSlugs": [
+      "bianco-carrara-gloss-600x1200",
+      "ivory-matt-vitrified-600x600",
+      "xl-slab-grey-polished-1200x2400"
+    ],
+    "authorLabel": "Showroom editorial team",
+    "publishedAt": "2026-09-08T10:30:00+05:30",
+    "updatedAt": "2026-09-08T10:30:00+05:30",
+    "body": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "Indian tile shops use a shorthand that confuses everyone the first time. \"2x2\" means 2 feet by 2 feet — 600x600 mm. \"2x4\" is 600x1200 mm. Once you can translate, choosing a size becomes a design and budget question instead of a vocabulary test."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "style": "h2",
+        "children": [
+          {
+            "text": "What each size does best"
+          }
+        ]
+      },
+      {
+        "_type": "table",
+        "head": [
+          "Size",
+          "Common name",
+          "Best for",
+          "Watch out for"
+        ],
+        "rows": [
+          [
+            "300x600 mm",
+            "1x2 wall tile",
+            "Bathroom and kitchen walls",
+            "More joints; keep grout colour consistent"
+          ],
+          [
+            "600x600 mm",
+            "2x2",
+            "Bedrooms, budget floors",
+            "Can look busy in very large rooms"
+          ],
+          [
+            "600x1200 mm",
+            "2x4",
+            "Living rooms, full-home floors",
+            "Needs a flatter subfloor; plan door levels"
+          ],
+          [
+            "800x1600 mm",
+            "4x8 quarter",
+            "Premium living floors",
+            "Two-person handling, higher wastage on small rooms"
+          ],
+          [
+            "1200x2400 mm",
+            "XL slab",
+            "Feature walls, seamless floors",
+            "Professional laying and adhesive system required"
+          ]
+        ]
+      },
+      {
+        "_type": "block",
+        "style": "h2",
+        "children": [
+          {
+            "text": "Practical rules we give customers every day"
+          }
+        ]
+      },
+      {
+        "_type": "list",
+        "items": [
+          {
+            "_type": "block",
+            "style": "normal",
+            "children": [
+              {
+                "text": "Bigger tiles = fewer joints = an airier room, but the subfloor must be flat or you will see lippage under raking light."
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "style": "normal",
+            "children": [
+              {
+                "text": "In bathrooms, smaller floor tiles (or textured 600x600) handle slopes toward the drain better than one giant slab."
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "style": "normal",
+            "children": [
+              {
+                "text": "Marble-look prints read better across a full tile, so large formats suit dramatic veining; small formats suit plain tones."
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "style": "normal",
+            "children": [
+              {
+                "text": "Diagonal or herringbone layouts increase cutting wastage — plan 12–15% instead of the usual 8–10%."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "Bring your room measurements to the showroom (or use our tile calculator) and we will show the same design in two or three sizes so the difference is obvious."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "guide-vitrified-vs-ceramic-vs-stone",
+    "title": "Vitrified vs ceramic vs natural stone",
+    "slug": "vitrified-vs-ceramic-vs-natural-stone",
+    "excerpt": "The honest differences that matter in an Indian home: water absorption, maintenance, feel underfoot and lifetime cost.",
+    "categorySlugs": [
+      "tiles",
+      "marble",
+      "granite"
+    ],
+    "productSlugs": [
+      "ivory-matt-vitrified-600x600",
+      "makrana-white-marble",
+      "black-galaxy-granite"
+    ],
+    "authorLabel": "Showroom editorial team",
+    "publishedAt": "2026-09-07T10:30:00+05:30",
+    "updatedAt": "2026-09-07T10:30:00+05:30",
+    "body": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "Customers ask this daily, and the honest answer is: none of the three is universally better — they fail differently. Here is the comparison we draw on the counter."
+          }
+        ]
+      },
+      {
+        "_type": "table",
+        "head": [
+          "",
+          "Vitrified / porcelain tile",
+          "Ceramic tile",
+          "Natural marble",
+          "Granite"
+        ],
+        "rows": [
+          [
+            "Water absorption",
+            "Very low",
+            "Higher — walls mainly",
+            "Low but porous without sealing",
+            "Very low"
+          ],
+          [
+            "Scratch behaviour",
+            "Good",
+            "Moderate",
+            "Soft — will scratch and polish out",
+            "Excellent"
+          ],
+          [
+            "Looks",
+            "Consistent print",
+            "Consistent",
+            "Every slab unique",
+            "Every slab unique"
+          ],
+          [
+            "Maintenance",
+            "Mop and go",
+            "Mop and go",
+            "Periodic polishing/sealing",
+            "Low; seal once"
+          ],
+          [
+            "Lifetime cost",
+            "Low",
+            "Lowest",
+            "Highest",
+            "Moderate"
+          ]
+        ]
+      },
+      {
+        "_type": "block",
+        "style": "h2",
+        "children": [
+          {
+            "text": "How we frame the decision"
+          }
+        ]
+      },
+      {
+        "_type": "list",
+        "items": [
+          {
+            "_type": "block",
+            "style": "normal",
+            "children": [
+              {
+                "text": "Rental or budget build: vitrified 600x600 is the pragmatic answer."
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "style": "normal",
+            "children": [
+              {
+                "text": "Forever home, willing to maintain: marble is a living material many families love for decades."
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "style": "normal",
+            "children": [
+              {
+                "text": "Kitchens and stairs: granite or full-body vitrified; both shrug off decades of traffic."
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "style": "normal",
+            "children": [
+              {
+                "text": "Want the marble look without the upkeep: printed marble-look vitrified at a fraction of the price."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "_type": "callout",
+        "variant": "info",
+        "text": "Technical claims vary by specific product and batch. We publish manufacturer-documented figures only — ask to see the datasheet for anything we quote."
+      }
+    ]
+  },
+  {
+    "id": "guide-quantity-wastage",
+    "title": "How many boxes do I need? Quantity and wastage, explained",
+    "slug": "how-many-boxes-tile-quantity-wastage",
+    "excerpt": "A no-nonsense method to estimate tile boxes, why wastage is 8–12% for most rooms and more for diagonal layouts, plus our calculator.",
+    "categorySlugs": [
+      "tiles"
+    ],
+    "productSlugs": [
+      "bianco-carrara-gloss-600x1200"
+    ],
+    "authorLabel": "Showroom editorial team",
+    "publishedAt": "2026-09-06T10:30:00+05:30",
+    "updatedAt": "2026-09-06T10:30:00+05:30",
+    "body": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "Under-order and you risk a shade mismatch from a different batch; over-order and you waste money. The method below is what our counter staff actually use."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "style": "h2",
+        "children": [
+          {
+            "text": "The method"
+          }
+        ]
+      },
+      {
+        "_type": "list",
+        "ordered": true,
+        "items": [
+          {
+            "_type": "block",
+            "style": "normal",
+            "children": [
+              {
+                "text": "Measure each floor/wall as length × width; add the areas of every surface together."
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "style": "normal",
+            "children": [
+              {
+                "text": "Add wastage: 8–10% for straight layouts in regular rooms, 12–15% for diagonal, herringbone, many doorways, or very small rooms."
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "style": "normal",
+            "children": [
+              {
+                "text": "Divide by the box coverage (printed on every product page here) and round UP to whole boxes."
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "style": "normal",
+            "children": [
+              {
+                "text": "Keep one spare box per home after laying — future repairs will not match a new batch."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "Example: a 15 ft × 12 ft living room is 180 sq ft. At 10% wastage you need 198 sq ft. The Bianco Carrara 600x1200 covers 15.5 sq ft per box, so 198 / 15.5 = 12.8 → 13 boxes."
+          }
+        ]
+      },
+      {
+        "_type": "callout",
+        "variant": "warn",
+        "text": "Odd-shaped rooms, patterns and site conditions change the numbers. Treat the calculator as a planning estimate and confirm the final order with your installer or with us."
+      },
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [
+          {
+            "text": "Our tile calculator does all of this for any product on the site, including the per-box figures for that exact tile."
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "cat-tiles",
+    "name": "Tiles & Vitrified",
+    "slug": "tiles",
+    "materialType": "tile",
+    "heroImage": {
+      "url": "/textures/marble-bianco-face-1.png",
+      "alt": "Polished marble-look vitrified tile surface",
+      "kind": "product",
+      "rightsStatus": "owned"
+    },
+    "summary": "Vitrified, ceramic and porcelain tiles in every size from 300x600 wall tiles to 1200x2400 slabs — with honest per-square-foot prices and live stock states.",
+    "priceGuide": [
+      {
+        "label": "Ceramic wall tiles (300x600)",
+        "min": 28,
+        "max": 45,
+        "unit": "sq_ft",
+        "lastUpdated": "2026-09-15T10:30:00+05:30"
+      },
+      {
+        "label": "Vitrified floor tiles (600x600)",
+        "min": 40,
+        "max": 70,
+        "unit": "sq_ft",
+        "lastUpdated": "2026-09-15T10:30:00+05:30"
+      },
+      {
+        "label": "Large-format marble-look (600x1200 and up)",
+        "min": 60,
+        "max": 180,
+        "unit": "sq_ft",
+        "lastUpdated": "2026-09-15T10:30:00+05:30"
+      }
+    ],
+    "seo": {
+      "title": "Tiles in Mathura — Prices, Sizes & Stock | Rajasthan Marble Enterprises"
+    }
+  },
+  {
+    "id": "cat-marble",
+    "name": "Marble",
+    "slug": "marble",
+    "materialType": "marble",
+    "heroImage": {
+      "url": "/textures/marble-emperador-face-1.png",
+      "alt": "Brown marble slab with light veining",
+      "kind": "product",
+      "rightsStatus": "owned"
+    },
+    "summary": "Natural Indian marble slabs, sold by the slab with honest lot-variation guidance. Every slab is unique — see it in the showroom before you buy.",
+    "priceGuide": [
+      {
+        "label": "Indian marble (Makrana, Kotah belt)",
+        "min": 90,
+        "max": 220,
+        "unit": "sq_ft",
+        "lastUpdated": "2026-09-12T10:30:00+05:30"
+      },
+      {
+        "label": "Premium imported-look Indian marble",
+        "min": 200,
+        "max": 420,
+        "unit": "sq_ft",
+        "lastUpdated": "2026-09-12T10:30:00+05:30"
+      }
+    ]
+  },
+  {
+    "id": "cat-granite",
+    "name": "Granite",
+    "slug": "granite",
+    "materialType": "granite",
+    "heroImage": {
+      "url": "/textures/granite-steel-grey-face-1.png",
+      "alt": "Speckled steel grey granite surface",
+      "kind": "product",
+      "rightsStatus": "owned"
+    },
+    "summary": "Hard-wearing granite for kitchens, stairs and facades. Prices vary by slab thickness and lot — current ranges are listed with each product.",
+    "priceGuide": [
+      {
+        "label": "Common Indian granite (18–20 mm slabs)",
+        "min": 80,
+        "max": 190,
+        "unit": "sq_ft",
+        "lastUpdated": "2026-09-14T10:30:00+05:30"
+      }
+    ]
+  }
+]

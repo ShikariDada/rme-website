@@ -1,0 +1,78 @@
+[
+  {
+    "id": "proj-001",
+    "title": "Showroom display — Bianco living-room floor set",
+    "slug": "showroom-bianco-living-floor",
+    "projectType": "commercial",
+    "locationLabel": "Our showroom, Mathura",
+    "summary": "A full-scale floor display in our showroom laid with the Bianco Carrara 600x1200 in running bond, so you can walk on the material before deciding. Sample display imagery — replace with real project photography once available.",
+    "images": [
+      {
+        "url": "/rooms/living-room.png",
+        "alt": "Living room floor display with marble-look tiles",
+        "kind": "installed",
+        "width": 1600,
+        "height": 1200,
+        "rightsStatus": "owned",
+        "source": "demo-generated"
+      }
+    ],
+    "productSlugs": [
+      "bianco-carrara-gloss-600x1200",
+      "bianco-carrara-matt-600x1200"
+    ],
+    "clientPermissionConfirmed": true,
+    "featured": true
+  },
+  {
+    "id": "proj-002",
+    "title": "Showroom display — bathroom wall & floor combination",
+    "slug": "showroom-bathroom-combination",
+    "projectType": "commercial",
+    "locationLabel": "Our showroom, Mathura",
+    "summary": "Demonstration bathroom combining an anti-skid style floor with a gloss wall tile, showing grout colour choices under warm lighting. Sample display imagery.",
+    "images": [
+      {
+        "url": "/rooms/bathroom.png",
+        "alt": "Bathroom display with wall and floor tiles",
+        "kind": "installed",
+        "width": 1600,
+        "height": 1200,
+        "rightsStatus": "owned",
+        "source": "demo-generated"
+      }
+    ],
+    "productSlugs": [
+      "kitchen-wall-gloss-grey-300x600",
+      "outdoor-anti-skid-beige-600x1200"
+    ],
+    "clientPermissionConfirmed": true,
+    "featured": true
+  },
+  {
+    "id": "proj-003",
+    "title": "Showroom display — kitchen floor & splashback pairing",
+    "slug": "showroom-kitchen-pairing",
+    "projectType": "commercial",
+    "locationLabel": "Our showroom, Mathura",
+    "summary": "Kitchen vignette pairing the concrete-grey floor tile with a simple gloss wall tile and granite counter suggestion. Sample display imagery.",
+    "images": [
+      {
+        "url": "/rooms/kitchen.png",
+        "alt": "Kitchen display with grey floor tiles",
+        "kind": "installed",
+        "width": 1600,
+        "height": 1200,
+        "rightsStatus": "owned",
+        "source": "demo-generated"
+      }
+    ],
+    "productSlugs": [
+      "concrete-grey-matt-600x600",
+      "kitchen-wall-gloss-grey-300x600",
+      "steel-grey-granite"
+    ],
+    "clientPermissionConfirmed": true,
+    "featured": false
+  }
+]
