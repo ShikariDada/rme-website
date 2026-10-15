@@ -18,6 +18,15 @@ interface FieldErrors {
   form?: string;
 }
 
+// DOM order for moving keyboard focus to the first invalid field on failed validation.
+const FIELD_ID_BY_KEY: Record<Exclude<keyof FieldErrors, "form">, string> = {
+  name: "q-name",
+  phone: "q-phone",
+  city: "q-city",
+  areaSqFt: "q-area",
+  consent: "q-consent",
+};
+
 /**
  * Quote form (spec §17.4). Collects the minimum needed to respond: no email,
  * no address, no room images (spec §26 data minimisation).
@@ -32,6 +41,7 @@ export function QuoteForm({
   prefillProducts?: string;
 }) {
   const startedRef = useRef(false);
+  const formRef = useRef<HTMLFormElement>(null);
   const [values, setValues] = useState({
     name: "",
     phone: "",
@@ -88,6 +98,15 @@ export function QuoteForm({
         if (!fieldErrors[key]) fieldErrors[key] = issue.message;
       }
       setErrors(fieldErrors);
+      // Move keyboard focus to the first invalid field so screen-reader and
+      // keyboard users land right on what needs fixing.
+      const firstErrorField = (
+        ["name", "phone", "city", "areaSqFt", "consent"] as const
+      ).find((key) => Boolean(fieldErrors[key]));
+      if (firstErrorField) {
+        const el = document.getElementById(FIELD_ID_BY_KEY[firstErrorField]);
+        requestAnimationFrame(() => el?.focus());
+      }
       track("quote_form_error", { source_surface: sourceSurface, reason: "validation" });
       return;
     }
@@ -154,7 +173,7 @@ export function QuoteForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-4">
+    <form ref={formRef} onSubmit={handleSubmit} noValidate className="space-y-4">
       {errors.form && (
         <p role="alert" className="rounded-md border border-[var(--color-danger)]/40 bg-[var(--color-danger)]/5 px-3 py-2 text-sm text-[var(--color-danger)]">
           {errors.form}

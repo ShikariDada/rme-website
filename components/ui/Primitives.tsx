@@ -60,14 +60,15 @@ export function SectionHeader({
   title: string;
   description?: string;
   action?: ReactNode;
-  level?: 2 | 3;
+  /** 1 = page-level heading (one visible h1), 2/3 = section headings. */
+  level?: 1 | 2 | 3;
   className?: string;
 }) {
-  const Heading = level === 2 ? "h2" : "h3";
+  const Heading = level === 1 ? "h1" : level === 2 ? "h2" : "h3";
   return (
     <div className={cn("mb-6 flex flex-wrap items-end justify-between gap-3", className)}>
       <div className="max-w-2xl">
-        <Heading className="text-2xl md:text-[1.75rem] leading-tight">{title}</Heading>
+        <Heading className={level === 1 ? "text-3xl md:text-4xl leading-tight" : "text-2xl md:text-[1.75rem] leading-tight"}>{title}</Heading>
         {description && <p className="mt-2 text-text-muted">{description}</p>}
       </div>
       {action && <div className="shrink-0">{action}</div>}

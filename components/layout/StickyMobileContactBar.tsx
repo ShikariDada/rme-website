@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { trackCallClick, trackWhatsAppClick } from "@/lib/analytics/track";
 
@@ -21,13 +20,6 @@ export function StickyMobileContactBar({
   show?: boolean;
 }) {
   const pathname = usePathname();
-
-  useEffect(() => {
-    if (show) {
-      document.documentElement.style.setProperty("--sticky-bar-height", "60px");
-      return () => document.documentElement.style.setProperty("--sticky-bar-height", "0px");
-    }
-  }, [show]);
 
   if (!show) return null;
   // The visualizer is a full-height editor with its own bottom controls.

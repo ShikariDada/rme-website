@@ -195,7 +195,7 @@ export function QuantityCalculatorEmbed({
 
   const modeButtonClass = (active: boolean) =>
     cn(
-      "inline-flex h-10 items-center rounded-md px-4 text-sm font-medium transition-colors",
+      "inline-flex h-11 items-center rounded-md px-4 text-sm font-medium transition-colors",
       active
         ? "bg-accent text-white"
         : "text-text-muted hover:bg-surface-muted hover:text-text"

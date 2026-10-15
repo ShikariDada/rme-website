@@ -64,7 +64,7 @@ export async function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="inline-flex h-10 items-center rounded-md px-3 text-text-muted hover:bg-surface-muted hover:text-text"
+                  className="inline-flex h-11 items-center rounded-md px-3 text-text-muted hover:bg-surface-muted hover:text-text"
                 >
                   {item.label}
                 </Link>
@@ -73,7 +73,7 @@ export async function Header() {
             <li>
               <Link
                 href="/brand/varmora"
-                className="inline-flex h-10 items-center rounded-md px-3 text-text-muted hover:bg-surface-muted hover:text-text"
+                className="inline-flex h-11 items-center rounded-md px-3 text-text-muted hover:bg-surface-muted hover:text-text"
               >
                 Varmora
               </Link>
@@ -97,7 +97,7 @@ export async function Header() {
           <TrackedWhatsAppLink
             href={whatsappHref}
             sourceSurface="header"
-            className="inline-flex h-10 items-center gap-2 rounded-md bg-[#1fa855] px-3 text-[15px] font-medium text-white hover:bg-[#178a45] max-md:w-10 max-md:justify-center max-md:px-0"
+            className="inline-flex h-11 items-center gap-2 rounded-md bg-[#1fa855] px-3 text-[15px] font-medium text-white hover:bg-[#178a45] max-md:w-11 max-md:justify-center max-md:px-0"
             ariaLabel="Chat on WhatsApp"
           >
             <WhatsAppIcon />

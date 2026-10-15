@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { ButtonLink } from "@/components/ui/Button";
 import { FieldError, FieldLabel, Input, Select } from "@/components/ui/Input";
@@ -42,15 +42,23 @@ export function TileCalculator() {
         ...(coverageNum && coverageNum > 0 ? { coverageSqFtPerBox: coverageNum } : {}),
         ...(tilesPerBoxNum && tilesPerBoxNum > 0 ? { tilesPerBox: tilesPerBoxNum } : {}),
       };
-      const r = calculateTileQuantity(input);
       setError(null);
-      track("calculator_complete", { source_surface: "calculator", page_type: "calculator" });
-      return r;
+      return calculateTileQuantity(input);
     } catch (e) {
       setError(e instanceof CalculatorInputError ? e.message : "Check your inputs");
       return null;
     }
   }, [mode, areaSqFt, rows, wastage, coverage, tilesPerBox]);
+
+  // Track completion once per successful result transition (not per keystroke
+  // during render).
+  const lastTrackedRef = useRef<string | null>(null);
+  const resultKey = result === null ? "" : JSON.stringify(result);
+  useEffect(() => {
+    if (result === null || resultKey === lastTrackedRef.current) return;
+    lastTrackedRef.current = resultKey;
+    track("calculator_complete", { source_surface: "calculator", page_type: "calculator" });
+  }, [result, resultKey]);
 
   function onFirstInput() {
     if (!startedRef.current) {
@@ -65,12 +73,14 @@ export function TileCalculator() {
         <div className="flex gap-2" role="group" aria-label="Input mode">
           <Button
             variant={mode === "area" ? "primary" : "secondary"}
+            aria-pressed={mode === "area"}
             onClick={() => setMode("area")}
           >
             By total area
           </Button>
           <Button
             variant={mode === "rows" ? "primary" : "secondary"}
+            aria-pressed={mode === "rows"}
             onClick={() => setMode("rows")}
           >
             By room dimensions
@@ -90,6 +100,8 @@ export function TileCalculator() {
                 min={1}
                 step="any"
                 placeholder="180"
+                aria-invalid={Boolean(error)}
+                aria-describedby={error ? "calc-error" : undefined}
                 value={areaSqFt}
                 onChange={(e) => {
                   onFirstInput();

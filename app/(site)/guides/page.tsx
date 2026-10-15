@@ -15,6 +15,7 @@ export default async function GuidesPage() {
   return (
     <Container className="py-10 md:py-14">
       <SectionHeader
+        level={1}
         title="Buying guides"
         description="The answers our counter staff give every day — written down properly."
       />

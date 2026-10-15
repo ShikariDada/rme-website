@@ -121,3 +121,15 @@ h1, h2, h3, .font-display {
 .pb-safe-bar {
   padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
 }
+
+/* Full-height editor pages (visualizer) need main's sticky-bar padding removed.
+   The visualizer is h-[calc(...)] tall and adds its own bottom rail; the dead
+   scroll otherwise breaks the fixed-height layout (a11y audit P3 #12). */
+.visualizer-root {
+  height: 100%;
+}
+@media (max-width: 767px) {
+  main:has(> .visualizer-root) {
+    padding-bottom: 0;
+  }
+}

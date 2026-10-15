@@ -46,13 +46,15 @@ export function Dialog({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const onCancel = (e: Event) => {
-      e.preventDefault();
-      handleClose();
+    // Restore focus on EVERY close path (native cancel/Escape and parent-driven
+    // open=false), not only the backdrop/button handlers.
+    const onCloseEvent = () => {
+      onClose();
+      previouslyFocused.current?.focus?.();
     };
-    el.addEventListener("cancel", onCancel);
-    return () => el.removeEventListener("cancel", onCancel);
-  }, [handleClose]);
+    el.addEventListener("close", onCloseEvent);
+    return () => el.removeEventListener("close", onCloseEvent);
+  }, [onClose, open]);
 
   // Scroll lock while open (native dialog doesn't lock page scroll).
   useEffect(() => {

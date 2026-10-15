@@ -19,7 +19,11 @@ interface PageMetaInput {
 export function pageMetadata(input: PageMetaInput): Metadata {
   const url = absoluteUrl(input.path);
   const base = siteUrl();
-  const images = (input.images ?? []).map((img) => ({
+  const images = (
+    input.images && input.images.length > 0
+      ? input.images
+      : [{ url: DEFAULT_OG_IMAGE, alt: input.title }]
+  ).map((img) => ({
     url: img.url.startsWith("http") ? img.url : absoluteUrl(img.url),
     width: img.width ?? 1200,
     height: img.height ?? 630,

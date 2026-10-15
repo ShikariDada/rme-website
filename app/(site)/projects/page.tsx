@@ -15,6 +15,7 @@ export default async function ProjectsPage() {
   return (
     <Container className="py-10 md:py-14">
       <SectionHeader
+        level={1}
         title="Displays & installations"
         description="Materials shown the way they actually lay — walk on them in the showroom before you decide."
       />

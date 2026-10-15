@@ -486,7 +486,7 @@ export default function VisualizerShell({ materials, settings, initialMaterialId
   }
 
   return (
-    <div className="flex h-[calc(100dvh-4rem)] flex-col bg-bg">
+    <div className="visualizer-root flex h-[calc(100dvh-4rem)] flex-col bg-bg">
       {/* Top bar */}
       <div className="flex h-14 items-center gap-2 border-b border-border bg-surface px-3">
         <Button variant="text" onClick={() => window.history.back()} aria-label="Back">
@@ -588,7 +588,7 @@ export default function VisualizerShell({ materials, settings, initialMaterialId
           <Button variant="secondary" onClick={() => setPanel("surface")} disabled={!project}>Surface</Button>
           <Button variant="secondary" onClick={() => setPanel("layout")} disabled={!project}>Layout</Button>
           <Button variant="secondary" onClick={() => setPanel("grout")} disabled={!project}>Grout</Button>
-          <Button variant={compare ? "primary" : "secondary"} onClick={() => setCompare((c) => !c)} disabled={!project}>
+          <Button variant={compare ? "primary" : "secondary"} aria-pressed={compare} onClick={() => setCompare((c) => !c)} disabled={!project}>
             Compare
           </Button>
           <div className="ml-auto flex gap-2">

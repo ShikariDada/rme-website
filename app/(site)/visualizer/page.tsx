@@ -26,6 +26,7 @@ export default async function VisualizerPage({ searchParams }: Props) {
 
   return (
     <>
+      <h1 className="sr-only">See tiles in your room</h1>
       <noscript>
         <p className="mx-auto max-w-xl px-4 py-10 text-center text-text-muted">
           The visualizer needs JavaScript. To preview a material, WhatsApp us a

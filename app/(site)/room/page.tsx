@@ -21,6 +21,7 @@ export default async function RoomsPage() {
   return (
     <Container className="py-10 md:py-14">
       <SectionHeader
+        level={1}
         title="Browse by room"
         description="Every space fails differently — we stock materials for how each one is actually used."
       />
