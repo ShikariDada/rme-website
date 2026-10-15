@@ -1,21 +1,27 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import { AnalyticsProvider } from "@/components/analytics/AnalyticsProvider";
 import { pageMetadata } from "@/lib/seo/metadata";
 import { contentSource } from "@/lib/data";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  subsets: ["latin"],
+/**
+ * Self-hosted variable fonts (spec §8.1: fonts must ship with the build, not
+ * create runtime Google Fonts requests — and no build-time font fetching,
+ * which broke Vercel builds).
+ */
+const fraunces = localFont({
+  src: "./fonts/Fraunces-Variable.ttf",
   variable: "--font-fraunces",
   display: "swap",
-  axes: ["SOFT", "WONK", "opsz"],
+  weight: "100 900",
 });
 
-const inter = Inter({
-  subsets: ["latin"],
+const inter = localFont({
+  src: "./fonts/Inter-Variable.ttf",
   variable: "--font-inter",
   display: "swap",
+  weight: "100 900",
 });
 
 export async function generateMetadata(): Promise<Metadata> {

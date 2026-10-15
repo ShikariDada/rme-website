@@ -31,3 +31,6 @@ coverage/
 
 # generated heavy artifacts (regenerate via npm run generate:assets if removed)
 scripts/ai/downloads/
+
+.vercel
+.env*
