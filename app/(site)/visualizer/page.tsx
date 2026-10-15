@@ -1,12 +1,10 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
-import { VisualizerLazy } from "@/src/features/visualizer/ui/VisualizerLazy";
+import { Skeleton } from "@/components/ui/Primitives";
 import { pageMetadata } from "@/lib/seo/metadata";
 import { getVisualizerMaterials } from "@/lib/visualizer/materials";
 import { contentSource } from "@/lib/data";
-
-interface Props {
-  searchParams: Promise<{ material?: string }>;
-}
+import { VisualizerClient } from "./visualizer-client";
 
 export async function generateMetadata(): Promise<Metadata> {
   return pageMetadata({
@@ -17,13 +15,14 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-export default async function VisualizerPage({ searchParams }: Props) {
-  const { material } = await searchParams;
+export default async function VisualizerPage() {
   const [materials, settings] = await Promise.all([
     getVisualizerMaterials(),
     contentSource.getSettings(),
   ]);
 
+  // `?material=` is read client-side inside VisualizerClient (useSearchParams);
+  // the Suspense boundary is required for the prerender bailout in static export.
   return (
     <>
       <h1 className="sr-only">See tiles in your room</h1>
@@ -33,14 +32,23 @@ export default async function VisualizerPage({ searchParams }: Props) {
           photo of your room and we will send a mockup manually.
         </p>
       </noscript>
-      <VisualizerLazy
-        materials={materials}
-        settings={{
-          whatsappNumber: settings.whatsappNumber,
-          phone: settings.phoneDisplay ?? settings.phone,
-        }}
-        initialMaterialId={material}
-      />
+      <Suspense
+        fallback={
+          <div className="flex h-[calc(100dvh-4rem)] flex-col">
+            <Skeleton className="h-14 w-full rounded-none" />
+            <div className="flex-1 bg-surface-muted/40" />
+            <Skeleton className="h-16 w-full rounded-none" />
+          </div>
+        }
+      >
+        <VisualizerClient
+          materials={materials}
+          settings={{
+            whatsappNumber: settings.whatsappNumber,
+            phone: settings.phoneDisplay ?? settings.phone,
+          }}
+        />
+      </Suspense>
     </>
   );
 }

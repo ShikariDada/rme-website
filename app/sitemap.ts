@@ -2,6 +2,9 @@ import type { MetadataRoute } from "next";
 import { contentSource } from "@/lib/data";
 import { absoluteUrl } from "@/lib/utils";
 
+// Static-compatible: emit at build time in both server and export modes.
+export const dynamic = 'force-static';
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [products, rooms, brands, projects, guides] = await Promise.all([
     contentSource.getProducts(),

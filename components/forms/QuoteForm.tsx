@@ -1,12 +1,14 @@
 "use client";
 
 import { useCallback, useMemo, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { Button, ButtonLink } from "@/components/ui/Button";
 import { Checkbox, FieldError, FieldLabel, Input, Select, Textarea } from "@/components/ui/Input";
 import { Turnstile } from "@/components/forms/Turnstile";
 import { quoteFormSchema, type QuoteFormData } from "@/lib/validation/quote";
-import { buildQuoteReferenceMessage, buildWhatsAppUrl } from "@/lib/whatsapp";
+import { buildQuoteReferenceMessage, buildWhatsAppUrl, buildGeneralEnquiryMessage } from "@/lib/whatsapp";
 import { track } from "@/lib/analytics/track";
+import { isStaticExport } from "@/lib/static";
 import type { SiteSettings } from "@/lib/types";
 
 interface FieldErrors {
@@ -27,9 +29,45 @@ const FIELD_ID_BY_KEY: Record<Exclude<keyof FieldErrors, "form">, string> = {
   consent: "q-consent",
 };
 
+const PROJECT_TYPE_LABELS: Record<string, string> = {
+  home: "My home",
+  shop: "Shop",
+  office: "Office",
+  other: "Other",
+};
+
+function buildGeneralEnquiry(): string {
+  return buildGeneralEnquiryMessage("quote-form");
+}
+
+/** Same payload the server receives, composed as a WhatsApp-friendly message. */
+function buildQuoteEnquiryMessage(data: QuoteFormData): string {
+  const lines = [
+    buildGeneralEnquiry(),
+    "",
+    `Name: ${data.name}`,
+    `Phone: ${data.phone}`,
+    `City: ${data.city}`,
+  ];
+  if (data.products) lines.push(`Products: ${data.products}`);
+  if (data.areaSqFt !== undefined) lines.push(`Area: ${data.areaSqFt} sq ft`);
+  if (data.projectType) {
+    lines.push(`Project type: ${PROJECT_TYPE_LABELS[data.projectType] ?? data.projectType}`);
+  }
+  if (data.message) {
+    lines.push("", data.message);
+  }
+  return lines.join("\n");
+}
+
 /**
  * Quote form (spec §17.4). Collects the minimum needed to respond: no email,
  * no address, no room images (spec §26 data minimisation).
+ *
+ * Two submit paths:
+ * - Server build: POSTs to /api/quote (unchanged).
+ * - Static export: no route handlers exist, so the same validated payload is
+ *   handed over via WhatsApp (with a clipboard fallback), no fetch.
  */
 export function QuoteForm({
   settings,
@@ -40,13 +78,28 @@ export function QuoteForm({
   sourceSurface: string;
   prefillProducts?: string;
 }) {
+  // `?ref=` prefill (product path) is resolved client-side so both build modes
+  // work without server searchParams; an explicit prefillProducts prop wins.
+  const searchParams = useSearchParams();
+  const refParam = searchParams.get("ref") ?? "";
+  const refPrefill = useMemo(() => {
+    if (!refParam) return "";
+    // searchParams are already decoded; a guarded decode is defensive for
+    // double-encoded links and never crashes on malformed input.
+    try {
+      return decodeURIComponent(refParam) || refParam;
+    } catch {
+      return refParam;
+    }
+  }, [refParam]);
+
   const startedRef = useRef(false);
   const formRef = useRef<HTMLFormElement>(null);
   const [values, setValues] = useState({
     name: "",
     phone: "",
     city: "",
-    products: prefillProducts ?? "",
+    products: prefillProducts ?? refPrefill,
     areaSqFt: "",
     projectType: "",
     message: "",
@@ -57,6 +110,8 @@ export function QuoteForm({
   const [errors, setErrors] = useState<FieldErrors>({});
   const [pending, setPending] = useState(false);
   const [success, setSuccess] = useState<{ reference: string; warning?: string } | null>(null);
+  const [prepared, setPrepared] = useState<{ message: string; whatsappHref: string } | null>(null);
+  const [copied, setCopied] = useState(false);
 
   const set = useCallback(
     (field: keyof typeof values, value: string | boolean) => {
@@ -75,10 +130,6 @@ export function QuoteForm({
     phoneE164: settings.whatsappNumber,
     message: buildGeneralEnquiry(),
   }), [settings.whatsappNumber]);
-
-  function buildGeneralEnquiry(): string {
-    return "Hi, I submitted a quote request on your website.";
-  }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -111,6 +162,18 @@ export function QuoteForm({
       return;
     }
 
+    // Static export: no /api/quote route handler exists — prepare the enquiry
+    // for WhatsApp instead of fetching.
+    if (isStaticExport) {
+      const message = buildQuoteEnquiryMessage(parsed.data);
+      setPrepared({
+        message,
+        whatsappHref: buildWhatsAppUrl({ phoneE164: settings.whatsappNumber, message }),
+      });
+      track("quote_form_submit", { source_surface: sourceSurface });
+      return;
+    }
+
     setPending(true);
     try {
       const res = await fetch("/api/quote", {
@@ -137,6 +200,43 @@ export function QuoteForm({
     } finally {
       setPending(false);
     }
+  }
+
+  async function copyDetails() {
+    if (!prepared) return;
+    try {
+      await navigator.clipboard.writeText(prepared.message);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
+  }
+
+  if (prepared) {
+    return (
+      <div className="rounded-lg border border-border bg-surface p-6" role="status">
+        <h2 className="font-display text-xl">Enquiry prepared</h2>
+        <p className="mt-2 text-text-muted">
+          Nothing was sent yet — hand it over with one tap. WhatsApp is the
+          fastest route; calling {settings.phoneDisplay ?? settings.phone} works too.
+        </p>
+        <div className="mt-5 flex flex-col gap-2 sm:flex-row">
+          <ButtonLink variant="whatsapp" href={prepared.whatsappHref} external>
+            Send enquiry on WhatsApp
+          </ButtonLink>
+          <Button variant="secondary" onClick={copyDetails}>
+            {copied ? "Copied!" : "Copy details"}
+          </Button>
+          <ButtonLink variant="secondary" href={`tel:${settings.phone}`}>
+            Call {settings.phoneDisplay ?? settings.phone}
+          </ButtonLink>
+        </div>
+        {settings.defaultQuoteResponseCopy && (
+          <p className="mt-4 text-sm text-text-muted">{settings.defaultQuoteResponseCopy}</p>
+        )}
+      </div>
+    );
   }
 
   if (success) {
@@ -275,17 +375,15 @@ export function QuoteForm({
       <FieldError id="q-consent-error" message={errors.consent} />
 
       <Button type="submit" size="lg" disabled={pending} className="w-full sm:w-auto">
-        {pending ? "Sending…" : "Request a quote"}
+        {pending
+          ? "Sending…"
+          : isStaticExport
+            ? "Send enquiry on WhatsApp"
+            : "Request a quote"}
       </Button>
       <p className="text-xs text-text-muted">
         Prefer chatting? <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">Message us on WhatsApp</a> — usually the fastest route.
       </p>
     </form>
   );
-}
-
-// Imported late to avoid a circular-looking import list above.
-import { buildGeneralEnquiryMessage } from "@/lib/whatsapp";
-function buildGeneralEnquiry(): string {
-  return buildGeneralEnquiryMessage("quote-form");
 }

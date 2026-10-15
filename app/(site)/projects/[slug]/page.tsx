@@ -10,6 +10,11 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
+export async function generateStaticParams() {
+  const projects = await contentSource.getProjects();
+  return projects.map((project) => ({ slug: project.slug }));
+}
+
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const project = await contentSource.getProjectBySlug(slug);

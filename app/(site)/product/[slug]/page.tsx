@@ -22,6 +22,13 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+export async function generateStaticParams() {
+  const products = await contentSource.getProducts();
+  return products
+    .filter((p) => p.status === "active")
+    .map((p) => ({ slug: p.slug }));
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const product = await contentSource.getProductBySlug(slug);

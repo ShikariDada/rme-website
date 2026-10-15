@@ -1,13 +1,10 @@
+import { Suspense } from "react";
 import { Container } from "@/components/ui/Primitives";
 import { QuoteForm } from "@/components/forms/QuoteForm";
 import { HoursTable } from "@/components/showroom/HoursTable";
 import { WhatsAppIcon } from "@/components/layout/Header";
 import { pageMetadata } from "@/lib/seo/metadata";
 import { contentSource } from "@/lib/data";
-
-interface Props {
-  searchParams: Promise<{ ref?: string }>;
-}
 
 export async function generateMetadata() {
   const settings = await contentSource.getSettings();
@@ -18,19 +15,13 @@ export async function generateMetadata() {
   });
 }
 
-export default async function ContactPage({ searchParams }: Props) {
-  const { ref } = await searchParams;
+export default async function ContactPage() {
   const settings = await contentSource.getSettings();
 
-  // `ref` is a product path like /product/slug → resolve a friendly name.
-  let prefill: string | undefined;
-  if (ref?.startsWith("/product/")) {
-    const product = await contentSource.getProductBySlug(ref.replace("/product/", ""));
-    prefill = product ? `${product.name} (SKU ${product.sku})` : ref;
-  } else if (ref) {
-    prefill = ref;
-  }
-
+  // `?ref=` prefill is resolved inside the client QuoteForm (useSearchParams),
+  // so the page no longer reads searchParams — a requirement for static export.
+  // QuoteForm needs a Suspense boundary because useSearchParams bails out
+  // during prerendering in export mode.
   return (
     <Container className="py-8 md:py-12">
       <div className="grid gap-10 md:grid-cols-[1fr_320px]">
@@ -42,7 +33,9 @@ export default async function ContactPage({ searchParams }: Props) {
             fastest route; this form works too.
           </p>
           <div className="mt-8">
-            <QuoteForm settings={settings} sourceSurface="contact-page" prefillProducts={prefill} />
+            <Suspense fallback={null}>
+              <QuoteForm settings={settings} sourceSurface="contact-page" />
+            </Suspense>
           </div>
         </div>
 
