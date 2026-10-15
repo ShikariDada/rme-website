@@ -487,7 +487,7 @@ export default function VisualizerShell({ materials, settings, initialMaterialId
   }
 
   return (
-    <div className="visualizer-root flex h-[calc(100dvh-4rem)] flex-col bg-bg">
+    <div className="visualizer-root flex flex-col bg-bg">
       {/* Top bar */}
       <div className="flex h-14 items-center gap-2 border-b border-border bg-surface px-3">
         <Button variant="text" onClick={() => window.history.back()} aria-label="Back">
