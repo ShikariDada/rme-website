@@ -6,6 +6,7 @@ import {
   type VisualizerMaterial,
 } from "@visualizer/engine";
 import type { Product } from "@/lib/types";
+import { assetUrl } from "@/lib/static";
 
 /**
  * Projects site products into engine VisualizerMaterials (visualizer spec §6).
@@ -70,7 +71,7 @@ export function productToMaterial(product: Product, textures: DemoTextureSet): V
     recommendedGroutMm: { min: 1.5, max: 5 },
     faces: textures.faceUrls.map((url, i) => ({
       id: `${product.sku}-face-${i + 1}`,
-      albedoUrl: url,
+      albedoUrl: assetUrl(url),
       previewUrl: url,
     })),
     variationMode: textures.faceUrls.length > 1 ? "random-faces" : "single",

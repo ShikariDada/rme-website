@@ -29,6 +29,8 @@ try {
       ...process.env,
       STATIC_EXPORT: "1",
       NEXT_PUBLIC_STATIC_EXPORT: "1",
+      /* real public URL so canonical/og/sitemap URLs are correct in static pages */
+      NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || "https://zerothlayer.com",
     },
   });
 } finally {

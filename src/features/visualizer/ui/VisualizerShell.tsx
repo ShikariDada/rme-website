@@ -29,6 +29,7 @@ import { CapabilityNotice } from "./CapabilityNotice";
 import { Dialog } from "@/components/ui/Dialog";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
+import { assetUrl, STATIC_BASE_PATH } from "../../../../lib/static";
 
 /**
  * Visualizer shell (visualizer spec §30): full-height editor, canvas-first,
@@ -216,11 +217,11 @@ export default function VisualizerShell({ materials, settings, initialMaterialId
   const loadPresetRoom = useCallback(async (presetId: string) => {
     setBusy("Preparing sample room…");
     try {
-      const res = await fetch("/rooms/preset-rooms.json");
+      const res = await fetch(`${STATIC_BASE_PATH}/rooms/preset-rooms.json`);
       const presets = (await res.json()) as PresetRoom[];
       const preset = presets.find((p) => p.id === presetId);
       if (!preset) throw new Error("missing preset");
-      const bitmap = await createImageBitmapFromUrl(preset.image);
+      const bitmap = await createImageBitmapFromUrl(assetUrl(preset.image));
       const { canvas, width, height } = drawToCanvas(bitmap, bitmap.width, bitmap.height);
       registerRoomCanvas(canvas);
       const surfaces: VisualizerSurface[] = preset.surfaces.map((ps) => {
@@ -243,7 +244,7 @@ export default function VisualizerShell({ materials, settings, initialMaterialId
         // mask images are white=material, black=room → convert to mask canvas alpha
         void mctx;
         maskCanvases.current.set(surface.maskAssetId, maskCanvas);
-        loadMaskIntoCanvas(maskCanvas, ps.maskUrl, surface).then(() => {
+        loadMaskIntoCanvas(maskCanvas, assetUrl(ps.maskUrl), surface).then(() => {
           dispatch({ type: "UPDATE_SURFACE", surfaceId: surface.id, patch: { maskVersion: surface.maskVersion + 1 } });
         });
         return surface;

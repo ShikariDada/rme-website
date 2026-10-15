@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { FieldLabel } from "@/components/ui/Input";
 import { cn } from "@/lib/utils";
+import { STATIC_BASE_PATH } from "../../../../lib/static";
 
 /**
  * First screen (spec §29): use my photo, or try a curated sample room with
@@ -25,7 +26,7 @@ export function RoomPicker({
     let cancelled = false;
     void (async () => {
       try {
-        const res = await fetch("/rooms/preset-rooms.json");
+        const res = await fetch(`${STATIC_BASE_PATH}/rooms/preset-rooms.json`);
         const data = (await res.json()) as { id: string; name: string; image: string }[];
         if (!cancelled) setPresets(data);
       } catch {

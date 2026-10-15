@@ -26,7 +26,11 @@ const nextConfig: NextConfig = {
         output: "export" as const,
         basePath,
         assetPrefix: basePath,
-        images: { unoptimized: true },
+        images: {
+          /* custom loader prefixes every next/image src with /rme-website */
+          loader: "custom" as const,
+          loaderFile: "./lib/image-loader.ts",
+        },
         trailingSlash: true,
       }
     : {
