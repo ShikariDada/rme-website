@@ -15,7 +15,7 @@ export function Hero({ settings }: { settings: SiteSettings }) {
  });
 
  return (
- <section className="relative min-h-min-h-88vh w-full overflow-hidden border-b border-border">
+ <section className="relative min-h-hero w-full overflow-hidden border-b border-border">
   <Image
   src="/textures/marble-bianco-face-1.png"
   alt="Bianco Carrara, polished porcelain surface with soft grey veining"
@@ -26,7 +26,7 @@ export function Hero({ settings }: { settings: SiteSettings }) {
   />
 
   {/* Editorial block — solid bg panel, lower-left */}
-  <div className="relative z-10 flex min-h-min-h-88vh items-end">
+  <div className="relative z-10 flex min-h-hero items-end">
   <div className="max-w-140 bg-bg px-6 pb-14 pt-14 md:ml-0 md:px-16 md:pb-16 md:pt-24">
    <p className="kicker">Porcelain · Stone · Terracotta</p>
    <h1 className="mt-5 font-display text-display leading-hero tracking-display">

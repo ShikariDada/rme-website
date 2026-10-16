@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 const fieldBase =
  "w-full rounded-sm border border-border bg-surface px-3 text-base text-text placeholder:text-text-muted/70 " +
- "focus-visible:outline-1 focus-visible:outline-offset-0 focus-visible:outline-accent focus-visible:border-[var(--color-accent)] " +
+ "focus-visible:outline-1 focus-visible:outline-offset-0 focus-visible:outline-accent focus-visible:border-accent " +
  "disabled:opacity-50";
 
 export const Input = forwardRef<HTMLInputElement, ComponentProps<"input">>(

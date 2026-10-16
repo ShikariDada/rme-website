@@ -39,6 +39,10 @@
   --radius-lg: 4px;
 }
 
+@utility min-h-hero {
+  min-height: 88vh;
+}
+
 @utility max-w-92pct {
   max-width: 92%;
 }

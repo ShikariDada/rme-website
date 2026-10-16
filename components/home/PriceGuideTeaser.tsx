@@ -45,7 +45,7 @@ export async function PriceGuideTeaser() {
      / {formatUnit(g.unit)}
     </span>
     </p>
-    <p className="col-span-2 text-xs text-text-muted md:col-span-1 md:min-w-[110px] md:text-right">
+    <p className="col-span-2 text-xs text-text-muted md:col-span-1 md:min-w-27 md:text-right">
     verified {new Date(g.lastUpdated).toLocaleDateString("en-IN", { day: "numeric", month: "short" })}
     </p>
    </div>
