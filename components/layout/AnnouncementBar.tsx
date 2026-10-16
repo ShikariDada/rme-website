@@ -7,7 +7,7 @@ export async function AnnouncementBar() {
   const announcement = await getActiveAnnouncement();
   if (!announcement) return null;
   return (
-    <div className="bg-accent text-white">
+    <div className="bg-ink text-white">
       <Container className="py-2 text-center text-sm">
         {announcement.href ? (
           <Link href={announcement.href} className="underline-offset-2 hover:underline">

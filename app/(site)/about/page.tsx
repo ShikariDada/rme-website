@@ -30,7 +30,7 @@ export default async function AboutPage() {
           flattering render.
         </p>
 
-        <h2 className="pt-2 font-display text-xl text-text">How buying works here</h2>
+        <h2 className="pt-2 text-xl text-text">How buying works here</h2>
         <ol className="list-decimal space-y-2 pl-5">
           <li>Browse the catalogue here and filter by room, size, finish or budget.</li>
           <li>Shortlist two or three options; use the visualizer or WhatsApp us photos of your space.</li>
@@ -39,7 +39,7 @@ export default async function AboutPage() {
           <li>Confirm quantities with your installer, and we arrange the rest.</li>
         </ol>
 
-        <h2 className="pt-2 font-display text-xl text-text">What we promise</h2>
+        <h2 className="pt-2 text-xl text-text">What we promise</h2>
         <ul className="list-disc space-y-2 pl-5">
           <li>Prices carry verification dates, with no stale figures quietly displayed for months.</li>
           <li>Stock states mean what they say: ready stock is in the godown today.</li>
@@ -47,7 +47,7 @@ export default async function AboutPage() {
           <li>No invented reviews, no manufactured urgency, no fake countdown offers.</li>
         </ul>
 
-        <h2 className="pt-2 font-display text-xl text-text">Who we serve</h2>
+        <h2 className="pt-2 text-xl text-text">Who we serve</h2>
         <p>
           Homeowners building or renovating, contractors who need sizes and
           availability fast, and architects and designers who need reliable

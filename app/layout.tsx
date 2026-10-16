@@ -10,18 +10,18 @@ import "./globals.css";
  * create runtime Google Fonts requests — and no build-time font fetching,
  * which broke Vercel builds).
  */
-const fraunces = localFont({
- src: "./fonts/Fraunces-Variable.ttf",
- variable: "--font-fraunces",
+const albert = localFont({
+ src: "./fonts/AlbertSans-Var.woff2",
+ variable: "--font-albert",
  display: "swap",
  weight: "100 900",
 });
 
-const inter = localFont({
- src: "./fonts/Inter-Variable.ttf",
- variable: "--font-inter",
+const bodoni = localFont({
+ src: "./fonts/BodoniModa-Var.woff2",
+ variable: "--font-bodoni",
  display: "swap",
- weight: "100 900",
+ weight: "400 900",
 });
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -36,7 +36,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export const viewport: Viewport = {
  width: "device-width",
  initialScale: 1,
- themeColor: "#F6F3ED",
+ themeColor: "#f6f5f3",
 };
 
 export default function RootLayout({
@@ -45,7 +45,13 @@ export default function RootLayout({
  children: React.ReactNode;
 }) {
  return (
- <html lang="en-IN" className={`${fraunces.variable} ${inter.variable}`}>
+ <html lang="en-IN" suppressHydrationWarning className={`${albert.variable} ${bodoni.variable}`}>
+  <head>
+  <script
+  // eslint-disable-next-line react/no-danger
+  dangerouslySetInnerHTML={{ __html: 'document.documentElement.dataset.js="1"' }}
+  />
+  </head>
   <body>
   <AnalyticsProvider>{children}</AnalyticsProvider>
   </body>

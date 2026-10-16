@@ -24,7 +24,7 @@ export default async function ContactPage() {
  // during prerendering in export mode.
  return (
  <Container className="py-8 md:py-12">
-  <div className="grid gap-10 md:grid-cols-grid-cols-calc">
+  <div className="grid gap-10 md:grid-cols-contact">
   <div>
    <h1 className="text-3xl leading-tight md:text-4xl">Get a quote</h1>
    <p className="mt-3 max-w-2xl text-text-muted">

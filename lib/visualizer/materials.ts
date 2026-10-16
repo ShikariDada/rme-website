@@ -23,19 +23,19 @@ interface DemoTextureSet {
 }
 
 const DEMO_TEXTURE_MAP: Record<string, DemoTextureSet> = {
- "vm-bianco-gloss": { kind: "vitrified-tile", faceUrls: ["/textures/marble-bianco-face-1.png", "/textures/marble-bianco-face-2.png", "/textures/marble-bianco-face-3.png", "/textures/marble-bianco-face-4.png"] },
- "vm-bianco-matt": { kind: "vitrified-tile", faceUrls: ["/textures/marble-bianco-face-3.png", "/textures/marble-bianco-face-1.png", "/textures/marble-bianco-face-4.png", "/textures/marble-bianco-face-2.png"] },
- "vm-emperador": { kind: "vitrified-tile", faceUrls: ["/textures/marble-emperador-face-1.png", "/textures/marble-emperador-face-2.png", "/textures/marble-emperador-face-3.png", "/textures/marble-emperador-face-4.png"] },
- "vm-emerald": { kind: "vitrified-tile", faceUrls: ["/textures/marble-emerald-face-1.png", "/textures/marble-emerald-face-2.png", "/textures/marble-emerald-face-3.png"] },
- "vm-ivory": { kind: "vitrified-tile", faceUrls: ["/textures/vitrified-ivory-face-1.png", "/textures/vitrified-ivory-face-2.png"] },
- "vm-concrete": { kind: "vitrified-tile", faceUrls: ["/textures/porcelain-concrete-face-1.png", "/textures/porcelain-concrete-face-2.png"] },
- "vm-steel-grey-tile": { kind: "vitrified-tile", faceUrls: ["/textures/granite-steel-grey-face-1.png", "/textures/granite-steel-grey-face-2.png"] },
- "vm-desert-brown": { kind: "vitrified-tile", faceUrls: ["/textures/granite-desert-brown-face-1.png", "/textures/granite-desert-brown-face-2.png"] },
- "vm-oak": { kind: "porcelain-tile", faceUrls: ["/textures/wood-oak-face-1.png", "/textures/wood-oak-face-2.png"] },
- "vm-outdoor": { kind: "porcelain-tile", faceUrls: ["/textures/outdoor-antiskid-face-1.png", "/textures/outdoor-antiskid-face-2.png"] },
- "vm-wall-grey": { kind: "ceramic-tile", faceUrls: ["/textures/wall-gloss-grey-face-1.png"] },
- "vm-xl-slab": { kind: "porcelain-tile", faceUrls: ["/textures/porcelain-concrete-face-2.png", "/textures/porcelain-concrete-face-1.png"] },
- "vm-steel-grey-granite": { kind: "granite-slab", faceUrls: ["/textures/granite-steel-grey-face-1.png", "/textures/granite-steel-grey-face-2.png"] },
+ "vm-bianco-gloss": { kind: "vitrified-tile", faceUrls: ["/textures/marble-bianco-face-1.webp", "/textures/marble-bianco-face-2.webp", "/textures/marble-bianco-face-3.webp", "/textures/marble-bianco-face-4.webp"] },
+ "vm-bianco-matt": { kind: "vitrified-tile", faceUrls: ["/textures/marble-bianco-face-3.webp", "/textures/marble-bianco-face-1.webp", "/textures/marble-bianco-face-4.webp", "/textures/marble-bianco-face-2.webp"] },
+ "vm-emperador": { kind: "vitrified-tile", faceUrls: ["/textures/marble-emperador-face-1.webp", "/textures/marble-emperador-face-2.webp", "/textures/marble-emperador-face-3.webp", "/textures/marble-emperador-face-4.webp"] },
+ "vm-emerald": { kind: "vitrified-tile", faceUrls: ["/textures/marble-emerald-face-1.webp", "/textures/marble-emerald-face-2.webp", "/textures/marble-emerald-face-3.webp"] },
+ "vm-ivory": { kind: "vitrified-tile", faceUrls: ["/textures/vitrified-ivory-face-1.webp", "/textures/vitrified-ivory-face-2.webp"] },
+ "vm-concrete": { kind: "vitrified-tile", faceUrls: ["/textures/porcelain-concrete-face-1.webp", "/textures/porcelain-concrete-face-2.webp"] },
+ "vm-steel-grey-tile": { kind: "vitrified-tile", faceUrls: ["/textures/granite-steel-grey-face-1.webp", "/textures/granite-steel-grey-face-2.webp"] },
+ "vm-desert-brown": { kind: "vitrified-tile", faceUrls: ["/textures/granite-desert-brown-face-1.webp", "/textures/granite-desert-brown-face-2.webp"] },
+ "vm-oak": { kind: "porcelain-tile", faceUrls: ["/textures/wood-oak-face-1.webp", "/textures/wood-oak-face-2.webp"] },
+ "vm-outdoor": { kind: "porcelain-tile", faceUrls: ["/textures/outdoor-antiskid-face-1.webp", "/textures/outdoor-antiskid-face-2.webp"] },
+ "vm-wall-grey": { kind: "ceramic-tile", faceUrls: ["/textures/wall-gloss-grey-face-1.webp"] },
+ "vm-xl-slab": { kind: "porcelain-tile", faceUrls: ["/textures/porcelain-concrete-face-2.webp", "/textures/porcelain-concrete-face-1.webp"] },
+ "vm-steel-grey-granite": { kind: "granite-slab", faceUrls: ["/textures/granite-steel-grey-face-1.webp", "/textures/granite-steel-grey-face-2.webp"] },
 };
 
 function kindFor(product: Product): MaterialKind {

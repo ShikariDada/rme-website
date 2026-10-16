@@ -20,9 +20,9 @@ export async function FeaturedBrandBlock() {
  const shown = (featured.length > 0 ? featured : products.slice(0, 3));
 
  return (
- <section className="border-y border-border bg-surface">
-  <div className="mx-auto w-full max-w-screen px-4 py-10 md:px-6 md:py-14">
-  <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
+ <section data-reveal="" className="border-y border-border bg-surface">
+  <div className="mx-auto w-full max-w-screen px-4 py-16 md:px-6 md:py-28">
+  <div className="mb-8 flex flex-wrap items-end justify-between gap-4 md:mb-10">
    <div>
    <div className="flex items-center gap-2">
     <h2 className="text-2xl">{brand.name}</h2>

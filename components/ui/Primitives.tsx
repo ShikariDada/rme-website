@@ -8,10 +8,10 @@ const tones: Record<BadgeTone, string> = {
  success: "bg-surface text-success border-border",
  warn: "bg-surface text-danger border-border",
  muted: "bg-surface text-text-muted border-border",
- accent: "bg-accent-soft text-accent border-border",
+ accent: "bg-accent-soft text-accent-hover border-accent/25",
 };
 
-/** Restrained badge (spec §8.7 bans badge/chip proliferation). */
+/** Restrained pill badge (spec §8.7 bans badge/chip proliferation). */
 export function Badge({
  tone = "neutral",
  className,
@@ -24,7 +24,7 @@ export function Badge({
  return (
  <span
   className={cn(
-  "inline-flex items-center gap-1 rounded-sm border px-2 py-0.5 text-11 font-medium uppercase tracking-badge",
+  "inline-flex items-center gap-1 rounded-pill border px-2.5 py-1 text-11 font-semibold uppercase tracking-badge",
   tones[tone],
   className
   )}
@@ -57,6 +57,7 @@ export function SectionHeader({
  level = 2,
  kicker,
  className,
+reveal = true,
 }: {
  title: string;
  description?: string;
@@ -66,14 +67,23 @@ export function SectionHeader({
  /** Optional kicker rendered above the title. */
  kicker?: string;
  className?: string;
+reveal?: boolean;
 }) {
  const Heading = level === 1 ? "h1" : level === 2 ? "h2" : "h3";
  return (
- <div className={cn("mb-6 flex flex-wrap items-end justify-between gap-3", className)}>
+ <div
+  {...(reveal ? { "data-reveal": "" } : {})}
+  className={cn("mb-8 flex flex-wrap items-end justify-between gap-4 md:mb-10", className)}
+ >
   <div className="max-w-2xl">
-  {kicker && <p className="kicker mb-2">{kicker}</p>}
-  <Heading className={level === 1 ? "text-3xl md:text-4xl leading-tight" : "text-2xl md:text-[1.75rem] leading-tight"}>{title}</Heading>
-  {description && <p className="mt-2 text-text-muted">{description}</p>}
+  {kicker && (
+   <p className="kicker mb-3 flex items-center gap-2.5">
+   <span aria-hidden="true" className="h-px w-6 bg-accent" />
+   {kicker}
+   </p>
+  )}
+  <Heading className={level === 1 ? "text-3xl md:text-4xl" : "text-2xl md:text-3xl"}>{title}</Heading>
+  {description && <p className="mt-3 text-text-muted">{description}</p>}
   </div>
   {action && <div className="shrink-0">{action}</div>}
  </div>
@@ -81,5 +91,5 @@ export function SectionHeader({
 }
 
 export function Skeleton({ className }: { className?: string }) {
- return <div className={cn("animate-pulse rounded-sm bg-surface-muted", className)} />;
+ return <div className={cn("animate-pulse rounded-md bg-surface-muted", className)} />;
 }

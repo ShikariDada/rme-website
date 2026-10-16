@@ -17,7 +17,7 @@ export function Accordion({
  <div className={cn("divide-y divide-border rounded-lg border border-border bg-surface", className)}>
   {items.map((item) => (
   <details key={item.id} className="group px-4 md:px-5 py-1">
-   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-3 text-15 font-medium marker:hidden [&::-webkit-details-marker]:hidden">
+   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-3.5 text-15 font-semibold marker:hidden transition-colors hover:text-accent-hover [&::-webkit-details-marker]:hidden">
    {item.question}
    <svg
     width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"

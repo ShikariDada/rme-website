@@ -282,7 +282,7 @@ export function QuantityCalculatorEmbed({
     {rows.map((row, i) => (
     <div
      key={row.id}
-     className="rounded-sm border border-border bg-surface-muted/40 p-3"
+     className="rounded-md border border-border bg-surface-muted/40 p-3"
     >
      <p className="mb-2 text-sm font-medium">Surface {i + 1}</p>
      <div className="flex items-start gap-2">
@@ -445,7 +445,7 @@ export function QuantityCalculatorEmbed({
   </form>
 
   {result && (
-  <div className="mt-4 max-w-xl rounded-sm border border-border bg-surface p-4">
+  <div className="mt-4 max-w-xl rounded-md border border-border bg-surface p-4">
    <h3 className="text-sm font-semibold uppercase tracking-wide text-text-muted">
    Estimated quantity
    </h3>

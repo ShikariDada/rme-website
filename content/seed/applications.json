@@ -5,7 +5,7 @@
     "slug": "bathroom",
     "kind": "room",
     "image": {
-      "url": "/textures/wall-gloss-grey-face-1.png",
+      "url": "/textures/wall-gloss-grey-face-1.webp",
       "alt": "Bathroom wall surface, gloss grey ceramic",
       "kind": "product",
       "rightsStatus": "owned"
@@ -22,7 +22,7 @@
     "slug": "kitchen",
     "kind": "room",
     "image": {
-      "url": "/textures/marble-bianco-face-3.png",
+      "url": "/textures/marble-bianco-face-3.webp",
       "alt": "Kitchen floor surface, marble-look vitrified",
       "kind": "product",
       "rightsStatus": "owned"
@@ -39,7 +39,7 @@
     "slug": "living-room",
     "kind": "room",
     "image": {
-      "url": "/textures/marble-emperador-face-2.png",
+      "url": "/textures/marble-emperador-face-2.webp",
       "alt": "Living-room surface, warm brown marble-look porcelain",
       "kind": "product",
       "rightsStatus": "owned"
@@ -56,7 +56,7 @@
     "slug": "bedroom",
     "kind": "room",
     "image": {
-      "url": "/textures/wood-oak-face-1.png",
+      "url": "/textures/wood-oak-face-1.webp",
       "alt": "Bedroom surface, wood-look porcelain strip",
       "kind": "product",
       "rightsStatus": "owned"
@@ -72,7 +72,7 @@
     "slug": "outdoor",
     "kind": "use-case",
     "image": {
-      "url": "/textures/outdoor-antiskid-face-1.png",
+      "url": "/textures/outdoor-antiskid-face-1.webp",
       "alt": "Outdoor surface, textured anti-skid tile",
       "kind": "product",
       "rightsStatus": "owned"
@@ -89,7 +89,7 @@
     "slug": "elevation",
     "kind": "surface",
     "image": {
-      "url": "/textures/porcelain-concrete-face-2.png",
+      "url": "/textures/porcelain-concrete-face-2.webp",
       "alt": "Facade surface, concrete-look porcelain",
       "kind": "product",
       "rightsStatus": "owned"

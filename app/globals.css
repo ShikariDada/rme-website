@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "./tailwind-safelist.css";
-@source inline("text-[13px] min-h-[88vh] tracking-[0.12em]");
+@source inline("text-[13px] tracking-[0.12em]");
 
 /* Explicit sources: automatic detection silently drops arbitrary utilities
    in static-export builds (verified: text-[13px] and 13 other utilities were
@@ -14,39 +14,60 @@
 
 /*
  * Design tokens — docs/DESIGN_DIRECTION.md is the single source of truth.
- * Centralised: components must use these tokens, never raw hex values.
+ * Language: cool gallery neutrals + near-black ink + brass accent, bold
+ * grotesque headlines with a high-contrast Didone for editorial moments.
+ * Verified against varmora.com and somanyceramics.com (2026-10).
  */
 
 :root {
-  --color-bg: #F4F0E8;
-  --color-surface: #FFFFFF;
-  --color-surface-muted: #E9E3D7;
-  --color-text: #171512;
-  --color-text-muted: #6B655C;
-  --color-border: #D8D1C3;
-  --color-accent: #6E4F28;
-  --color-accent-hover: #573F1D;
-  --color-accent-soft: #EDE6D8;
-  --color-accent-2: #A4634A;
-  --color-danger: #9C3D2E;
-  --color-success: #4A6741;
-  --color-focus: #4A67A1;
-  --color-ink-soft: #2E2A24;
-  --color-ink: #171512;
+  --color-bg: #f6f5f3;
+  --color-surface: #ffffff;
+  --color-surface-muted: #ecebe7;
+  --color-text: #14161a;
+  --color-text-muted: #6b7076;
+  --color-border: #e2e0db;
+  --color-accent: #a5854a;
+  --color-accent-hover: #8a6b36;
+  --color-accent-soft: #f2ecdf;
+  --color-accent-2: #8a6b36;
+  --color-danger: #b3261e;
+  --color-success: #2f7d4f;
+  --color-focus: #2563a8;
+  --color-ink: #101214;
+  --color-ink-soft: #22262b;
 
-  --radius-sm: 2px;
-  --radius-md: 2px;
-  --radius-lg: 4px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.33, 0.9, 0.35, 1);
+  --dur-fast: 180ms;
+  --dur-med: 360ms;
+  --dur-slow: 700ms;
 }
 
 @utility min-h-hero {
-  min-height: 88vh;
+  min-height: 92svh;
 }
 
 @utility max-w-92pct {
   max-width: 92%;
 }
 
+@utility grid-cols-contact {
+  grid-template-columns: minmax(0, 1fr) 20rem;
+}
+@utility grid-cols-label {
+  grid-template-columns: 1fr auto;
+}
+@utility grid-cols-price {
+  grid-template-columns: minmax(0, 1fr) auto auto;
+}
+@utility grid-cols-dims {
+  grid-template-columns: 1fr 1fr auto auto;
+}
 @utility grid-cols-calc {
   grid-template-columns: 1fr 6rem auto;
 }
@@ -57,32 +78,38 @@
 @theme {
   /* Static tokens: theme-based utilities SHIP in production builds,
        unlike bracket utilities (verified). */
-  --text-display: 3.5rem;
+  --text-display: 4rem;
   --text-23px: 1.4375rem;
   --text-h1: 2.75rem;
-  --text-h2: 2rem;
+  --text-h2: 2.25rem;
   --text-13: 0.8125rem;
+  --text-14: 0.875rem;
   --aspect-43: 4 / 3;
   --aspect-45: 4 / 5;
   --aspect-169: 16 / 9;
+  --aspect-32: 3 / 2;
   --tracking-wide2: 0.02em;
   --text-15: 0.9375rem;
-  --tracking-display: -0.02em;
-  --leading-hero: 1.05;
-  --leading-h2: 1.15;
+  --tracking-display: -0.025em;
+  --tracking-serif: -0.01em;
+  --leading-hero: 1;
+  --leading-h2: 1.12;
   --text-11: 0.6875rem;
   --text-12: 0.75rem;
   --text-h3: 1.375rem;
-  --tracking-kicker: 0.12em;
+  --tracking-kicker: 0.14em;
   --tracking-badge: 0.08em;
-  --shadow-card: 0 2px 8px rgba(23, 21, 18, 0.06);
-  --shadow-dialog: 0 8px 24px rgba(23, 21, 18, 0.12);
-  --color-wa: #1FA855;
-  --color-wa-dark: #178A45;
-  --color-danger-soft: rgba(156, 61, 46, 0.1);
-  --color-paper: #F4F0E8;
-  --color-ink: #171512;
-  --color-ink-soft: #2E2A24;
+  --shadow-card: 0 1px 2px rgba(16, 18, 20, 0.05), 0 12px 32px -16px rgba(16, 18, 20, 0.18);
+  --shadow-raise: 0 2px 6px rgba(16, 18, 20, 0.06), 0 28px 56px -24px rgba(16, 18, 20, 0.32);
+  --shadow-nav: 0 1px 2px rgba(16, 18, 20, 0.05), 0 16px 40px -20px rgba(16, 18, 20, 0.28);
+  --shadow-dialog: 0 24px 64px -24px rgba(16, 18, 20, 0.45);
+  --color-wa: #1fa855;
+  --color-wa-dark: #178a45;
+  --color-danger-soft: rgba(179, 38, 30, 0.08);
+  --color-paper: #f6f5f3;
+  --color-ink: #101214;
+  --color-ink-soft: #22262b;
+  --color-canvas: #0e1013;
 }
 
 @theme inline {
@@ -103,26 +130,32 @@
   --radius-sm: var(--radius-sm);
   --radius-md: var(--radius-md);
   --radius-lg: var(--radius-lg);
+  --radius-pill: var(--radius-pill);
 
-  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
-  --font-body: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-bodoni), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-albert), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --text-xs: 0.75rem;
   --text-xs--line-height: 1rem;
   --text-sm: 0.875rem;
-  --text-sm--line-height: 1.25rem;
+  --text-sm--line-height: 1.3rem;
   --text-base: 1rem;
-  --text-base--line-height: 1.5rem;
+  --text-base--line-height: 1.6;
   --text-lg: 1.125rem;
-  --text-lg--line-height: 1.75rem;
+  --text-lg--line-height: 1.55;
   --text-xl: 1.375rem;
-  --text-xl--line-height: 1.875rem;
+  --text-xl--line-height: 1.35;
   --text-2xl: 1.75rem;
-  --text-2xl--line-height: 2.125rem;
-  --text-3xl: clamp(2.125rem, 5vw, 3.5rem);
-  --text-3xl--line-height: 1.1;
-  --text-hero: clamp(2.625rem, 7vw, 4.875rem);
-  --text-hero--line-height: 1.04;
+  --text-2xl--line-height: 1.2;
+  --text-3xl: clamp(2.25rem, 5vw, 3.5rem);
+  --text-3xl--line-height: 1.05;
+  --text-hero: clamp(2.75rem, 7.5vw, 5.25rem);
+  --text-hero--line-height: 1;
+
+  /* Motion curve for utility classes (transition-[...] uses the default). */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --default-transition-duration: 220ms;
+  --default-transition-timing-function: cubic-bezier(0.33, 0.9, 0.35, 1);
 }
 
 html {
@@ -147,25 +180,48 @@ body {
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-feature-settings: "ss01" on;
 }
 
-h1, h2, .font-display, h3.font-display {
-  font-family: var(--font-display);
-  font-weight: 560;
+/* Headlines: bold grotesque (competitor-true), tight. Serif reserved for
+   section titles + editorial moments via h2 and .font-display. */
+h1 {
+  font-family: var(--font-body);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+}
+
+h2 {
+  font-family: var(--font-body);
+  font-weight: 750;
   letter-spacing: -0.02em;
-  font-variation-settings: "opsz" 144, "SOFT" 0, "WONK" 0;
+  line-height: 1.1;
 }
 
-/* Kicker: Inter 500 12px uppercase, tracked, muted. Used above display headings. */
+h3,
+h4 {
+  font-family: var(--font-body);
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 520;
+  letter-spacing: -0.01em;
+}
+
+/* Kicker: Albert 500 12px uppercase, tracked, muted. */
 .kicker {
   font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 0.75rem;
+  font-weight: 600;
+  font-size: 0.6875rem;
   line-height: 1.4;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-text-muted);
 }
@@ -175,11 +231,157 @@ h1, h2, .font-display, h3.font-display {
   font-feature-settings: "tnum";
 }
 
+/* ------------------------------------------------------------------ motion */
+
+/* Scroll reveal: gated behind html[data-js] so content is never hidden
+   without JavaScript, and back-navigation restores never flash empty. */
+[data-reveal],
+[data-reveal-grid] > * {
+  transition:
+    opacity var(--dur-slow) var(--ease-expo),
+    transform var(--dur-slow) var(--ease-expo);
+}
+html[data-js] [data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+html[data-js] [data-reveal][data-in] {
+  opacity: 1;
+  transform: none;
+}
+html[data-js] [data-reveal-grid] > * {
+  opacity: 0;
+  transform: translateY(18px);
+}
+html[data-js] [data-reveal-grid][data-in] > * {
+  opacity: 1;
+  transform: none;
+}
+[data-reveal-grid][data-in] > *:nth-child(1) { transition-delay: 0ms; }
+[data-reveal-grid][data-in] > *:nth-child(2) { transition-delay: 70ms; }
+[data-reveal-grid][data-in] > *:nth-child(3) { transition-delay: 140ms; }
+[data-reveal-grid][data-in] > *:nth-child(4) { transition-delay: 210ms; }
+[data-reveal-grid][data-in] > *:nth-child(5) { transition-delay: 280ms; }
+[data-reveal-grid][data-in] > *:nth-child(6) { transition-delay: 350ms; }
+[data-reveal-grid][data-in] > *:nth-child(7) { transition-delay: 420ms; }
+[data-reveal-grid][data-in] > *:nth-child(8) { transition-delay: 490ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal-grid] > * {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Hero: the photograph settles slowly on load; copy rises in sequence. */
+@keyframes hero-settle {
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.hero-media {
+  animation: hero-settle 2.4s var(--ease-expo) both;
+}
+.rise {
+  animation: rise-in 0.9s var(--ease-expo) both;
+  animation-delay: var(--rise-delay, 0ms);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-media,
+  .rise {
+    animation: none;
+  }
+}
+
+/* Inline link with a nudging arrow. */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: color var(--dur-fast) var(--ease-soft);
+}
+.link-arrow:hover {
+  color: var(--color-accent-hover);
+}
+.link-arrow .arrow {
+  display: inline-flex;
+  transition: transform var(--dur-med) var(--ease-expo);
+}
+.link-arrow:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Frosted chips over photography (functional legibility, not decoration). */
+.glass-chip {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  color: #ffffff;
+  transition: background var(--dur-fast) var(--ease-soft), transform var(--dur-fast) var(--ease-soft);
+}
+.glass-chip:hover {
+  background: rgba(255, 255, 255, 0.24);
+  transform: translateY(-1px);
+}
+
+/* Cross-document view transitions (Chromium): quiet fade + lift per navigation. */
+@view-transition {
+  navigation: auto;
+}
+@keyframes vt-out {
+  to {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+@keyframes vt-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+::view-transition-old(root) {
+  animation: vt-out 160ms ease both;
+}
+::view-transition-new(root) {
+  animation: vt-in 320ms var(--ease-expo) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+
+/* Floating nav: deeper shadow once the page moves. */
+html[data-scrolled="true"] .nav-bar {
+  box-shadow: 0 2px 8px rgba(16, 18, 20, 0.08), 0 28px 60px -28px rgba(16, 18, 20, 0.4);
+}
+
 /* Visible, consistent keyboard focus (WCAG 2.2). */
 :focus-visible {
   outline: 2px solid var(--color-focus);
   outline-offset: 2px;
-  border-radius: 2px;
+  border-radius: 6px;
 }
 
 /* Utility for visually hidden but screen-reader available content. */
@@ -206,11 +408,34 @@ h1, h2, .font-display, h3.font-display {
    NOTE: explicit rule (not a Tailwind arbitrary utility) — the utility was
    missing from production export CSS chunks. */
 .visualizer-root {
-  height: calc(100dvh - 4rem);
+  height: 100dvh;
+}
+body:has(.visualizer-root) header {
+  display: none;
+}
+body:has(.visualizer-root) .nav-bar {
+  display: none;
 }
 @media (max-width: 767px) {
   main:has(> .visualizer-root) {
     padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+/* Pages clear the floating nav; full-bleed hero pages start flush underneath it. */
+main {
+  padding-top: 5.25rem;
+}
+main:has(> section.min-h-hero) {
+  padding-top: 0;
+}
+@media (min-width: 768px) {
+  main {
+    padding-top: 6rem;
+  }
+  main:has(> section.min-h-hero) {
+    padding-top: 0;
   }
 }
 

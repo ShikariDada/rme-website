@@ -78,22 +78,22 @@ export function Dialog({
   }}
   className={cn(
   "m-auto w-w-dialog max-w-lg bg-surface text-text backdrop:bg-black/40",
-  "border border-border rounded-sm p-0 open:animate-none",
+  "border border-border rounded-md p-0 open:animate-none shadow-dialog",
   "shadow-dialog",
   isSheet &&
-   "md:m-auto max-md:m-0 max-md:mt-auto max-md:max-w-none max-md:w-full max-md:rounded-b-none max-md:rounded-t-sm",
+   "md:m-auto max-md:m-0 max-md:mt-auto max-md:max-w-none max-md:w-full max-md:rounded-b-none max-md:rounded-t-md",
   className
   )}
  >
   <div className={cn("flex items-center justify-between gap-4 px-5 pt-4", isSheet && "pb-1")}>
-  <h2 id="dialog-title" className="text-lg font-display">
+  <h2 id="dialog-title" className="text-lg">
    {title}
   </h2>
   <button
    type="button"
    onClick={handleClose}
    aria-label="Close"
-   className="-mr-2 flex h-11 w-11 items-center justify-center rounded-sm text-text-muted hover:bg-surface-muted"
+   className="-mr-2 flex h-10 w-10 items-center justify-center rounded-pill text-text-muted hover:bg-surface-muted"
   >
    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
    <path d="M18 6 6 18M6 6l12 12" />

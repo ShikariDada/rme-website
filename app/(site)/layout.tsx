@@ -3,6 +3,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { StickyMobileContactBar } from "@/components/layout/StickyMobileContactBar";
 import { WhatsAppBubble } from "@/components/layout/WhatsAppBubble";
+import { SiteMotion } from "@/components/motion/SiteMotion";
 import { contentSource } from "@/lib/data";
 import { buildWhatsAppUrl, buildGeneralEnquiryMessage } from "@/lib/whatsapp";
 
@@ -19,6 +20,7 @@ export default async function SiteLayout({
 
  return (
  <div className="flex min-h-dvh flex-col">
+  <SiteMotion />
   <a href="#main-content" className="sr-only-focusable absolute left-2 top-2 z-50 rounded-md bg-accent px-4 py-2 text-white">
   Skip to content
   </a>

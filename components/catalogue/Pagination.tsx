@@ -11,7 +11,7 @@ function pageHref(state: CatalogueFilterState, page: number): string {
 }
 
 const linkClass =
- "inline-flex h-11 min-w-11 items-center justify-center rounded-sm border border-border bg-surface px-3 text-sm font-medium hover:bg-surface-muted";
+ "inline-flex h-11 min-w-11 items-center justify-center rounded-md border border-border bg-surface px-3 text-sm font-medium hover:bg-surface-muted";
 const disabledClass =
  "inline-flex h-11 items-center rounded-sm px-3 text-sm text-text-muted/60";
 

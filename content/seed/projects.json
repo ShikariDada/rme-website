@@ -8,7 +8,7 @@
     "summary": "A full-scale floor display in our showroom laid with the Bianco Carrara 600x1200 in running bond, so you can walk on the material before deciding. Sample display imagery. Replace with real project photography once available.",
     "images": [
       {
-        "url": "/textures/marble-bianco-face-2.png",
+        "url": "/textures/marble-bianco-face-2.webp",
         "alt": "Full-scale marble-look floor display surface",
         "kind": "installed",
         "width": 1600,
@@ -33,7 +33,7 @@
     "summary": "Demonstration bathroom combining an anti-skid style floor with a gloss wall tile, showing grout colour choices under warm lighting. Sample display imagery.",
     "images": [
       {
-        "url": "/textures/wall-gloss-grey-face-1.png",
+        "url": "/textures/wall-gloss-grey-face-1.webp",
         "alt": "Gloss grey wall tile surface display",
         "kind": "installed",
         "width": 1600,
@@ -58,7 +58,7 @@
     "summary": "Kitchen vignette pairing the concrete-grey floor tile with a simple gloss wall tile and granite counter suggestion. Sample display imagery.",
     "images": [
       {
-        "url": "/textures/porcelain-concrete-face-1.png",
+        "url": "/textures/porcelain-concrete-face-1.webp",
         "alt": "Concrete-look floor tile surface display",
         "kind": "installed",
         "width": 1600,

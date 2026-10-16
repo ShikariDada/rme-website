@@ -73,7 +73,7 @@ export function SurfacePanel({
  const cornerInputs = (
  <div className="mt-2 space-y-3">
   {(["Top left", "Top right", "Bottom right", "Bottom left"] as const).map((label, i) => (
-  <div key={label} className="grid grid-cols-grid-cols-dims items-end gap-2">
+  <div key={label} className="grid grid-cols-dims items-end gap-2">
    <span className="text-sm">{label}</span>
    <div>
    <label htmlFor={`cx-${i}`} className="sr-only">{label} X %</label>

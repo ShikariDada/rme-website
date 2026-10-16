@@ -6,22 +6,22 @@ type Variant = "primary" | "secondary" | "text" | "destructive" | "whatsapp";
 type Size = "sm" | "md" | "lg";
 
 const base =
- "inline-flex items-center justify-center gap-2 font-medium uppercase tracking-wide2 rounded-sm transition-colors duration-200 disabled:opacity-50 disabled:pointer-events-none select-none";
+ "inline-flex items-center justify-center gap-2 font-semibold rounded-pill transition-all duration-300 ease-out-expo disabled:opacity-50 disabled:pointer-events-none select-none";
 
 const variants: Record<Variant, string> = {
  primary:
- "bg-accent text-bg hover:bg-accent-hover active:bg-accent-hover",
+ "bg-ink text-white hover:bg-ink-soft hover:-translate-y-0.5 hover:shadow-raise active:translate-y-0",
  secondary:
- "bg-transparent text-text border border-text hover:bg-text hover:text-bg active:bg-text active:text-bg",
+ "bg-transparent text-text border border-text/25 hover:border-text hover:bg-text hover:text-white",
  text: "text-accent underline underline-offset-4 decoration-border hover:decoration-accent hover:text-accent-hover",
- destructive: "bg-danger text-bg hover:opacity-90",
- whatsapp: "bg-wa text-white hover:bg-wa-dark active:bg-wa-dark",
+ destructive: "bg-danger text-white hover:opacity-90",
+ whatsapp: "bg-wa text-white hover:bg-wa-dark hover:-translate-y-0.5 hover:shadow-raise",
 };
 
 const sizes: Record<Size, string> = {
- sm: "text-xs h-10 px-4 min-w-9",
- md: "text-13 h-12 px-7 min-w-11",
- lg: "text-13 h-14 px-8",
+ sm: "text-13 h-10 px-5 min-w-9",
+ md: "text-sm h-12 px-6 min-w-11",
+ lg: "text-sm h-14 px-8",
 };
 
 export function buttonClasses(

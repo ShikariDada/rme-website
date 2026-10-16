@@ -40,7 +40,7 @@
         "alt": "Bianco Carrara Gloss Vitrified Tile 600x1200, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/marble-bianco-face-1.png",
+        "url": "/textures/marble-bianco-face-1.webp",
         "kind": "texture",
         "width": 1024,
         "height": 512
@@ -49,7 +49,7 @@
         "alt": "Bianco Carrara Gloss Vitrified Tile 600x1200, product photo",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/marble-bianco-face-2.png",
+        "url": "/textures/marble-bianco-face-2.webp",
         "kind": "closeup",
         "width": 1024,
         "height": 512
@@ -137,7 +137,7 @@
         "alt": "Bianco Carrara Matt Vitrified Tile 600x1200, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/marble-bianco-face-3.png",
+        "url": "/textures/marble-bianco-face-3.webp",
         "kind": "texture",
         "width": 1024,
         "height": 512
@@ -216,7 +216,7 @@
         "alt": "Emperador Brown Polished Tile 800x1600, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/marble-emperador-face-1.png",
+        "url": "/textures/marble-emperador-face-1.webp",
         "kind": "texture",
         "width": 1024,
         "height": 512
@@ -294,7 +294,7 @@
         "alt": "Emerald Green Polished Tile 600x1200, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/marble-emerald-face-1.png",
+        "url": "/textures/marble-emerald-face-1.webp",
         "kind": "texture",
         "width": 1024,
         "height": 512
@@ -371,7 +371,7 @@
         "alt": "Portoro Black Gold Tile 800x1600, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/granite-steel-grey-face-2.png",
+        "url": "/textures/granite-steel-grey-face-2.webp",
         "kind": "texture",
         "width": 1024,
         "height": 1024
@@ -447,7 +447,7 @@
         "alt": "Onyx Ice Gloss Tile 600x1200, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/marble-emerald-face-2.png",
+        "url": "/textures/marble-emerald-face-2.webp",
         "kind": "texture",
         "width": 1024,
         "height": 512
@@ -516,7 +516,7 @@
         "alt": "Ivory Matt Vitrified Floor Tile 600x600, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/vitrified-ivory-face-1.png",
+        "url": "/textures/vitrified-ivory-face-1.webp",
         "kind": "texture",
         "width": 1024,
         "height": 1024
@@ -593,7 +593,7 @@
         "alt": "Concrete Grey Matt Tile 600x600, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/porcelain-concrete-face-1.png",
+        "url": "/textures/porcelain-concrete-face-1.webp",
         "kind": "texture",
         "width": 1024,
         "height": 1024
@@ -669,7 +669,7 @@
         "alt": "Steel Grey Gloss Floor Tile 600x600, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/granite-steel-grey-face-1.png",
+        "url": "/textures/granite-steel-grey-face-1.webp",
         "kind": "texture",
         "width": 1024,
         "height": 1024
@@ -735,7 +735,7 @@
         "alt": "Desert Brown Rustic Tile 600x600, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/granite-desert-brown-face-1.png",
+        "url": "/textures/granite-desert-brown-face-1.webp",
         "kind": "texture",
         "width": 1024,
         "height": 1024
@@ -800,7 +800,7 @@
         "alt": "Oak Wood-Look Strip Tile 300x900, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/wood-oak-face-1.png",
+        "url": "/textures/wood-oak-face-1.webp",
         "kind": "texture",
         "width": 340,
         "height": 1024
@@ -877,7 +877,7 @@
         "alt": "Outdoor Anti-Skid Beige Tile 600x1200, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/outdoor-antiskid-face-1.png",
+        "url": "/textures/outdoor-antiskid-face-1.webp",
         "kind": "texture",
         "width": 1024,
         "height": 512
@@ -959,7 +959,7 @@
         "alt": "Kitchen Wall Gloss Grey Tile 300x600, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/wall-gloss-grey-face-1.png",
+        "url": "/textures/wall-gloss-grey-face-1.webp",
         "kind": "texture",
         "width": 512,
         "height": 1024
@@ -1023,7 +1023,7 @@
         "alt": "XL Slab Grey Polished 1200x2400, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/porcelain-concrete-face-2.png",
+        "url": "/textures/porcelain-concrete-face-2.webp",
         "kind": "texture",
         "width": 1024,
         "height": 1024
@@ -1102,7 +1102,7 @@
         "alt": "Terracotta Matt Tile 600x600, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/granite-desert-brown-face-2.png",
+        "url": "/textures/granite-desert-brown-face-2.webp",
         "kind": "texture",
         "width": 1024,
         "height": 1024
@@ -1165,7 +1165,7 @@
         "alt": "Makrana White Marble, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/marble-bianco-face-2.png",
+        "url": "/textures/marble-bianco-face-2.webp",
         "kind": "texture",
         "width": 1024,
         "height": 512
@@ -1237,7 +1237,7 @@
         "alt": "Indian Statuario Marble, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/marble-bianco-face-4.png",
+        "url": "/textures/marble-bianco-face-4.webp",
         "kind": "texture",
         "width": 1024,
         "height": 512
@@ -1299,7 +1299,7 @@
         "alt": "Rainforest Brown Marble, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/marble-emperador-face-3.png",
+        "url": "/textures/marble-emperador-face-3.webp",
         "kind": "texture",
         "width": 1024,
         "height": 512
@@ -1357,7 +1357,7 @@
         "alt": "Pink Onyx Marble, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/marble-emperador-face-4.png",
+        "url": "/textures/marble-emperador-face-4.webp",
         "kind": "texture",
         "width": 1024,
         "height": 512
@@ -1418,7 +1418,7 @@
         "alt": "Black Galaxy Granite, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/granite-steel-grey-face-1.png",
+        "url": "/textures/granite-steel-grey-face-1.webp",
         "kind": "texture",
         "width": 1024,
         "height": 1024
@@ -1479,7 +1479,7 @@
         "alt": "Steel Grey Granite, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/granite-steel-grey-face-2.png",
+        "url": "/textures/granite-steel-grey-face-2.webp",
         "kind": "texture",
         "width": 1024,
         "height": 1024
@@ -1541,7 +1541,7 @@
         "alt": "Kashmir White Granite, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/vitrified-ivory-face-2.png",
+        "url": "/textures/vitrified-ivory-face-2.webp",
         "kind": "texture",
         "width": 1024,
         "height": 1024
@@ -1603,7 +1603,7 @@
         "alt": "Tan Brown Granite, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
-        "url": "/textures/granite-desert-brown-face-1.png",
+        "url": "/textures/granite-desert-brown-face-1.webp",
         "kind": "texture",
         "width": 1024,
         "height": 1024

@@ -24,7 +24,7 @@ export default async function PrivacyPage() {
 
   <div className="mt-8 space-y-8 text-base leading-relaxed">
   <section>
-   <h2 className="font-display text-xl">What we collect, and why</h2>
+   <h2 className="text-xl">What we collect, and why</h2>
    <p className="mt-2 text-text-muted">
    The quote form asks for your name, phone number, city/locality and
    the details of your enquiry. We use exactly this to respond to you,
@@ -36,7 +36,7 @@ export default async function PrivacyPage() {
   </section>
 
   <section>
-   <h2 className="font-display text-xl">WhatsApp</h2>
+   <h2 className="text-xl">WhatsApp</h2>
    <p className="mt-2 text-text-muted">
    Most conversations happen on WhatsApp. Those messages, and any room
    photos you attach there, live in WhatsApp&apos;s own system under
@@ -46,7 +46,7 @@ export default async function PrivacyPage() {
   </section>
 
   <section>
-   <h2 className="font-display text-xl">The room visualizer</h2>
+   <h2 className="text-xl">The room visualizer</h2>
    <p className="mt-2 text-text-muted">
    The &quot;see it in your room&quot; tool processes your photo
    locally in your browser. Your photo is not uploaded to us. Saved
@@ -56,7 +56,7 @@ export default async function PrivacyPage() {
   </section>
 
   <section>
-   <h2 className="font-display text-xl">Analytics</h2>
+   <h2 className="text-xl">Analytics</h2>
    <p className="mt-2 text-text-muted">
    We use Google Analytics 4 to understand which pages help people
    (for example, which products get viewed before a quote request).
@@ -66,7 +66,7 @@ export default async function PrivacyPage() {
   </section>
 
   <section>
-   <h2 className="font-display text-xl">Where data lives</h2>
+   <h2 className="text-xl">Where data lives</h2>
    <ul className="mt-2 list-disc space-y-1.5 pl-5 text-text-muted">
    <li>Quote requests: sent as email to the showroom inbox; kept only as long as useful to serve you, deleted on request.</li>
    <li>Hosting: Vercel (or our chosen host) serving this website.</li>
@@ -77,7 +77,7 @@ export default async function PrivacyPage() {
   </section>
 
   <section>
-   <h2 className="font-display text-xl">Your choices</h2>
+   <h2 className="text-xl">Your choices</h2>
    <p className="mt-2 text-text-muted">
    Ask us what we hold about your enquiry, or ask us to delete the
    correspondence: {settings.quoteEmail}. We will do it promptly,

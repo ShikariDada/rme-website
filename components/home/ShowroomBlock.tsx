@@ -16,8 +16,8 @@ export function ShowroomBlock({ settings }: { settings: SiteSettings }) {
  .join(" · ");
 
  return (
- <section className="border-t border-border">
-  <Container className="py-14 md:py-24">
+ <section data-reveal="" className="border-t border-border">
+  <Container className="py-16 md:py-28">
   <SectionHeader
    kicker="Visit"
    title="See the material in person"
@@ -39,10 +39,10 @@ export function ShowroomBlock({ settings }: { settings: SiteSettings }) {
     href={settings.googleMapsUrl}
     target="_blank"
     rel="noopener noreferrer"
-    className="group mt-4 inline-flex items-center gap-2 text-13 font-medium uppercase tracking-wide2 text-accent"
+    className="link-arrow mt-4"
    >
     Get directions
-    <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+    <span aria-hidden="true" className="arrow">→</span>
    </a>
    </div>
    <div>
@@ -63,7 +63,7 @@ export function ShowroomBlock({ settings }: { settings: SiteSettings }) {
    <div className="mt-3 flex flex-col gap-3">
     <a
     href={`tel:${settings.phone}`}
-    className="tnum inline-flex h-12 items-center justify-center rounded-sm border border-text px-6 text-13 font-medium uppercase tracking-wide2 text-text transition-colors hover:bg-text hover:text-bg"
+    className="tnum inline-flex h-12 items-center justify-center rounded-pill border border-text/25 px-6 text-sm font-semibold text-text transition-all duration-300 ease-out-expo hover:-translate-y-0.5 hover:border-text hover:bg-text hover:text-white"
     >
     Call {settings.phoneDisplay ?? settings.phone}
     </a>
@@ -71,7 +71,7 @@ export function ShowroomBlock({ settings }: { settings: SiteSettings }) {
     href={`https://wa.me/${settings.whatsappNumber.replace(/\D/g, "")}`}
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex h-12 items-center justify-center gap-2 rounded-sm bg-wa px-6 text-13 font-medium uppercase tracking-wide2 text-white transition-colors hover:bg-wa-dark"
+    className="inline-flex h-12 items-center justify-center gap-2 rounded-pill bg-wa px-6 text-sm font-semibold text-white transition-all duration-300 ease-out-expo hover:-translate-y-0.5 hover:bg-wa-dark hover:shadow-raise"
     >
     <WhatsAppIcon />
     WhatsApp us

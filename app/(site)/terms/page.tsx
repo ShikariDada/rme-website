@@ -21,7 +21,7 @@ export default async function TermsPage() {
 
   <div className="mt-8 space-y-8 text-base leading-relaxed">
   <section>
-   <h2 className="font-display text-xl">Prices and stock</h2>
+   <h2 className="text-xl">Prices and stock</h2>
    <p className="mt-2 text-text-muted">
    Website prices and stock states are indicative until confirmed by
    the showroom at the time of order. Prices carry their
@@ -31,7 +31,7 @@ export default async function TermsPage() {
    </p>
   </section>
   <section>
-   <h2 className="font-display text-xl">Natural material variation</h2>
+   <h2 className="text-xl">Natural material variation</h2>
    <p className="mt-2 text-text-muted">
    Natural marble and granite vary in shade, veining and pattern
    between lots. Photographed items are representative. For natural
@@ -40,7 +40,7 @@ export default async function TermsPage() {
    </p>
   </section>
   <section>
-   <h2 className="font-display text-xl">Quotes</h2>
+   <h2 className="text-xl">Quotes</h2>
    <p className="mt-2 text-text-muted">
    Written quotes are valid for the period stated on them (typically
    7 days for tiles, 3 days for natural stone lots). Quantities are
@@ -49,7 +49,7 @@ export default async function TermsPage() {
    </p>
   </section>
   <section>
-   <h2 className="font-display text-xl">Samples</h2>
+   <h2 className="text-xl">Samples</h2>
    <p className="mt-2 text-text-muted">
    Standard tile samples are free to take from the showroom. For
    premium slabs we may ask for a refundable deposit against return
@@ -57,7 +57,7 @@ export default async function TermsPage() {
    </p>
   </section>
   <section>
-   <h2 className="font-display text-xl">Delivery</h2>
+   <h2 className="text-xl">Delivery</h2>
    <p className="mt-2 text-text-muted">
    Delivery around {settings.address.city} and nearby towns is
    arranged case by case, because cost depends on distance, quantity and
@@ -66,7 +66,7 @@ export default async function TermsPage() {
    </p>
   </section>
   <section>
-   <h2 className="font-display text-xl">Website content</h2>
+   <h2 className="text-xl">Website content</h2>
    <p className="mt-2 text-text-muted">
    Product photography, guides and imagery on this site belong to the
    business or their stated owners and may not be republished without
@@ -75,7 +75,7 @@ export default async function TermsPage() {
    </p>
   </section>
   <section>
-   <h2 className="font-display text-xl">Governing law</h2>
+   <h2 className="text-xl">Governing law</h2>
    <p className="mt-2 text-text-muted">
    Transactions are governed by the laws of India, with disputes
    handled in the courts of {settings.address.city}, {settings.address.state}.

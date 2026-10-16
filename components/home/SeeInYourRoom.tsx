@@ -38,14 +38,14 @@ export function SeeInYourRoom({ settings }: { settings: SiteSettings }) {
   <div className="flex items-center bg-surface-muted md:order-1">
   <div className="max-w-130 px-6 py-14 md:px-16 md:py-20">
    <p className="kicker">See it in your room</p>
-   <h2 className="mt-4 font-display text-h2 leading-h2">
+   <h2 className="mt-4 text-2xl md:text-3xl">
    Preview the material{" "}
    <span className="text-accent-2">before</span> you commit
    </h2>
    <ol className="mt-7 space-y-6">
    {steps.map((s, i) => (
     <li key={s.title} className="flex gap-5">
-    <span className="tnum shrink-0 font-display text-15 text-accent" aria-hidden="true">
+    <span className="tnum shrink-0 text-15 font-bold text-accent" aria-hidden="true">
      {String(i + 1).padStart(2, "0")}
     </span>
     <div>
@@ -58,7 +58,7 @@ export function SeeInYourRoom({ settings }: { settings: SiteSettings }) {
    <div className="mt-8 flex flex-col gap-3 sm:flex-row">
    <Link
     href="/visualizer"
-    className="inline-flex h-12 items-center justify-center rounded-sm bg-accent px-7 text-13 font-medium uppercase tracking-wide2 text-bg transition-colors duration-200 hover:bg-accent-hover"
+    className="inline-flex h-12 items-center justify-center rounded-pill bg-ink px-7 text-sm font-semibold text-white transition-all duration-300 ease-out-expo hover:-translate-y-0.5 hover:bg-ink-soft hover:shadow-raise"
    >
     Try the room visualizer
    </Link>
@@ -66,7 +66,7 @@ export function SeeInYourRoom({ settings }: { settings: SiteSettings }) {
     href={photoHref}
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex h-12 items-center justify-center rounded-sm border border-text px-7 text-13 font-medium uppercase tracking-wide2 text-text transition-colors duration-200 hover:bg-text hover:text-bg"
+    className="inline-flex h-12 items-center justify-center rounded-pill border border-text/25 px-7 text-sm font-semibold text-text transition-all duration-300 ease-out-expo hover:-translate-y-0.5 hover:border-text hover:bg-text hover:text-white"
    >
     Send a photo on WhatsApp
    </a>
@@ -79,7 +79,7 @@ export function SeeInYourRoom({ settings }: { settings: SiteSettings }) {
   </div>
   <div className="relative min-h-80 md:min-h-140 md:order-2">
   <Image
-   src="/textures/marble-bianco-face-2.png"
+   src="/textures/marble-bianco-face-2.webp"
    alt="Bathroom preview generated with the room visualizer: wall and floor tile combination"
    fill
    sizes="(max-width: 768px) 100vw, 50vw"

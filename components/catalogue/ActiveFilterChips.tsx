@@ -28,7 +28,7 @@ export function ActiveFilterChips({ chips }: { chips: ActiveFilterChip[] }) {
     source_surface: "filter-chips",
    })
    }
-   className="inline-flex min-h-11 items-center gap-1.5 rounded-sm border border-border bg-surface px-3 text-sm hover:bg-surface-muted"
+   className="inline-flex min-h-11 items-center gap-1.5 rounded-md border border-border bg-surface px-3 text-sm hover:bg-surface-muted"
   >
    {chip.label}
    <svg

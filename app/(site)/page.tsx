@@ -48,7 +48,7 @@ export default async function HomePage() {
 
   {/* Editorial split — rooms (design §5.3) */}
   <EditorialSplit
-  image="/textures/marble-emperador-face-2.png"
+  image="/textures/marble-emperador-face-2.webp"
   imageAlt="Large-format warm brown marble porcelain surface, close-up crop"
   kicker="By space"
   title={
@@ -63,13 +63,13 @@ export default async function HomePage() {
   />
 
   {/* Featured collection grid (design §5.4) */}
-  <Container className="py-14 md:py-24">
+  <Container data-reveal="" className="py-16 md:py-28">
   <SectionHeader
    kicker="Ready stock"
    title="On the floor today"
    description="Exact prices and stock states on every card, verified, with the date."
    action={
-   <Link href="/products" className="text-13 font-medium uppercase tracking-wide2 text-accent hover:underline hover:underline-offset-4">
+   <Link href="/products" className="link-arrow">
     View all products →
    </Link>
    }
@@ -88,12 +88,12 @@ export default async function HomePage() {
   <PriceGuideTeaser />
 
   {featuredProjects.length > 0 && (
-  <Container className="py-14 md:py-24">
+  <Container data-reveal="" className="py-16 md:py-28">
    <SectionHeader
    kicker="Displays"
    title="What you can walk on"
    action={
-    <Link href="/projects" className="text-13 font-medium uppercase tracking-wide2 text-accent hover:underline hover:underline-offset-4">
+    <Link href="/projects" className="link-arrow">
     All displays →
     </Link>
    }
@@ -106,13 +106,13 @@ export default async function HomePage() {
   </Container>
   )}
 
-  <section className="border-y border-border bg-surface-muted">
-  <Container className="py-14 md:py-24">
+  <section data-reveal="" className="border-y border-border bg-surface-muted">
+  <Container data-reveal="" className="py-16 md:py-28">
    <SectionHeader
    kicker="Buying help"
    title="The answers our counter gives daily"
    action={
-    <Link href="/guides" className="text-13 font-medium uppercase tracking-wide2 text-accent hover:underline hover:underline-offset-4">
+    <Link href="/guides" className="link-arrow">
     All guides →
     </Link>
    }
@@ -127,7 +127,7 @@ export default async function HomePage() {
 
   <ShowroomBlock settings={settings} />
 
-  <Container className="py-14 md:py-24">
+  <Container data-reveal="" className="py-16 md:py-28">
   <SectionHeader
    kicker="Common questions"
    title="Pricing, stock, samples, delivery"
@@ -163,21 +163,21 @@ function EditorialSplit({
  flip?: boolean;
 }) {
  return (
- <section className={`grid md:grid-cols-2 ${flip ? "" : ""}`}>
-  <div className={`relative min-h-80 md:min-h-120 ${flip ? "md:order-2" : ""}`}>
+ <section data-reveal="" className="grid md:grid-cols-2">
+  <div className={`relative min-h-80 overflow-hidden md:min-h-140 ${flip ? "md:order-2" : ""}`}>
   <Image src={image} alt={imageAlt} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
   </div>
   <div className="flex items-center bg-surface-muted">
   <div className="max-w-130 px-6 py-14 md:px-16 md:py-20">
    <p className="kicker">{kicker}</p>
-   <h2 className="mt-4 font-display text-h2 leading-h2">{title}</h2>
+   <h2 className="mt-4 text-2xl md:text-3xl">{title}</h2>
    <p className="mt-5 text-base leading-relaxed text-text-muted">{copy}</p>
    <Link
    href={href}
-   className="group mt-7 inline-flex items-center gap-2 text-13 font-medium uppercase tracking-wide2 text-accent"
+   className="link-arrow mt-7"
    >
    {linkLabel}
-   <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+   <span aria-hidden="true" className="arrow">→</span>
    </Link>
   </div>
   </div>
@@ -208,18 +208,18 @@ function ServiceBand() {
  },
  ];
  return (
- <section className="border-y border-border bg-surface-muted">
-  <Container className="grid gap-10 py-14 md:grid-cols-3 md:gap-12 md:py-24">
+ <section data-reveal="" className="border-y border-border bg-surface-muted">
+  <Container data-reveal="" className="grid gap-10 py-16 md:grid-cols-3 md:gap-12 md:py-24">
   {services.map((s) => (
    <div key={s.title}>
-   <h3 className="font-display text-h3 leading-snug">{s.title}</h3>
+   <h3 className="text-xl">{s.title}</h3>
    <p className="mt-3 text-15 leading-relaxed text-text-muted">{s.copy}</p>
    <Link
     href={s.href}
-    className="group mt-5 inline-flex items-center gap-2 text-13 font-medium uppercase tracking-wide2 text-accent"
+    className="link-arrow mt-5"
    >
     {s.label}
-    <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+    <span aria-hidden="true" className="arrow">→</span>
    </Link>
    </div>
   ))}

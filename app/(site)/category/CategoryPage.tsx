@@ -41,7 +41,7 @@ export async function CategoryPage({ slug, path }: { slug: string; path: string 
    { name: category.name },
   ]}
   />
-  <div className="mt-4 grid items-start gap-6 md:grid-cols-grid-cols-label">
+  <div className="mt-4 grid items-start gap-6 md:grid-cols-label">
   <div>
    <h1 className="text-3xl leading-tight md:text-4xl">{category.name}</h1>
    <p className="mt-3 max-w-2xl text-text-muted">{category.summary}</p>

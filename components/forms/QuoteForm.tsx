@@ -215,8 +215,8 @@ export function QuoteForm({
 
  if (prepared) {
  return (
-  <div className="rounded-sm border border-border bg-surface p-6" role="status">
-  <h2 className="font-display text-xl">Enquiry prepared</h2>
+  <div className="rounded-md border border-border bg-surface p-6" role="status">
+  <h2 className="text-xl">Enquiry prepared</h2>
   <p className="mt-2 text-text-muted">
    Nothing was sent yet. Hand it over with one tap. WhatsApp is the
    fastest route; calling {settings.phoneDisplay ?? settings.phone} works too.
@@ -246,8 +246,8 @@ export function QuoteForm({
   message: buildQuoteReferenceMessage({ reference: success.reference, summary }),
  });
  return (
-  <div className="rounded-sm border border-border bg-surface p-6" role="status">
-  <h2 className="font-display text-xl">Request received</h2>
+  <div className="rounded-md border border-border bg-surface p-6" role="status">
+  <h2 className="text-xl">Request received</h2>
   <p className="mt-2 text-text-muted">
    Keep this reference for the showroom:
   </p>

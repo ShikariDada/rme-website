@@ -64,7 +64,7 @@ export function PatternPanel({
   />
   </div>
 
-  <div className="mt-4 rounded-sm border border-border bg-surface-muted/50 p-3">
+  <div className="mt-4 rounded-md border border-border bg-surface-muted/50 p-3">
   <p className="text-sm font-medium">
    {calibrated ? "Calibrated scale" : "Approximate scale"}
   </p>

@@ -64,7 +64,7 @@ export function MobileNavButton({
         aria-controls="mobile-nav"
         onClick={() => setOpen(true)}
         aria-label="Open menu"
-        className="-ml-2 flex h-11 w-11 items-center justify-center rounded-md text-paper hover:bg-paper/10"
+        className="-ml-0.5 flex h-10 w-10 items-center justify-center rounded-pill text-text hover:bg-surface-muted"
       >
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
           <path d="M4 6h16M4 12h16M4 18h16" />
@@ -84,7 +84,7 @@ export function MobileNavButton({
                     <Link
                       href={link.href}
                       onClick={() => setOpen(false)}
-                      className="flex min-h-11 items-center rounded-md px-2 text-base hover:bg-surface-muted"
+                      className="flex min-h-11 items-center rounded-sm px-3 text-base hover:bg-surface-muted"
                     >
                       {link.name}
                     </Link>
@@ -94,14 +94,14 @@ export function MobileNavButton({
             </div>
           ))}
           <div className="mt-2 flex gap-2 border-t border-border pt-4">
-            <a href={`tel:${phone}`} className="flex h-11 flex-1 items-center justify-center rounded-md border border-border font-medium">
+            <a href={`tel:${phone}`} className="flex h-11 flex-1 items-center justify-center rounded-pill border border-border font-medium">
               Call {phone}
             </a>
             <a
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-11 flex-1 items-center justify-center rounded-md bg-wa font-medium text-white"
+              className="flex h-11 flex-1 items-center justify-center rounded-pill bg-wa font-medium text-white"
             >
               WhatsApp
             </a>

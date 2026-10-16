@@ -23,7 +23,7 @@ function PortableBlock({ block }: { block: PortableTextBlock }) {
   const text = <MarkedText children_={block.children} markDefs={block.markDefs} />;
   switch (block.style) {
   case "h2":
-   return <h2 className="pt-2 font-display text-xl">{text}</h2>;
+   return <h2 className="pt-2 text-xl">{text}</h2>;
   case "h3":
    return <h3 className="pt-1 text-lg font-semibold">{text}</h3>;
   case "blockquote":

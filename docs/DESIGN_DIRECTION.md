@@ -1,5 +1,21 @@
 # Design Direction — Premium Tile Showroom Rebuild
 
+## 0. Current language (2026-10-16, verified against varmora.com and somanyceramics.com)
+
+Evidence: Varmora runs a floating white pill nav over a full-bleed lifestyle photograph with frosted glass category chips along the base, plain Inter at 13px UI scale. Somany runs the same floating pill over a cinematic hero, bold sans headlines (Barlow) with a serif accent (Playfair Display), a cool near-white base (#F7F6F5) with near-black ink (#191B1C), rounded photographic cards with bottom scrims and white type, dark pill CTAs, and a persistent WhatsApp entry. Premium reads from photography, contrast, rounding and motion discipline, not exotic type.
+
+Implemented language:
+- Type: Albert Sans variable everywhere (400 body, 600 UI, 750/800 headlines); Bodoni Moda only for the small RME wordmark and the 404 numeral. No italics, no serif headings.
+- Palette: cool ivory #f6f5f3 base, near-black ink #14161a, graphite muted surfaces, brass #a5854a accent used sparingly. WhatsApp green only on WhatsApp surfaces.
+- Chrome: floating white pill nav (radius 999px) that deepens its shadow on scroll via html[data-scrolled].
+- Hero: full-bleed photograph, functional bottom scrim, bold white headline, glass material chips along the base, 2.4s image settle and staggered copy rise.
+- Cards: 16px rounded photo plates, slow hover zoom (700ms expo), lift plus deep shadow, frosted pill badges, bold names, tabular prices.
+- Motion: shared tokens --ease-expo / --ease-soft / --dur-fast|med|slow; reveals via data-reveal and data-reveal-grid attributes marked with data-in by SiteMotion (never mutating className, so hydration stays clean); cross-document view transitions (@view-transition auto, 160ms out / 320ms in); everything honors prefers-reduced-motion.
+- Performance: all textures converted to WebP (7.1MB to 1.5MB); hero uses priority and fetchPriority; reveals gated behind html[data-js] so content is never hidden without JS and back-navigation restores never flash empty.
+
+---
+
+
 Single source of truth for implementers. Research base: porcelanosa.com, tilebar.com, daltile.com, annsacks.kohler.com, cletile.com, fireclaytile.com, mytyles.com, orientbell.com (kajaria/somany/siteinspire/awwwards blocked or timed out).
 
 Key patterns observed across the premium tier (Porcelanosa, Ann Sacks, Clé, Fireclay, TileBar): warm-neutral paper backgrounds, uppercase tracked kickers + sentence-case serif display, full-bleed material photography, hairline borders, square or near-square buttons, price-per-ft² on cards, no gradients anywhere, editorial storytelling bands between product grids. Mass-market Indian sites (MyTyles, Orientbell) are search-first and dense — we deliberately do NOT follow them; our reference set is the US/EU premium tier.

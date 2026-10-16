@@ -87,7 +87,7 @@ export function TileCalculator() {
    </Button>
   </div>
 
-  <div className="mt-4 rounded-sm border border-border bg-surface p-5">
+  <div className="mt-4 rounded-md border border-border bg-surface p-5">
    {mode === "area" ? (
    <div>
     <FieldLabel htmlFor="calc-area" required>
@@ -251,8 +251,8 @@ export function TileCalculator() {
   </div>
 
   <aside>
-  <div className="rounded-sm border border-border bg-surface p-5" aria-live="polite">
-   <h2 className="font-display text-lg">Result</h2>
+  <div className="rounded-md border border-border bg-surface p-5" aria-live="polite">
+   <h2 className="text-lg">Result</h2>
    {result ? (
    <dl className="mt-3 space-y-2 text-sm">
     <div className="flex justify-between gap-2">

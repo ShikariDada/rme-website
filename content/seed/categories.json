@@ -5,7 +5,7 @@
     "slug": "tiles",
     "materialType": "tile",
     "heroImage": {
-      "url": "/textures/marble-bianco-face-1.png",
+      "url": "/textures/marble-bianco-face-1.webp",
       "alt": "Polished marble-look vitrified tile surface",
       "kind": "product",
       "rightsStatus": "owned"
@@ -44,7 +44,7 @@
     "slug": "marble",
     "materialType": "marble",
     "heroImage": {
-      "url": "/textures/marble-emperador-face-1.png",
+      "url": "/textures/marble-emperador-face-1.webp",
       "alt": "Brown marble slab with light veining",
       "kind": "product",
       "rightsStatus": "owned"
@@ -73,7 +73,7 @@
     "slug": "granite",
     "materialType": "granite",
     "heroImage": {
-      "url": "/textures/granite-steel-grey-face-1.png",
+      "url": "/textures/granite-steel-grey-face-1.webp",
       "alt": "Speckled steel grey granite surface",
       "kind": "product",
       "rightsStatus": "owned"
