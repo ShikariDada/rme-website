@@ -18,12 +18,12 @@ Sharpened warm-neutral system. Deeper ink, stone-toned muted surface, bronze acc
 | `ink` | `#171512` | Primary text. Near-black warm charcoal — deeper than current `#1E1D1A`. |
 | `ink-muted` | `#6B655C` | Secondary text, captions, meta. |
 | `border` | `#D8D1C3` | Hairline borders only (1px). Never heavier. |
-| `accent` (bronze) | `#7A5C36` | Primary CTA fill, active states, links on hover. Used sparingly, max one accent element per viewport. |
-| `accent-2` (clay) | `#A4634A` | Supporting tone: italic emphasis words in display headlines, small badges, pull-quote marks. Never fills large areas. |
+| `accent` (walnut) | `#6E4F28` (hover `#573F1D`) | Primary CTA fill, active states, links on hover. Used sparingly, max one accent element per viewport. |
+| `accent-2` (clay) | `#A4634A` | Supporting tone: non-italic colored emphasis phrase in display headlines, small badges, pull-quote marks. Never fills large areas. |
 | `success` | `#4A6741` | In-stock badges only. |
 | `danger` | `#9C3D2E` | Errors, low-stock. |
 
-Accent discipline (learned from Porcelanosa/Ann Sacks): bronze appears on primary buttons, active nav underline, and price text on PDP. Clay appears only in italic headline words and tiny badges. Everything else is ink on paper.
+Accent discipline (learned from Porcelanosa/Ann Sacks): walnut appears on primary buttons, active nav underline, and price text on PDP. Clay appears only in the one non-italic emphasis phrase per display headline and tiny badges. Everything else is ink on paper.
 
 ## 2. Typography
 
@@ -32,7 +32,7 @@ Fraunces (display) + Inter (body/UI). Both variable.
 - **Fraunces**: load variable font with `opsz` axis. Display sizes use `font-variation-settings: "opsz" 144; "SOFT" 0; "WONK" 0`. Tracking: `-0.02em` at display sizes, `-0.01em` at subheads. Never uppercase Fraunces — uppercase is reserved for Inter kickers.
 - **Inter**: body `400`, UI labels `500`, kickers `500` uppercase with `letter-spacing: 0.12em`, size `11–12px`.
 - **Scale** (rem, 1rem=16px): display `3.5rem/1.05` (hero), h1 `2.75rem/1.1`, h2 `2rem/1.15`, h3 `1.375rem/1.25`, body `1rem/1.6`, small `0.875rem/1.5`, kicker `0.75rem/1.4`.
-- **Italics: BANNED** (user constraint, 2026-10). No italic emphasis anywhere. Non-italic Fraunces with a single clay () colored phrase carries the same emphasis.
+- **Italics: BANNED** (user constraint, 2026-10). No italic emphasis anywhere. Non-italic Fraunces with a single clay (`accent-2`) colored phrase carries the same emphasis.
 - Numbers in stats/prices: Inter `500`, tabular figures (`font-feature-settings: "tnum"`).
 
 ## 3. Hero pattern
@@ -110,7 +110,7 @@ Stat bands: only if numbers are real and verifiable (e.g., actual SKU count, yea
 
 ## 9. Ship rules learned on this build
 
-- Production Turbopack DROPS every bracket arbitrary-value utility (text-[13px] etc.) even in static export; dev looks fine. All spacing/sizes/colors/shadows must be shipped as  tokens,  definitions, or standard utilities. No bracket classes anywhere.
+- Production Turbopack DROPS every bracket arbitrary-value utility (text-[13px] etc.) even in static export; dev looks fine. All spacing/sizes/colors/shadows must be shipped as `@theme` tokens, `@utility` definitions, or standard utilities. No bracket classes anywhere.
 - Header chrome is INK (#171512) with paper text and a bare Fraunces "RME" wordmark lockup with a tracked "Marble · Tiles · Granite" kicker (xl+ only). Brand green (#1FA855) is reserved for actual WhatsApp contact moments (sticky mobile bar, floating bubble, form rails); the header CTA is walnut bronze.
 - Rendering QA: screenshot home, products, PDP, visualizer, contact at 1440x900 AND 390x844 before shipping.
-- No em dashes in any user-visible copy (search  content/seed, app, components, src).
+- No em dashes in any user-visible copy (search content/seed, app, components, src).
