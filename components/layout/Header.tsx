@@ -25,7 +25,7 @@ export async function Header() {
   });
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-bg/95 backdrop-blur-sm supports-[backdrop-filter]:bg-bg/85">
+    <header className="sticky top-0 z-40 border-b border-border bg-bg">
       <Container className="flex h-16 items-center gap-2 md:h-[68px]">
         {/* Mobile: menu button */}
         <div className="md:hidden">
@@ -41,14 +41,14 @@ export async function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="mr-2 flex min-w-0 items-center gap-2 font-display text-lg font-semibold tracking-tight md:text-xl"
+          className="mr-2 flex min-w-0 items-center gap-2 font-display text-lg tracking-[-0.01em] md:text-xl"
           aria-label={`${settings.businessName} — home`}
         >
           {settings.logo ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={settings.logo.url} alt="" className="h-8 w-auto" />
           ) : (
-            <span className="flex h-8 w-8 items-center justify-center rounded-sm bg-accent font-display text-base text-white">
+            <span className="flex h-8 w-8 items-center justify-center rounded-sm bg-accent font-display text-base text-bg">
               {settings.businessName.slice(0, 1)}
             </span>
           )}
@@ -64,7 +64,7 @@ export async function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="inline-flex h-11 items-center rounded-md px-3 text-text-muted hover:bg-surface-muted hover:text-text"
+                  className="inline-flex h-11 items-center px-3 text-[13px] font-medium text-text-muted transition-colors hover:text-text hover:underline hover:decoration-accent hover:underline-offset-[6px] hover:decoration-1"
                 >
                   {item.label}
                 </Link>
@@ -73,7 +73,7 @@ export async function Header() {
             <li>
               <Link
                 href="/brand/varmora"
-                className="inline-flex h-11 items-center rounded-md px-3 text-text-muted hover:bg-surface-muted hover:text-text"
+                className="inline-flex h-11 items-center px-3 text-[13px] font-medium text-text-muted transition-colors hover:text-text hover:underline hover:decoration-accent hover:underline-offset-[6px] hover:decoration-1"
               >
                 Varmora
               </Link>
@@ -86,7 +86,7 @@ export async function Header() {
           <SearchButton />
           <a
             href={`tel:${settings.phone}`}
-            className="hidden h-11 items-center gap-2 rounded-md px-3 text-[15px] font-medium text-text hover:bg-surface-muted lg:inline-flex"
+            className="hidden h-11 items-center gap-2 px-3 text-[13px] font-medium text-text-muted transition-colors hover:text-text lg:inline-flex"
             aria-label="Call showroom"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">

@@ -2,7 +2,7 @@ import { Container, SectionHeader } from "@/components/ui/Primitives";
 import { WhatsAppIcon } from "@/components/layout/Header";
 import type { SiteSettings } from "@/lib/types";
 
-/** Showroom block (spec §9.11): address, honest hours, call/WhatsApp/directions. */
+/** Showroom block (design §5.7): hairline editorial panel, three columns, no card boxes. */
 export function ShowroomBlock({ settings }: { settings: SiteSettings }) {
   const addr = settings.address;
   const open = settings.hours.filter((h) => !h.closed);
@@ -16,65 +16,70 @@ export function ShowroomBlock({ settings }: { settings: SiteSettings }) {
     .join(" · ");
 
   return (
-    <Container className="py-10 md:py-14">
-      <SectionHeader
-        title="Visit the showroom"
-        description="Touch the materials, compare finishes side by side, and get a quote on the spot."
-      />
-      <div className="grid gap-4 md:grid-cols-3">
-        <div className="rounded-lg border border-border bg-surface p-5">
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-text-muted">Address</h3>
-          <address className="mt-2 not-italic leading-relaxed">
-            {[addr.line1, addr.line2, addr.locality].filter(Boolean).map((l, i) => (
-              <span key={i} className="block">{l}</span>
-            ))}
-            <span className="block">
-              {addr.city}, {addr.state} {addr.postalCode}
-            </span>
-          </address>
-          <a
-            href={settings.googleMapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-3 inline-flex min-h-[44px] items-center text-accent underline underline-offset-2"
-          >
-            Get directions
-          </a>
-        </div>
-        <div className="rounded-lg border border-border bg-surface p-5">
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-text-muted">Hours</h3>
-          {openSummary ? (
-            <p className="mt-2 leading-relaxed">{openSummary}</p>
-          ) : (
-            <p className="mt-2 text-text-muted">Call us for current hours.</p>
-          )}
-          {closed.length > 0 && (
-            <p className="mt-1 text-sm text-text-muted">
-              Closed: {closed.map((h) => daysShort[h.day.toLowerCase()] ?? h.day).join(", ")}
-            </p>
-          )}
-        </div>
-        <div className="rounded-lg border border-border bg-surface p-5">
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-text-muted">Talk to us</h3>
-          <div className="mt-3 flex flex-col gap-2">
+    <section className="border-t border-border">
+      <Container className="py-14 md:py-24">
+        <SectionHeader
+          kicker="Visit"
+          title="See the material in person"
+          description="Touch the finishes, compare side by side, and get a quote on the spot."
+        />
+        <div className="grid gap-10 border-t border-border pt-10 md:grid-cols-3 md:gap-12">
+          <div>
+            <h3 className="kicker">Address</h3>
+            <address className="mt-3 not-italic leading-relaxed">
+              {[addr.line1, addr.line2].filter(Boolean).map((l, i) => (
+                <span key={i} className="block">{l}</span>
+              ))}
+              <span className="block">{addr.locality}</span>
+              <span className="block">
+                {addr.city}, {addr.state} {addr.postalCode}
+              </span>
+            </address>
             <a
-              href={`tel:${settings.phone}`}
-              className="inline-flex min-h-[44px] items-center rounded-md border border-border px-4 font-medium hover:bg-surface-muted"
-            >
-              Call {settings.phoneDisplay ?? settings.phone}
-            </a>
-            <a
-              href={`https://wa.me/${settings.whatsappNumber.replace(/\D/g, "")}`}
+              href={settings.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-[44px] items-center gap-2 rounded-md bg-[#1fa855] px-4 font-medium text-white hover:bg-[#178a45]"
+              className="group mt-4 inline-flex items-center gap-2 text-[13px] font-medium uppercase tracking-[0.1em] text-accent"
             >
-              <WhatsAppIcon />
-              WhatsApp the showroom
+              Get directions
+              <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">→</span>
             </a>
           </div>
+          <div>
+            <h3 className="kicker">Hours</h3>
+            {openSummary ? (
+              <p className="tnum mt-3 leading-relaxed">{openSummary}</p>
+            ) : (
+              <p className="mt-3 text-text-muted">Call us for current hours.</p>
+            )}
+            {closed.length > 0 && (
+              <p className="mt-2 text-sm text-text-muted">
+                Closed: {closed.map((h) => daysShort[h.day.toLowerCase()] ?? h.day).join(", ")}
+              </p>
+            )}
+          </div>
+          <div>
+            <h3 className="kicker">Talk to us</h3>
+            <div className="mt-3 flex flex-col gap-3">
+              <a
+                href={`tel:${settings.phone}`}
+                className="tnum inline-flex h-12 items-center justify-center rounded-sm border border-text px-6 text-[13px] font-medium uppercase tracking-[0.1em] text-text transition-colors hover:bg-text hover:text-bg"
+              >
+                Call {settings.phoneDisplay ?? settings.phone}
+              </a>
+              <a
+                href={`https://wa.me/${settings.whatsappNumber.replace(/\D/g, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-sm bg-[#1fa855] px-6 text-[13px] font-medium uppercase tracking-[0.1em] text-white transition-colors hover:bg-[#178a45]"
+              >
+                <WhatsAppIcon />
+                WhatsApp us
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </section>
   );
 }

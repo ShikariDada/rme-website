@@ -61,7 +61,7 @@ export function RoomPicker({
         browser. Nothing is uploaded.
       </p>
 
-      <div className="mt-5 rounded-lg border border-border bg-surface p-4">
+      <div className="mt-5 rounded-sm border border-border bg-surface p-4">
         <p className="font-medium">Use my photo</p>
         <p className="mt-1 text-sm text-text-muted">
           Take a straight-on photo of your floor or wall where the surface is
@@ -94,7 +94,7 @@ export function RoomPicker({
               type="button"
               onClick={() => onUsePreset(p.id)}
               className={cn(
-                "overflow-hidden rounded-lg border border-border bg-surface text-left transition-colors hover:border-accent/60"
+                "overflow-hidden rounded-sm border border-border bg-surface text-left transition-colors hover:border-accent/60"
               )}
             >
               <span className="relative block aspect-[4/3] bg-surface-muted">

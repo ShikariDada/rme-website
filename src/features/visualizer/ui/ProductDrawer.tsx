@@ -32,7 +32,7 @@ export function ProductDrawer({
             onClick={() => onSelect(m.id)}
             aria-pressed={selectedId === m.id}
             className={cn(
-              "w-full overflow-hidden rounded-lg border text-left transition-colors",
+              "w-full overflow-hidden rounded-sm border text-left transition-colors",
               selectedId === m.id ? "border-accent ring-1 ring-accent" : "border-border hover:border-accent/50"
             )}
           >

@@ -4,52 +4,54 @@ import { Container, SectionHeader } from "@/components/ui/Primitives";
 import { formatINR, formatUnit } from "@/lib/pricing/format";
 import { contentSource } from "@/lib/data";
 
-/** Price guidance + calculator teaser, combined (spec §9.8). */
+/**
+ * Price guidance (design §6): hairline-divided table rows, tabular figures,
+ * kicker header. No card boxes.
+ */
 export async function PriceGuideTeaser() {
   const categories = await contentSource.getCategories();
   const withGuide = categories.filter((c) => c.priceGuide && c.priceGuide.length > 0);
 
   return (
-    <section className="border-y border-border bg-surface">
-      <Container className="py-10 md:py-14">
-        <SectionHeader
-          title="Honest price guidance"
-          description="Current ranges by category, with the date each was last verified. Exact product prices are on every listing."
-          action={
-            <ButtonLink href="/tile-calculator" variant="secondary">
-              Estimate boxes for your room
-            </ButtonLink>
-          }
-        />
-        <div className="grid gap-4 md:grid-cols-3">
-          {withGuide.map((c) => (
-            <div key={c.slug} className="rounded-lg border border-border p-5">
-              <h3 className="font-medium">
-                <Link href={`/${c.slug}`} className="hover:underline underline-offset-2">
-                  {c.name}
+    <Container className="py-14 md:py-24">
+      <SectionHeader
+        kicker="Price guidance"
+        title="Current ranges, with dates"
+        description="Exact product prices are on every listing. Natural stone varies by lot, thickness and finish — the exact figure is confirmed when you pick your slab."
+        action={
+          <ButtonLink href="/tile-calculator" variant="secondary">
+            Estimate quantity
+          </ButtonLink>
+        }
+      />
+      <div className="divide-y divide-border border-y border-border">
+        {withGuide.map((c) =>
+          (c.priceGuide ?? []).map((g) => (
+            <div
+              key={`${c.slug}-${g.label}`}
+              className="grid grid-cols-[1fr_auto] items-baseline gap-x-6 gap-y-1 py-4 md:grid-cols-[1fr_auto_auto]"
+            >
+              <p className="text-[15px]">
+                <Link
+                  href={`/${c.slug}`}
+                  className="hover:underline hover:decoration-accent hover:underline-offset-4"
+                >
+                  {g.label}
                 </Link>
-              </h3>
-              <ul className="mt-3 space-y-3">
-                {c.priceGuide?.map((g) => (
-                  <li key={g.label} className="text-sm">
-                    <p>{g.label}</p>
-                    <p className="mt-0.5 font-medium">
-                      {formatINR(g.min)}–{formatINR(g.max)} / {formatUnit(g.unit)}
-                    </p>
-                    <p className="text-xs text-text-muted">
-                      Verified {new Date(g.lastUpdated).toLocaleDateString("en-IN", { day: "numeric", month: "short" })}
-                    </p>
-                  </li>
-                ))}
-              </ul>
+              </p>
+              <p className="tnum text-[15px] font-medium text-text md:text-right">
+                {formatINR(g.min)}–{formatINR(g.max)}
+                <span className="ml-1 text-xs font-normal text-text-muted">
+                  / {formatUnit(g.unit)}
+                </span>
+              </p>
+              <p className="col-span-2 text-xs text-text-muted md:col-span-1 md:min-w-[110px] md:text-right">
+                verified {new Date(g.lastUpdated).toLocaleDateString("en-IN", { day: "numeric", month: "short" })}
+              </p>
             </div>
-          ))}
-        </div>
-        <p className="mt-4 text-sm text-text-muted">
-          Natural stone varies by lot, thickness and finish — the exact figure is confirmed
-          when you pick your slab. Tile prices shown per square foot include GST where noted.
-        </p>
-      </Container>
-    </section>
+          ))
+        )}
+      </div>
+    </Container>
   );
 }

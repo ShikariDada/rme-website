@@ -87,7 +87,7 @@ export function TileCalculator() {
           </Button>
         </div>
 
-        <div className="mt-4 rounded-lg border border-border bg-surface p-5">
+        <div className="mt-4 rounded-sm border border-border bg-surface p-5">
           {mode === "area" ? (
             <div>
               <FieldLabel htmlFor="calc-area" required>
@@ -251,7 +251,7 @@ export function TileCalculator() {
       </div>
 
       <aside>
-        <div className="rounded-lg border border-border bg-surface p-5" aria-live="polite">
+        <div className="rounded-sm border border-border bg-surface p-5" aria-live="polite">
           <h2 className="font-display text-lg">Result</h2>
           {result ? (
             <dl className="mt-3 space-y-2 text-sm">
@@ -292,7 +292,7 @@ export function TileCalculator() {
           )}
         </div>
 
-        <div className="mt-4 rounded-lg border border-[var(--color-danger)]/30 bg-[var(--color-danger)]/5 p-4 text-sm">
+        <div className="mt-4 rounded-sm border border-[var(--color-danger)]/30 bg-[var(--color-danger)]/5 p-4 text-sm">
           <p>
             Planning estimate only. Real wastage depends on room shape, laying
             pattern (diagonal needs more) and site conditions — confirm the

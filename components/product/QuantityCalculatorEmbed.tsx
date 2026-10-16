@@ -195,7 +195,7 @@ export function QuantityCalculatorEmbed({
 
   const modeButtonClass = (active: boolean) =>
     cn(
-      "inline-flex h-11 items-center rounded-md px-4 text-sm font-medium transition-colors",
+      "inline-flex h-11 items-center rounded-sm px-4 text-sm font-medium transition-colors",
       active
         ? "bg-accent text-white"
         : "text-text-muted hover:bg-surface-muted hover:text-text"
@@ -211,7 +211,7 @@ export function QuantityCalculatorEmbed({
         <div
           role="group"
           aria-label="Calculation mode"
-          className="inline-flex rounded-md border border-border p-0.5"
+          className="inline-flex rounded-sm border border-border p-0.5"
         >
           <button
             type="button"
@@ -282,7 +282,7 @@ export function QuantityCalculatorEmbed({
               {rows.map((row, i) => (
                 <div
                   key={row.id}
-                  className="rounded-md border border-border bg-surface-muted/40 p-3"
+                  className="rounded-sm border border-border bg-surface-muted/40 p-3"
                 >
                   <p className="mb-2 text-sm font-medium">Surface {i + 1}</p>
                   <div className="flex items-start gap-2">
@@ -371,7 +371,7 @@ export function QuantityCalculatorEmbed({
                       type="button"
                       onClick={() => removeRow(row.id)}
                       aria-label={`Remove surface ${i + 1}`}
-                      className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md text-text-muted hover:bg-surface-muted hover:text-danger"
+                      className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-sm text-text-muted hover:bg-surface-muted hover:text-danger"
                     >
                       <svg
                         width="18"
@@ -445,7 +445,7 @@ export function QuantityCalculatorEmbed({
       </form>
 
       {result && (
-        <div className="mt-4 max-w-xl rounded-lg border border-border bg-surface p-4">
+        <div className="mt-4 max-w-xl rounded-sm border border-border bg-surface p-4">
           <h3 className="text-sm font-semibold uppercase tracking-wide text-text-muted">
             Estimated quantity
           </h3>

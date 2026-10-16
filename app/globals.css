@@ -1,28 +1,28 @@
 @import "tailwindcss";
 
 /*
- * Design tokens (spec §8). Centralised — components must use these tokens,
- * never raw hex values. If the real brand logo dictates different colours,
- * change them here in one place.
+ * Design tokens — docs/DESIGN_DIRECTION.md is the single source of truth.
+ * Centralised: components must use these tokens, never raw hex values.
  */
 
 :root {
-  --color-bg: #f6f3ed;
-  --color-surface: #ffffff;
-  --color-surface-muted: #ece7de;
-  --color-text: #1e1d1a;
-  --color-text-muted: #6c675f;
-  --color-border: #d9d2c7;
-  --color-accent: #785a3b;
-  --color-accent-hover: #62482f;
-  --color-accent-soft: #e8ded1;
-  --color-danger: #9b3a32;
-  --color-success: #35654b;
-  --color-focus: #4a67a1;
+  --color-bg: #F4F0E8;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #E9E3D7;
+  --color-text: #171512;
+  --color-text-muted: #6B655C;
+  --color-border: #D8D1C3;
+  --color-accent: #7A5C36;
+  --color-accent-hover: #6A4F2D;
+  --color-accent-soft: #EDE6D8;
+  --color-accent-2: #A4634A;
+  --color-danger: #9C3D2E;
+  --color-success: #4A6741;
+  --color-focus: #4A67A1;
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 4px;
 }
 
 @theme inline {
@@ -35,6 +35,7 @@
   --color-accent: var(--color-accent);
   --color-accent-hover: var(--color-accent-hover);
   --color-accent-soft: var(--color-accent-soft);
+  --color-accent-2: var(--color-accent-2);
   --color-danger: var(--color-danger);
   --color-success: var(--color-success);
   --color-focus: var(--color-focus);
@@ -94,7 +95,30 @@ body {
 h1, h2, h3, .font-display {
   font-family: var(--font-display);
   font-weight: 560;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 144, "SOFT" 0, "WONK" 0;
+}
+
+/* Kicker: Inter 500 12px uppercase, tracked, muted. Used above display headings. */
+.kicker {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* One-emphasis-word italic in Fraunces display headlines, clay accent. */
+.display-italic {
+  font-style: italic;
+  color: var(--color-accent-2);
+}
+
+/* Tabular figures for prices / stats. */
+.tnum {
+  font-feature-settings: "tnum";
 }
 
 /* Visible, consistent keyboard focus (WCAG 2.2). */

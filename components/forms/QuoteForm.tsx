@@ -215,7 +215,7 @@ export function QuoteForm({
 
   if (prepared) {
     return (
-      <div className="rounded-lg border border-border bg-surface p-6" role="status">
+      <div className="rounded-sm border border-border bg-surface p-6" role="status">
         <h2 className="font-display text-xl">Enquiry prepared</h2>
         <p className="mt-2 text-text-muted">
           Nothing was sent yet — hand it over with one tap. WhatsApp is the
@@ -246,14 +246,14 @@ export function QuoteForm({
       message: buildQuoteReferenceMessage({ reference: success.reference, summary }),
     });
     return (
-      <div className="rounded-lg border border-border bg-surface p-6" role="status">
+      <div className="rounded-sm border border-border bg-surface p-6" role="status">
         <h2 className="font-display text-xl">Request received</h2>
         <p className="mt-2 text-text-muted">
           Keep this reference for the showroom:
         </p>
         <p className="mt-1 font-mono text-2xl font-semibold tracking-wide">{success.reference}</p>
         {success.warning === "email-failed" && (
-          <p className="mt-3 rounded-md border border-[var(--color-danger)]/30 bg-[var(--color-danger)]/5 px-3 py-2 text-sm text-[var(--color-danger)]">
+          <p className="mt-3 rounded-sm border border-[var(--color-danger)]/30 bg-[var(--color-danger)]/5 px-3 py-2 text-sm text-[var(--color-danger)]">
             The email notification could not be sent — please continue on WhatsApp so we definitely see your request.
           </p>
         )}
@@ -275,7 +275,7 @@ export function QuoteForm({
   return (
     <form ref={formRef} onSubmit={handleSubmit} noValidate className="space-y-4">
       {errors.form && (
-        <p role="alert" className="rounded-md border border-[var(--color-danger)]/40 bg-[var(--color-danger)]/5 px-3 py-2 text-sm text-[var(--color-danger)]">
+        <p role="alert" className="rounded-sm border border-[var(--color-danger)]/40 bg-[var(--color-danger)]/5 px-3 py-2 text-sm text-[var(--color-danger)]">
           {errors.form}
         </p>
       )}

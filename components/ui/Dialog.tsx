@@ -78,9 +78,10 @@ export function Dialog({
       }}
       className={cn(
         "m-auto w-[calc(100%-2rem)] max-w-lg bg-surface text-text backdrop:bg-black/40",
-        "border border-border rounded-lg shadow-lg p-0 open:animate-none",
+        "border border-border rounded-sm p-0 open:animate-none",
+        "shadow-[0_8px_24px_rgba(23,21,18,0.12)]",
         isSheet &&
-          "md:m-auto max-md:m-0 max-md:mt-auto max-md:max-w-none max-md:w-full max-md:rounded-b-none max-md:rounded-t-lg",
+          "md:m-auto max-md:m-0 max-md:mt-auto max-md:max-w-none max-md:w-full max-md:rounded-b-none max-md:rounded-t-sm",
         className
       )}
     >
@@ -92,9 +93,9 @@ export function Dialog({
           type="button"
           onClick={handleClose}
           aria-label="Close"
-          className="-mr-2 flex h-11 w-11 items-center justify-center rounded-md text-text-muted hover:bg-surface-muted"
+          className="-mr-2 flex h-11 w-11 items-center justify-center rounded-sm text-text-muted hover:bg-surface-muted"
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
             <path d="M18 6 6 18M6 6l12 12" />
           </svg>
         </button>

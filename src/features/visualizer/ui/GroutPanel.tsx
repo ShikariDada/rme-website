@@ -62,7 +62,7 @@ export function GroutPanel({
                   style={{ background: c.value }}
                 />
               ))}
-              <label className="inline-flex min-h-[44px] items-center gap-2 rounded-md border border-border px-3 text-sm">
+              <label className="inline-flex min-h-[44px] items-center gap-2 rounded-sm border border-border px-3 text-sm">
                 Custom
                 <input
                   type="color"

@@ -1,13 +1,12 @@
 import Image from "next/image";
-import { ButtonLink } from "@/components/ui/Button";
-import { Container } from "@/components/ui/Primitives";
-import { WhatsAppIcon } from "@/components/layout/Header";
-import { buildWhatsAppUrl, buildGeneralEnquiryMessage } from "@/lib/whatsapp";
+import Link from "next/link";
 import type { SiteSettings } from "@/lib/types";
+import { buildGeneralEnquiryMessage, buildWhatsAppUrl } from "@/lib/whatsapp";
 
 /**
- * Hero (spec §9.3): one honest positioning line, one helpful subline, real
- * material imagery — no gradient overlays, no generic "premium living" copy.
+ * Hero (design §3): full-bleed material texture crop, left-aligned editorial
+ * block on a solid bg panel (no overlay gradient). One italic clay accent
+ * word in the Fraunces headline. Caption bottom-right names the texture.
  */
 export function Hero({ settings }: { settings: SiteSettings }) {
   const whatsappHref = buildWhatsAppUrl({
@@ -16,47 +15,61 @@ export function Hero({ settings }: { settings: SiteSettings }) {
   });
 
   return (
-    <section className="border-b border-border bg-surface">
-      <Container className="grid items-center gap-8 py-10 md:grid-cols-2 md:py-16">
-        <div>
-          <h1 className="text-3xl leading-[1.08] md:text-[clamp(2.125rem,4.5vw,3.5rem)]">
-            Marble, tiles &amp; granite —
-            <br />
-            <span className="text-text-muted">see real prices before you visit.</span>
+    <section className="relative min-h-[88vh] w-full overflow-hidden border-b border-border">
+      <Image
+        src="/textures/marble-bianco-face-1.png"
+        alt="Bianco Carrara — polished porcelain surface with soft grey veining"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
+
+      {/* Editorial block — solid bg panel, lower-left */}
+      <div className="relative z-10 flex min-h-[88vh] items-end">
+        <div className="max-w-[560px] bg-bg px-6 pb-14 pt-14 md:ml-0 md:px-16 md:pb-16 md:pt-24">
+          <p className="kicker">Porcelain · Stone · Terracotta</p>
+          <h1 className="mt-5 font-display text-[clamp(2.25rem,4.5vw,3.5rem)] leading-[1.05] tracking-[-0.02em]">
+            Marble, tiles &amp; granite —{" "}
+            <em className="display-italic">honest prices</em>, real stock.
           </h1>
-          <p className="mt-4 max-w-xl text-base text-text-muted md:text-lg">
-            A local showroom in {settings.address.city} with honest per-square-foot
-            pricing, live stock states, and tools to help you decide — not a
-            catalogue that hides the answer.
+          <p className="mt-5 max-w-[40ch] text-base leading-relaxed text-text-muted">
+            A local showroom with per-square-foot pricing you can check before
+            you visit, and material you can walk on before you decide.
           </p>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="/products" size="lg">
-              Browse products
-            </ButtonLink>
-            <ButtonLink href={whatsappHref} variant="whatsapp" size="lg" external>
-              <WhatsAppIcon />
-              WhatsApp us
-            </ButtonLink>
-          </div>
           <p className="mt-4 text-sm text-text-muted">
-            Prefer to see materials in person?{" "}
-            <a href="/showroom" className="text-accent underline underline-offset-2">
-              Visit the showroom
+            Or message us on{" "}
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent underline underline-offset-4 decoration-border hover:decoration-accent"
+            >
+              WhatsApp
             </a>{" "}
-            — directions inside.
+            for current stock.
           </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link
+              href="/products"
+              className="inline-flex h-12 items-center justify-center rounded-sm bg-accent px-7 text-[13px] font-medium uppercase tracking-[0.1em] text-white transition-colors duration-200 hover:bg-accent-hover"
+            >
+              Browse the collection
+            </Link>
+            <Link
+              href="/showroom"
+              className="inline-flex h-12 items-center justify-center rounded-sm border border-text bg-transparent px-7 text-[13px] font-medium uppercase tracking-[0.1em] text-text transition-colors duration-200 hover:bg-text hover:text-bg"
+            >
+              Visit the showroom
+            </Link>
+          </div>
         </div>
-        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-border bg-surface-muted">
-          <Image
-            src="/textures/marble-bianco-face-1.png"
-            alt="Polished white marble-look tile surface with soft grey veining"
-            fill
-            priority
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
-          />
-        </div>
-      </Container>
+      </div>
+
+      {/* Texture caption — bottom-right */}
+      <p className="pointer-events-none absolute bottom-4 right-4 z-10 text-xs text-text-muted md:bottom-6 md:right-6">
+        Bianco Carrara — polished porcelain
+      </p>
     </section>
   );
 }

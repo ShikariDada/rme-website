@@ -2,14 +2,14 @@ import { forwardRef, type ComponentProps, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 const fieldBase =
-  "w-full rounded-md border border-border bg-surface px-3 text-base text-text placeholder:text-text-muted/70 " +
-  "focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-[var(--color-focus)] " +
+  "w-full rounded-sm border border-border bg-surface px-3 text-base text-text placeholder:text-text-muted/70 " +
+  "focus-visible:outline-1 focus-visible:outline-offset-0 focus-visible:outline-[var(--color-accent)] focus-visible:border-[var(--color-accent)] " +
   "disabled:opacity-50";
 
 export const Input = forwardRef<HTMLInputElement, ComponentProps<"input">>(
   function Input({ className, ...props }, ref) {
     return (
-      <input ref={ref} className={cn(fieldBase, "h-11", className)} {...props} />
+      <input ref={ref} className={cn(fieldBase, "h-12", className)} {...props} />
     );
   }
 );
@@ -31,10 +31,10 @@ export const Select = forwardRef<HTMLSelectElement, ComponentProps<"select">>(
     return (
       <select
         ref={ref}
-        className={cn(fieldBase, "h-11 appearance-none bg-[right_0.75rem_center] pr-9", className)}
+        className={cn(fieldBase, "h-12 appearance-none bg-[right_0.75rem_center] pr-9", className)}
         style={{
           backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236c675f' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E\")",
+            "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B655C' stroke-width='1.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E\")",
           backgroundRepeat: "no-repeat",
         }}
         {...props}
@@ -73,14 +73,21 @@ export function FieldLabel({
   required?: boolean;
 }) {
   return (
-    <label htmlFor={htmlFor} className="block text-sm font-medium mb-1.5">
+    <label
+      htmlFor={htmlFor}
+      className="mb-1.5 block text-xs font-medium uppercase tracking-[0.12em] text-text"
+    >
       {children}
       {required && (
         <span className="text-danger ml-0.5" aria-hidden="true">
           *
         </span>
       )}
-      {hint && <span className="block text-xs font-normal text-text-muted">{hint}</span>}
+      {hint && (
+        <span className="mt-0.5 block text-[11px] font-normal normal-case tracking-normal text-text-muted">
+          {hint}
+        </span>
+      )}
     </label>
   );
 }

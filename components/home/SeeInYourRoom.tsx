@@ -1,13 +1,13 @@
-import { ButtonLink } from "@/components/ui/Button";
+import Image from "next/image";
+import Link from "next/link";
 import { Container, SectionHeader } from "@/components/ui/Primitives";
 import { buildRoomPhotoMessage, buildWhatsAppUrl } from "@/lib/whatsapp";
 import { absoluteUrl } from "@/lib/utils";
 import type { SiteSettings } from "@/lib/types";
 
 /**
- * "See it in your room" (spec §9.7): the visualizer is the primary path, the
- * manual WhatsApp room-photo service is the human fallback. Honest preview
- * language throughout.
+ * Visualizer promo (design §5.6): editorial split — copy left, room scene
+ * right. Steps as numbered editorial rows, not cards. Honest preview language.
  */
 export function SeeInYourRoom({ settings }: { settings: SiteSettings }) {
   const photoHref = buildWhatsAppUrl({
@@ -20,46 +20,72 @@ export function SeeInYourRoom({ settings }: { settings: SiteSettings }) {
 
   const steps = [
     {
-      title: "Pick a product",
-      body: "Open any tile, marble or granite page — or start from the visualizer and choose there.",
+      title: "Pick a surface",
+      body: "Open any tile, marble or granite — or start in the visualizer and choose there.",
     },
     {
-      title: "Show us the surface",
-      body: "Upload a room photo in the visualizer and mark the floor or wall, or send the photo to us on WhatsApp.",
+      title: "Show us your room",
+      body: "Upload a photo in the visualizer and mark the floor or wall. Your photo stays on your device.",
     },
     {
       title: "Preview, then confirm",
-      body: "Get a realistic preview with the exact SKU. Final look and quantity are confirmed with real samples in the showroom.",
+      body: "See the exact SKU in place. Final look and quantity are confirmed with real samples in the showroom.",
     },
   ];
 
   return (
-    <Container className="py-10 md:py-14">
-      <SectionHeader
-        title="See it in your room"
-        description="Wondering how a tile actually looks at home? Preview it against your own photo before you shortlist."
-      />
-      <div className="grid gap-4 md:grid-cols-3">
-        {steps.map((s, i) => (
-          <div key={s.title} className="rounded-lg border border-border bg-surface p-5">
-            <p className="font-display text-lg text-accent">{i + 1}</p>
-            <h3 className="mt-1 font-medium">{s.title}</h3>
-            <p className="mt-1 text-sm text-text-muted">{s.body}</p>
+    <section className="grid md:grid-cols-2">
+      <div className="flex items-center bg-surface-muted md:order-1">
+        <div className="max-w-[520px] px-6 py-14 md:px-16 md:py-20">
+          <p className="kicker">See it in your room</p>
+          <h2 className="mt-4 font-display text-[clamp(1.75rem,2.6vw,2.25rem)] leading-[1.15]">
+            Preview the material{" "}
+            <em className="display-italic">before</em> you commit
+          </h2>
+          <ol className="mt-7 space-y-6">
+            {steps.map((s, i) => (
+              <li key={s.title} className="flex gap-5">
+                <span className="tnum shrink-0 font-display text-[15px] text-accent" aria-hidden="true">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <p className="text-[15px] font-medium">{s.title}</p>
+                  <p className="mt-1 text-[15px] leading-relaxed text-text-muted">{s.body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link
+              href="/visualizer"
+              className="inline-flex h-12 items-center justify-center rounded-sm bg-accent px-7 text-[13px] font-medium uppercase tracking-[0.1em] text-bg transition-colors duration-200 hover:bg-accent-hover"
+            >
+              Try the room visualizer
+            </Link>
+            <a
+              href={photoHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-12 items-center justify-center rounded-sm border border-text px-7 text-[13px] font-medium uppercase tracking-[0.1em] text-text transition-colors duration-200 hover:bg-text hover:text-bg"
+            >
+              Send a photo on WhatsApp
+            </a>
           </div>
-        ))}
+          <p className="mt-4 text-xs text-text-muted">
+            Previews are approximate and generated from actual product imagery — not a
+            substitute for seeing the material in person.
+          </p>
+        </div>
       </div>
-      <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-        <ButtonLink href="/visualizer" size="lg">
-          Open the visualizer
-        </ButtonLink>
-        <ButtonLink href={photoHref} variant="secondary" size="lg" external>
-          Send a room photo on WhatsApp
-        </ButtonLink>
+      <div className="relative min-h-[320px] md:min-h-[560px] md:order-2">
+        <Image
+          src="/rooms/bathroom.png"
+          alt="Bathroom preview generated with the room visualizer — wall and floor tile combination"
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover"
+        />
       </div>
-      <p className="mt-3 text-sm text-text-muted">
-        Previews are approximate and generated from the actual product imagery — they are
-        not a substitute for seeing the material in person.
-      </p>
-    </Container>
+    </section>
   );
 }

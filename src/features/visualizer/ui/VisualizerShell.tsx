@@ -494,7 +494,7 @@ export default function VisualizerShell({ materials, settings, initialMaterialId
           ←
         </Button>
         <input
-          className="min-w-0 flex-1 rounded-md bg-transparent px-2 py-1 text-sm font-medium hover:bg-surface-muted"
+          className="min-w-0 flex-1 rounded-sm bg-transparent px-2 py-1 text-sm font-medium hover:bg-surface-muted"
           value={project?.name ?? "Visualizer"}
           onChange={(e) =>
             project && dispatch({ type: "SET_ROOM", assetId: project.room.originalAssetId, widthPx: project.room.widthPx, heightPx: project.room.heightPx, name: e.target.value })
@@ -551,19 +551,19 @@ export default function VisualizerShell({ materials, settings, initialMaterialId
                 className="pointer-events-auto absolute h-11 w-11 -translate-x-1/2 -translate-y-1/2 cursor-grab rounded-full active:cursor-grabbing"
                 style={{ left: `${p.x * 100}%`, top: `${p.y * 100}%` }}
               >
-                <span className="absolute left-1/2 top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-accent/80 shadow" />
+                <span className="absolute left-1/2 top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-accent shadow-sm" />
               </button>
             ))}
           </div>
         )}
 
         {busy && (
-          <div className="absolute inset-x-0 top-2 mx-auto w-fit rounded-full bg-black/70 px-4 py-1.5 text-sm text-white" role="status">
+          <div className="absolute inset-x-0 top-2 mx-auto w-fit rounded-full bg-[#171512]/90 px-4 py-1.5 text-sm text-[#F4F0E8]" role="status">
             {busy}
           </div>
         )}
         {status && !busy && (
-          <div className="absolute inset-x-0 bottom-2 mx-auto w-fit max-w-[92%] rounded-md bg-black/70 px-4 py-1.5 text-center text-sm text-white" role="status">
+          <div className="absolute inset-x-0 bottom-2 mx-auto w-fit max-w-[92%] rounded-sm bg-black/70 px-4 py-1.5 text-center text-sm text-white" role="status">
             {status}
           </div>
         )}
@@ -910,7 +910,7 @@ function RailButton({ label, onClick, disabled }: { label: string; onClick: () =
       onClick={onClick}
       disabled={disabled}
       className={cn(
-        "flex min-h-[48px] flex-col items-center justify-center rounded-md text-xs font-medium",
+        "flex min-h-[48px] flex-col items-center justify-center rounded-sm text-xs font-medium",
         "text-text hover:bg-surface-muted disabled:opacity-40"
       )}
     >
@@ -944,7 +944,7 @@ function ProjectsPanel({
   return (
     <ul className="space-y-2">
       {projects.map((p) => (
-        <li key={p.id} className="flex items-center justify-between gap-2 rounded-md border border-border p-3">
+        <li key={p.id} className="flex items-center justify-between gap-2 rounded-sm border border-border p-3">
           <div className="min-w-0">
             <p className="truncate text-sm font-medium">{p.name}</p>
             <p className="text-xs text-text-muted">

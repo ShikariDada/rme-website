@@ -11,9 +11,9 @@ function pageHref(state: CatalogueFilterState, page: number): string {
 }
 
 const linkClass =
-  "inline-flex h-11 min-w-[44px] items-center justify-center rounded-md border border-border bg-surface px-3 text-sm font-medium hover:bg-surface-muted";
+  "inline-flex h-11 min-w-[44px] items-center justify-center rounded-sm border border-border bg-surface px-3 text-sm font-medium hover:bg-surface-muted";
 const disabledClass =
-  "inline-flex h-11 items-center rounded-md px-3 text-sm text-text-muted/60";
+  "inline-flex h-11 items-center rounded-sm px-3 text-sm text-text-muted/60";
 
 export function Pagination({
   state,
@@ -56,7 +56,7 @@ export function Pagination({
             <span
               key={p}
               aria-current="page"
-              className="inline-flex h-11 min-w-[44px] items-center justify-center rounded-md bg-accent px-3 text-sm font-semibold text-white"
+              className="inline-flex h-11 min-w-[44px] items-center justify-center rounded-sm bg-accent px-3 text-sm font-semibold text-white"
             >
               {p}
             </span>

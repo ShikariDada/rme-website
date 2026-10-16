@@ -6,7 +6,7 @@ export function GuideCard({ guide, priority = false }: { guide: Guide; priority?
   return (
     <Link
       href={`/guides/${guide.slug}`}
-      className="group flex flex-col overflow-hidden rounded-lg border border-border bg-surface transition-shadow hover:shadow-md"
+      className="group flex flex-col overflow-hidden rounded-sm bg-surface transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_2px_8px_rgba(23,21,18,0.06)]"
     >
       <div className="relative aspect-[16/9] bg-surface-muted">
         {guide.heroImage && (
@@ -35,7 +35,7 @@ export function ProjectCard({ project, priority = false }: { project: Project; p
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group flex flex-col overflow-hidden rounded-lg border border-border bg-surface transition-shadow hover:shadow-md"
+      className="group flex flex-col overflow-hidden rounded-sm bg-surface transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_2px_8px_rgba(23,21,18,0.06)]"
     >
       <div className="relative aspect-[4/3] bg-surface-muted">
         {project.images[0] && (

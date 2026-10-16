@@ -90,7 +90,7 @@ export function CalibrationPanel({
         preview stays marked <strong>Approximate scale</strong>.
       </p>
       {calibrated && (
-        <p className="mt-2 rounded-md bg-accent-soft/60 px-3 py-2 text-xs text-accent">
+        <p className="mt-2 rounded-sm bg-accent-soft/60 px-3 py-2 text-xs text-accent">
           Calibrated — {surface.calibration?.realLengthMm} mm reference line.
         </p>
       )}

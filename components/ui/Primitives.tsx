@@ -4,11 +4,11 @@ import { cn } from "@/lib/utils";
 type BadgeTone = "neutral" | "success" | "warn" | "muted" | "accent";
 
 const tones: Record<BadgeTone, string> = {
-  neutral: "bg-surface-muted text-text border-border",
-  success: "bg-[var(--color-success)]/10 text-[var(--color-success)] border-[var(--color-success)]/30",
-  warn: "bg-[var(--color-danger)]/10 text-[var(--color-danger)] border-[var(--color-danger)]/30",
-  muted: "bg-transparent text-text-muted border-border",
-  accent: "bg-accent-soft text-accent border-accent/30",
+  neutral: "bg-surface text-text border-border",
+  success: "bg-surface text-[var(--color-success)] border-border",
+  warn: "bg-surface text-[var(--color-danger)] border-border",
+  muted: "bg-surface text-text-muted border-border",
+  accent: "bg-accent-soft text-accent border-border",
 };
 
 /** Restrained badge (spec §8.7 bans badge/chip proliferation). */
@@ -24,7 +24,7 @@ export function Badge({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-xs font-medium",
+        "inline-flex items-center gap-1 rounded-sm border px-2 py-0.5 text-[11px] font-medium uppercase tracking-[0.08em]",
         tones[tone],
         className
       )}
@@ -55,6 +55,7 @@ export function SectionHeader({
   description,
   action,
   level = 2,
+  kicker,
   className,
 }: {
   title: string;
@@ -62,12 +63,15 @@ export function SectionHeader({
   action?: ReactNode;
   /** 1 = page-level heading (one visible h1), 2/3 = section headings. */
   level?: 1 | 2 | 3;
+  /** Optional kicker rendered above the title. */
+  kicker?: string;
   className?: string;
 }) {
   const Heading = level === 1 ? "h1" : level === 2 ? "h2" : "h3";
   return (
     <div className={cn("mb-6 flex flex-wrap items-end justify-between gap-3", className)}>
       <div className="max-w-2xl">
+        {kicker && <p className="kicker mb-2">{kicker}</p>}
         <Heading className={level === 1 ? "text-3xl md:text-4xl leading-tight" : "text-2xl md:text-[1.75rem] leading-tight"}>{title}</Heading>
         {description && <p className="mt-2 text-text-muted">{description}</p>}
       </div>
@@ -77,5 +81,5 @@ export function SectionHeader({
 }
 
 export function Skeleton({ className }: { className?: string }) {
-  return <div className={cn("animate-pulse rounded-md bg-surface-muted", className)} />;
+  return <div className={cn("animate-pulse rounded-sm bg-surface-muted", className)} />;
 }
