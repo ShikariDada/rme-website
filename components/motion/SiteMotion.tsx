@@ -3,12 +3,13 @@
 import { useEffect } from "react";
 
 /**
- * Site-wide motion runtime:
- * - reveals [data-reveal] / [data-reveal-grid] once, on intersection
- *   (marks elements with a `data-in` attribute, not a class, so React
- *   hydration never sees mutated props)
- * - toggles html[data-scrolled] past 12px so the floating nav can settle
- * - bfcache restores reveal everything instantly instead of replaying
+ * Site-wide motion runtime.
+ * - reveals [data-reveal] / [data-reveal-grid] once: IntersectionObserver plus
+ *   a cheap viewport sweep as a safety net, so content is never left hidden
+ *   (restored scroll positions, instant jumps, back/forward cache).
+ * - marks a `data-in` attribute (not a class) so React hydration never sees
+ *   mutated props.
+ * - toggles html[data-scrolled] past 12px for the floating nav.
  * Renders nothing.
  */
 export function SiteMotion() {
@@ -16,18 +17,20 @@ export function SiteMotion() {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
     document.documentElement.dataset.js = "1";
 
-    const mark = (root: ParentNode) => {
-      root
-        .querySelectorAll<HTMLElement>("[data-reveal]:not([data-in]), [data-reveal-grid]:not([data-in])")
-        .forEach((el) => el.setAttribute("data-in", "1"));
+    const sel = "[data-reveal]:not([data-in]), [data-reveal-grid]:not([data-in])";
+    const markVisible = () => {
+      const vh = window.innerHeight;
+      document.querySelectorAll<HTMLElement>(sel).forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.top < vh + 320 && r.bottom > -320) {
+          el.setAttribute("data-in", "1");
+        }
+      });
     };
-    const revealAll = () => mark(document);
 
     let io: IntersectionObserver | undefined;
     const observe = () => {
-      const targets = document.querySelectorAll<HTMLElement>(
-        "[data-reveal]:not([data-in]), [data-reveal-grid]:not([data-in])"
-      );
+      const targets = document.querySelectorAll<HTMLElement>(sel);
       if (reduced.matches || !("IntersectionObserver" in window)) {
         targets.forEach((el) => el.setAttribute("data-in", "1"));
         return;
@@ -41,7 +44,7 @@ export function SiteMotion() {
             }
           }
         },
-        { rootMargin: "0px 0px -6% 0px", threshold: 0.06 }
+        { rootMargin: "0px 0px -4% 0px", threshold: 0 }
       );
       targets.forEach((el) => io?.observe(el));
     };
@@ -51,18 +54,26 @@ export function SiteMotion() {
         (window.scrollY || document.documentElement.scrollTop) > 12 ? "true" : "false";
     };
 
-    // Wait for hydration to settle (streamed Suspense boundaries included)
-    // before touching any SSR-rendered DOM.
-    const startTimer = window.setTimeout(observe, 220);
+    // Start after hydration settles; sweep again shortly after for restored scroll.
+    const startTimer = window.setTimeout(() => {
+      observe();
+      markVisible();
+    }, 140);
+    const sweep = window.setInterval(markVisible, 900);
+    const stopSweep = window.setTimeout(() => window.clearInterval(sweep), 12000);
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
 
     const onPageShow = (event: PageTransitionEvent) => {
       if (event.persisted) {
-        revealAll();
+        document
+          .querySelectorAll<HTMLElement>("[data-reveal], [data-reveal-grid]")
+          .forEach((el) => el.setAttribute("data-in", "1"));
       } else {
         io?.disconnect();
         observe();
+        markVisible();
       }
       onScroll();
     };
@@ -70,6 +81,8 @@ export function SiteMotion() {
 
     return () => {
       window.clearTimeout(startTimer);
+      window.clearTimeout(stopSweep);
+      window.clearInterval(sweep);
       io?.disconnect();
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("pageshow", onPageShow);

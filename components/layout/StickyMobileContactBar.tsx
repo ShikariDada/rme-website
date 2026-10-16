@@ -27,7 +27,7 @@ export function StickyMobileContactBar({
   const onProduct = pathname?.startsWith("/product/");
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-surface/95 pb-safe-bar backdrop-blur-sm md:hidden">
+    <div className="sticky-bar-in fixed inset-x-0 bottom-0 z-40 border-t border-border bg-surface/95 pb-safe-bar backdrop-blur-sm md:hidden">
       <div className="grid grid-cols-3 gap-1 px-2 pt-1.5">
         <a
           href={`tel:${phone}`}

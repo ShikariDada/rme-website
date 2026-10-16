@@ -35,42 +35,42 @@ export async function Footer() {
         <nav aria-label="Shop">
           <p className="kicker mb-4 text-accent">Shop</p>
           <ul className="space-y-2.5 text-sm text-white/65">
-            <li><Link href="/products" className="transition-colors hover:text-white">All products</Link></li>
+            <li><Link href="/products" className="link-underline transition-colors hover:text-white">All products</Link></li>
             {categories.map((c) => (
               <li key={c.slug}>
-                <Link href={`/${c.slug}`} className="transition-colors hover:text-white">
+                <Link href={`/${c.slug}`} className="link-underline transition-colors hover:text-white">
                   {c.name}
                 </Link>
               </li>
             ))}
-            <li><Link href="/brand/varmora" className="transition-colors hover:text-white">Varmora</Link></li>
+            <li><Link href="/brand/varmora" className="link-underline transition-colors hover:text-white">Varmora</Link></li>
           </ul>
         </nav>
 
         <nav aria-label="Help">
           <p className="kicker mb-4 text-accent">Help</p>
           <ul className="space-y-2.5 text-sm text-white/65">
-            <li><Link href="/tile-calculator" className="transition-colors hover:text-white">Tile calculator</Link></li>
-            <li><Link href="/visualizer" className="transition-colors hover:text-white">See in your room</Link></li>
-            <li><Link href="/guides" className="transition-colors hover:text-white">Buying guides</Link></li>
-            <li><Link href="/contact" className="transition-colors hover:text-white">Get a quote</Link></li>
-            <li><Link href="/showroom" className="transition-colors hover:text-white">Visit showroom</Link></li>
+            <li><Link href="/tile-calculator" className="link-underline transition-colors hover:text-white">Tile calculator</Link></li>
+            <li><Link href="/visualizer" className="link-underline transition-colors hover:text-white">See in your room</Link></li>
+            <li><Link href="/guides" className="link-underline transition-colors hover:text-white">Buying guides</Link></li>
+            <li><Link href="/contact" className="link-underline transition-colors hover:text-white">Get a quote</Link></li>
+            <li><Link href="/showroom" className="link-underline transition-colors hover:text-white">Visit showroom</Link></li>
           </ul>
         </nav>
 
         <nav aria-label="Company">
           <p className="kicker mb-4 text-accent">Company</p>
           <ul className="space-y-2.5 text-sm text-white/65">
-            <li><Link href="/about" className="transition-colors hover:text-white">About</Link></li>
-            <li><Link href="/projects" className="transition-colors hover:text-white">Projects</Link></li>
-            <li><Link href="/privacy" className="transition-colors hover:text-white">Privacy</Link></li>
-            <li><Link href="/terms" className="transition-colors hover:text-white">Terms</Link></li>
+            <li><Link href="/about" className="link-underline transition-colors hover:text-white">About</Link></li>
+            <li><Link href="/projects" className="link-underline transition-colors hover:text-white">Projects</Link></li>
+            <li><Link href="/privacy" className="link-underline transition-colors hover:text-white">Privacy</Link></li>
+            <li><Link href="/terms" className="link-underline transition-colors hover:text-white">Terms</Link></li>
           </ul>
           {settings.socialLinks && settings.socialLinks.length > 0 && (
             <ul className="mt-4 space-y-2.5 text-sm text-white/65">
               {settings.socialLinks.map((s) => (
                 <li key={s.url}>
-                  <a href={s.url} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-white">
+                  <a href={s.url} target="_blank" rel="noopener noreferrer" className="link-underline transition-colors hover:text-white">
                     {s.label}
                   </a>
                 </li>

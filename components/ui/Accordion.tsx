@@ -16,7 +16,7 @@ export function Accordion({
  return (
  <div className={cn("divide-y divide-border rounded-lg border border-border bg-surface", className)}>
   {items.map((item) => (
-  <details key={item.id} className="group px-4 md:px-5 py-1">
+  <details key={item.id} className="accordion-panel group px-4 md:px-5 py-1">
    <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-3.5 text-15 font-semibold marker:hidden transition-colors hover:text-accent-hover [&::-webkit-details-marker]:hidden">
    {item.question}
    <svg
