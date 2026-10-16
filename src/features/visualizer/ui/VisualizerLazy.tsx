@@ -9,16 +9,16 @@ import type { ShellProps } from "./VisualizerShell";
  * whole editor out of the main bundle and off the server.
  */
 const VisualizerShell = dynamic(() => import("./VisualizerShell"), {
-  ssr: false,
-  loading: () => (
-    <div className="flex h-[calc(100dvh-4rem)] flex-col">
-      <Skeleton className="h-14 w-full rounded-none" />
-      <div className="flex-1 bg-surface-muted/40" />
-      <Skeleton className="h-16 w-full rounded-none" />
-    </div>
-  ),
+ ssr: false,
+ loading: () => (
+ <div className="flex flex-col">
+  <Skeleton className="h-14 w-full rounded-none" />
+  <div className="flex-1 bg-surface-muted/40" />
+  <Skeleton className="h-16 w-full rounded-none" />
+ </div>
+ ),
 });
 
 export function VisualizerLazy(props: ShellProps) {
-  return <VisualizerShell {...props} />;
+ return <VisualizerShell {...props} />;
 }

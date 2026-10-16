@@ -8,25 +8,25 @@ import Script from "next/script";
  * forwards events to window.gtag, which this script initializes.
  */
 export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID;
-  if (!gaId) return <>{children}</>;
+ const gaId = process.env.NEXT_PUBLIC_GA_ID;
+ if (!gaId) return <>{children}</>;
 
-  return (
-    <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-        strategy="afterInteractive"
-      />
-      <Script id="ga-init" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          window.gtag = window.gtag || gtag;
-          gtag('js', new Date());
-          gtag('config', '${gaId}', { anonymize_ip: true });
-        `}
-      </Script>
-      {children}
-    </>
-  );
+ return (
+ <>
+  <Script
+  src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+  strategy="afterInteractive"
+  />
+  <Script id="ga-init" strategy="afterInteractive">
+  {`
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   window.gtag = window.gtag || gtag;
+   gtag('js', new Date());
+   gtag('config', '${gaId}', { anonymize_ip: true });
+  `}
+  </Script>
+  {children}
+ </>
+ );
 }

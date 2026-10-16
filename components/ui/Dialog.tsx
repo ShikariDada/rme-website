@@ -10,104 +10,104 @@ import { cn } from "@/lib/utils";
  */
 
 export function Dialog({
-  open,
-  onClose,
-  title,
-  children,
-  variant = "dialog",
-  className,
+ open,
+ onClose,
+ title,
+ children,
+ variant = "dialog",
+ className,
 }: {
-  open: boolean;
-  onClose: () => void;
-  title: string;
-  children: ReactNode;
-  variant?: "dialog" | "sheet";
-  className?: string;
+ open: boolean;
+ onClose: () => void;
+ title: string;
+ children: ReactNode;
+ variant?: "dialog" | "sheet";
+ className?: string;
 }) {
-  const ref = useRef<HTMLDialogElement>(null);
-  const previouslyFocused = useRef<HTMLElement | null>(null);
+ const ref = useRef<HTMLDialogElement>(null);
+ const previouslyFocused = useRef<HTMLElement | null>(null);
 
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    if (open && !el.open) {
-      previouslyFocused.current = document.activeElement as HTMLElement | null;
-      el.showModal();
-    } else if (!open && el.open) {
-      el.close();
-    }
-  }, [open]);
+ useEffect(() => {
+ const el = ref.current;
+ if (!el) return;
+ if (open && !el.open) {
+  previouslyFocused.current = document.activeElement as HTMLElement | null;
+  el.showModal();
+ } else if (!open && el.open) {
+  el.close();
+ }
+ }, [open]);
 
-  const handleClose = useCallback(() => {
-    onClose();
-    previouslyFocused.current?.focus?.();
-  }, [onClose]);
+ const handleClose = useCallback(() => {
+ onClose();
+ previouslyFocused.current?.focus?.();
+ }, [onClose]);
 
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    // Restore focus on EVERY close path (native cancel/Escape and parent-driven
-    // open=false), not only the backdrop/button handlers.
-    const onCloseEvent = () => {
-      onClose();
-      previouslyFocused.current?.focus?.();
-    };
-    el.addEventListener("close", onCloseEvent);
-    return () => el.removeEventListener("close", onCloseEvent);
-  }, [onClose, open]);
+ useEffect(() => {
+ const el = ref.current;
+ if (!el) return;
+ // Restore focus on EVERY close path (native cancel/Escape and parent-driven
+ // open=false), not only the backdrop/button handlers.
+ const onCloseEvent = () => {
+  onClose();
+  previouslyFocused.current?.focus?.();
+ };
+ el.addEventListener("close", onCloseEvent);
+ return () => el.removeEventListener("close", onCloseEvent);
+ }, [onClose, open]);
 
-  // Scroll lock while open (native dialog doesn't lock page scroll).
-  useEffect(() => {
-    if (!open) return;
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = prev;
-    };
-  }, [open]);
+ // Scroll lock while open (native dialog doesn't lock page scroll).
+ useEffect(() => {
+ if (!open) return;
+ const prev = document.body.style.overflow;
+ document.body.style.overflow = "hidden";
+ return () => {
+  document.body.style.overflow = prev;
+ };
+ }, [open]);
 
-  const isSheet = variant === "sheet";
+ const isSheet = variant === "sheet";
 
-  return (
-    <dialog
-      ref={ref}
-      aria-labelledby="dialog-title"
-      onClick={(e) => {
-        // Close when clicking the backdrop (dialog padding area).
-        if (e.target === ref.current) handleClose();
-      }}
-      className={cn(
-        "m-auto w-[calc(100%-2rem)] max-w-lg bg-surface text-text backdrop:bg-black/40",
-        "border border-border rounded-sm p-0 open:animate-none",
-        "shadow-[0_8px_24px_rgba(23,21,18,0.12)]",
-        isSheet &&
-          "md:m-auto max-md:m-0 max-md:mt-auto max-md:max-w-none max-md:w-full max-md:rounded-b-none max-md:rounded-t-sm",
-        className
-      )}
-    >
-      <div className={cn("flex items-center justify-between gap-4 px-5 pt-4", isSheet && "pb-1")}>
-        <h2 id="dialog-title" className="text-lg font-display">
-          {title}
-        </h2>
-        <button
-          type="button"
-          onClick={handleClose}
-          aria-label="Close"
-          className="-mr-2 flex h-11 w-11 items-center justify-center rounded-sm text-text-muted hover:bg-surface-muted"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-            <path d="M18 6 6 18M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-      <div
-        className={cn(
-          "px-5 py-4",
-          isSheet && "max-md:max-h-[75dvh] max-md:overflow-y-auto pb-safe-bar"
-        )}
-      >
-        {children}
-      </div>
-    </dialog>
-  );
+ return (
+ <dialog
+  ref={ref}
+  aria-labelledby="dialog-title"
+  onClick={(e) => {
+  // Close when clicking the backdrop (dialog padding area).
+  if (e.target === ref.current) handleClose();
+  }}
+  className={cn(
+  "m-auto w-w-dialog max-w-lg bg-surface text-text backdrop:bg-black/40",
+  "border border-border rounded-sm p-0 open:animate-none",
+  "shadow-dialog",
+  isSheet &&
+   "md:m-auto max-md:m-0 max-md:mt-auto max-md:max-w-none max-md:w-full max-md:rounded-b-none max-md:rounded-t-sm",
+  className
+  )}
+ >
+  <div className={cn("flex items-center justify-between gap-4 px-5 pt-4", isSheet && "pb-1")}>
+  <h2 id="dialog-title" className="text-lg font-display">
+   {title}
+  </h2>
+  <button
+   type="button"
+   onClick={handleClose}
+   aria-label="Close"
+   className="-mr-2 flex h-11 w-11 items-center justify-center rounded-sm text-text-muted hover:bg-surface-muted"
+  >
+   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+   <path d="M18 6 6 18M6 6l12 12" />
+   </svg>
+  </button>
+  </div>
+  <div
+  className={cn(
+   "px-5 py-4",
+   isSheet && "max-md:max-h-3/4 max-md:overflow-y-auto pb-safe-bar"
+  )}
+  >
+  {children}
+  </div>
+ </dialog>
+ );
 }

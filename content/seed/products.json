@@ -37,7 +37,7 @@
     },
     "images": [
       {
-        "alt": "Bianco Carrara Gloss Vitrified Tile 600x1200 — tile surface texture",
+        "alt": "Bianco Carrara Gloss Vitrified Tile 600x1200, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/marble-bianco-face-1.png",
@@ -46,7 +46,7 @@
         "height": 512
       },
       {
-        "alt": "Bianco Carrara Gloss Vitrified Tile 600x1200 — product photo",
+        "alt": "Bianco Carrara Gloss Vitrified Tile 600x1200, product photo",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/marble-bianco-face-2.png",
@@ -84,14 +84,14 @@
         "style": "normal",
         "children": [
           {
-            "text": "A bright marble-look vitrified tile with soft grey veining on a polished gloss surface. The most popular choice for living rooms in our showroom — it reads like marble at a vitrified tile price."
+            "text": "A bright marble-look vitrified tile with soft grey veining on a polished gloss surface. The most popular choice for living rooms in our showroom, because it reads like marble at a vitrified tile price."
           }
         ]
       },
       {
         "_type": "callout",
         "variant": "info",
-        "text": "Printed marble effect. Natural marble, by definition, varies more from piece to piece — see our marble category if you want the real thing."
+        "text": "Printed marble effect. Natural marble, by definition, varies more from piece to piece. See our marble category if you want the real thing."
       }
     ],
     "visualizerMaterialId": "vm-bianco-gloss"
@@ -134,7 +134,7 @@
     },
     "images": [
       {
-        "alt": "Bianco Carrara Matt Vitrified Tile 600x1200 — tile surface texture",
+        "alt": "Bianco Carrara Matt Vitrified Tile 600x1200, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/marble-bianco-face-3.png",
@@ -172,7 +172,7 @@
         "style": "normal",
         "children": [
           {
-            "text": "The matt version of our best-selling Bianco Carrara — calmer under interior lighting and more forgiving of water spots. Commonly used across full homes."
+            "text": "The matt version of our best-selling Bianco Carrara, calmer under interior lighting and more forgiving of water spots. Commonly used across full homes."
           }
         ]
       }
@@ -213,7 +213,7 @@
     },
     "images": [
       {
-        "alt": "Emperador Brown Polished Tile 800x1600 — tile surface texture",
+        "alt": "Emperador Brown Polished Tile 800x1600, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/marble-emperador-face-1.png",
@@ -291,7 +291,7 @@
     },
     "images": [
       {
-        "alt": "Emerald Green Polished Tile 600x1200 — tile surface texture",
+        "alt": "Emerald Green Polished Tile 600x1200, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/marble-emerald-face-1.png",
@@ -368,7 +368,7 @@
     },
     "images": [
       {
-        "alt": "Portoro Black Gold Tile 800x1600 — tile surface texture",
+        "alt": "Portoro Black Gold Tile 800x1600, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/granite-steel-grey-face-2.png",
@@ -404,7 +404,7 @@
         "style": "normal",
         "children": [
           {
-            "text": "Black base with metallic gold-toned veining — a luxury accent wall tile. Order basis: 10–12 days from confirmation."
+            "text": "Black base with metallic gold-toned veining. A luxury accent wall tile. Order basis: 10–12 days from confirmation."
           }
         ]
       }
@@ -444,7 +444,7 @@
     },
     "images": [
       {
-        "alt": "Onyx Ice Gloss Tile 600x1200 — tile surface texture",
+        "alt": "Onyx Ice Gloss Tile 600x1200, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/marble-emerald-face-2.png",
@@ -513,7 +513,7 @@
     },
     "images": [
       {
-        "alt": "Ivory Matt Vitrified Floor Tile 600x600 — tile surface texture",
+        "alt": "Ivory Matt Vitrified Floor Tile 600x600, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/vitrified-ivory-face-1.png",
@@ -590,7 +590,7 @@
     },
     "images": [
       {
-        "alt": "Concrete Grey Matt Tile 600x600 — tile surface texture",
+        "alt": "Concrete Grey Matt Tile 600x600, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/porcelain-concrete-face-1.png",
@@ -625,7 +625,7 @@
         "style": "normal",
         "children": [
           {
-            "text": "Cement-look tile in a soft grey. Range pricing: the exact rate depends on the batch in stock — ask us for today's figure."
+            "text": "Cement-look tile in a soft grey. Range pricing: the exact rate depends on the batch in stock, so ask us for today's figure."
           }
         ]
       }
@@ -666,7 +666,7 @@
     },
     "images": [
       {
-        "alt": "Steel Grey Gloss Floor Tile 600x600 — tile surface texture",
+        "alt": "Steel Grey Gloss Floor Tile 600x600, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/granite-steel-grey-face-1.png",
@@ -732,7 +732,7 @@
     },
     "images": [
       {
-        "alt": "Desert Brown Rustic Tile 600x600 — tile surface texture",
+        "alt": "Desert Brown Rustic Tile 600x600, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/granite-desert-brown-face-1.png",
@@ -797,7 +797,7 @@
     },
     "images": [
       {
-        "alt": "Oak Wood-Look Strip Tile 300x900 — tile surface texture",
+        "alt": "Oak Wood-Look Strip Tile 300x900, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/wood-oak-face-1.png",
@@ -833,7 +833,7 @@
         "style": "normal",
         "children": [
           {
-            "text": "Wood-grain porcelain strip tile — the warmth of timber with tile maintenance. Lay in a running bond with a 2 mm joint."
+            "text": "Wood-grain porcelain strip tile: the warmth of timber with tile maintenance. Lay in a running bond with a 2 mm joint."
           }
         ]
       }
@@ -874,7 +874,7 @@
     },
     "images": [
       {
-        "alt": "Outdoor Anti-Skid Beige Tile 600x1200 — tile surface texture",
+        "alt": "Outdoor Anti-Skid Beige Tile 600x1200, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/outdoor-antiskid-face-1.png",
@@ -956,7 +956,7 @@
     },
     "images": [
       {
-        "alt": "Kitchen Wall Gloss Grey Tile 300x600 — tile surface texture",
+        "alt": "Kitchen Wall Gloss Grey Tile 300x600, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/wall-gloss-grey-face-1.png",
@@ -1020,7 +1020,7 @@
     },
     "images": [
       {
-        "alt": "XL Slab Grey Polished 1200x2400 — tile surface texture",
+        "alt": "XL Slab Grey Polished 1200x2400, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/porcelain-concrete-face-2.png",
@@ -1057,7 +1057,7 @@
         "style": "normal",
         "children": [
           {
-            "text": "Two-metre porcelain slab with near-invisible joints. Professional handling and adhesive system required — ask us about laying service."
+            "text": "Two-metre porcelain slab with near-invisible joints. Professional handling and adhesive system required. Ask us about laying service."
           }
         ]
       }
@@ -1094,12 +1094,12 @@
     },
     "availability": {
       "status": "limited",
-      "publicNote": "Batch-dependent shade — inspect before purchase",
+      "publicNote": "Batch-dependent shade, inspect before purchase",
       "verifiedAt": "2026-09-10T10:30:00+05:30"
     },
     "images": [
       {
-        "alt": "Terracotta Matt Tile 600x600 — tile surface texture",
+        "alt": "Terracotta Matt Tile 600x600, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/granite-desert-brown-face-2.png",
@@ -1162,7 +1162,7 @@
     },
     "images": [
       {
-        "alt": "Makrana White Marble — tile surface texture",
+        "alt": "Makrana White Marble, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/marble-bianco-face-2.png",
@@ -1189,7 +1189,7 @@
       ],
       "slabSizeText": "Cut-size slabs; typical 5×8 ft and up",
       "origin": "Makrana, Rajasthan",
-      "variationNote": "Strong lot-to-lot variation in veining and base tone — select your actual slab in the showroom."
+      "variationNote": "Strong lot-to-lot variation in veining and base tone. Select your actual slab in the showroom."
     },
     "description": [
       {
@@ -1234,7 +1234,7 @@
     },
     "images": [
       {
-        "alt": "Indian Statuario Marble — tile surface texture",
+        "alt": "Indian Statuario Marble, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/marble-bianco-face-4.png",
@@ -1296,7 +1296,7 @@
     },
     "images": [
       {
-        "alt": "Rainforest Brown Marble — tile surface texture",
+        "alt": "Rainforest Brown Marble, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/marble-emperador-face-3.png",
@@ -1354,7 +1354,7 @@
     },
     "images": [
       {
-        "alt": "Pink Onyx Marble — tile surface texture",
+        "alt": "Pink Onyx Marble, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/marble-emperador-face-4.png",
@@ -1380,7 +1380,7 @@
         20
       ],
       "slabSizeText": "Cut-size slabs; typical 5×8 ft and up",
-      "origin": "Imported lots — ask for current stock",
+      "origin": "Imported lots, ask for current stock",
       "variationNote": "Price varies strongly by lot, translucency and size. Backlit panel work quoted separately."
     }
   },
@@ -1415,7 +1415,7 @@
     },
     "images": [
       {
-        "alt": "Black Galaxy Granite — tile surface texture",
+        "alt": "Black Galaxy Granite, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/granite-steel-grey-face-1.png",
@@ -1476,7 +1476,7 @@
     },
     "images": [
       {
-        "alt": "Steel Grey Granite — tile surface texture",
+        "alt": "Steel Grey Granite, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/granite-steel-grey-face-2.png",
@@ -1538,7 +1538,7 @@
     },
     "images": [
       {
-        "alt": "Kashmir White Granite — tile surface texture",
+        "alt": "Kashmir White Granite, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/vitrified-ivory-face-2.png",
@@ -1600,7 +1600,7 @@
     },
     "images": [
       {
-        "alt": "Tan Brown Granite — tile surface texture",
+        "alt": "Tan Brown Granite, tile surface texture",
         "rightsStatus": "owned",
         "source": "demo-generated",
         "url": "/textures/granite-desert-brown-face-1.png",

@@ -4,6 +4,12 @@
     "name": "Bathroom",
     "slug": "bathroom",
     "kind": "room",
+    "image": {
+      "url": "/textures/wall-gloss-grey-face-1.png",
+      "alt": "Bathroom wall surface, gloss grey ceramic",
+      "kind": "product",
+      "rightsStatus": "owned"
+    },
     "description": "Anti-slip flooring considerations and easy-clean wall tiles for Indian bathrooms.",
     "recommendedMaterialTypes": [
       "tile",
@@ -15,6 +21,12 @@
     "name": "Kitchen",
     "slug": "kitchen",
     "kind": "room",
+    "image": {
+      "url": "/textures/marble-bianco-face-3.png",
+      "alt": "Kitchen floor surface, marble-look vitrified",
+      "kind": "product",
+      "rightsStatus": "owned"
+    },
     "description": "Stain-resistant floors and splashback-friendly wall tiles.",
     "recommendedMaterialTypes": [
       "tile",
@@ -26,6 +38,12 @@
     "name": "Living Room",
     "slug": "living-room",
     "kind": "room",
+    "image": {
+      "url": "/textures/marble-emperador-face-2.png",
+      "alt": "Living-room surface, warm brown marble-look porcelain",
+      "kind": "product",
+      "rightsStatus": "owned"
+    },
     "description": "Large-format marble-look vitrified tiles and premium natural stone.",
     "recommendedMaterialTypes": [
       "tile",
@@ -37,6 +55,12 @@
     "name": "Bedroom",
     "slug": "bedroom",
     "kind": "room",
+    "image": {
+      "url": "/textures/wood-oak-face-1.png",
+      "alt": "Bedroom surface, wood-look porcelain strip",
+      "kind": "product",
+      "rightsStatus": "owned"
+    },
     "description": "Warm wood-look tiles and smooth vitrified floors.",
     "recommendedMaterialTypes": [
       "tile"
@@ -47,6 +71,12 @@
     "name": "Outdoor & Parking",
     "slug": "outdoor",
     "kind": "use-case",
+    "image": {
+      "url": "/textures/outdoor-antiskid-face-1.png",
+      "alt": "Outdoor surface, textured anti-skid tile",
+      "kind": "product",
+      "rightsStatus": "owned"
+    },
     "description": "Textured, weather-resistant surfaces for terraces, parking and pathways.",
     "recommendedMaterialTypes": [
       "tile",
@@ -58,6 +88,12 @@
     "name": "Elevation & Facade",
     "slug": "elevation",
     "kind": "surface",
+    "image": {
+      "url": "/textures/porcelain-concrete-face-2.png",
+      "alt": "Facade surface, concrete-look porcelain",
+      "kind": "product",
+      "rightsStatus": "owned"
+    },
     "description": "Exterior elevation tiles that hold up to Mathura sun and dust.",
     "recommendedMaterialTypes": [
       "tile"

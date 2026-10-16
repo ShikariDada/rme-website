@@ -9,6 +9,7 @@ import { TrackedWhatsAppLink } from "@/components/layout/TrackedWhatsAppLink";
 const primaryNav = [
   { label: "Products", href: "/products" },
   { label: "By Room", href: "/room" },
+  { label: "Visualizer", href: "/visualizer" },
   { label: "Projects", href: "/projects" },
   { label: "Guides", href: "/guides" },
   { label: "Calculator", href: "/tile-calculator" },
@@ -25,8 +26,8 @@ export async function Header() {
   });
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-bg">
-      <Container className="flex h-16 items-center gap-2 md:h-[68px]">
+    <header className="sticky top-0 z-40 border-b border-ink-soft bg-ink">
+      <Container className="flex h-16 items-center gap-2 md:h-17">
         {/* Mobile: menu button */}
         <div className="md:hidden">
           <MobileNavButton
@@ -41,30 +42,33 @@ export async function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="mr-2 flex min-w-0 items-center gap-2 font-display text-lg tracking-[-0.01em] md:text-xl"
-          aria-label={`${settings.businessName} — home`}
+          className="mr-2 flex min-w-0 items-center gap-2.5"
+          aria-label={`${settings.businessName} home`}
         >
           {settings.logo ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={settings.logo.url} alt="" className="h-8 w-auto" />
           ) : (
-            <span className="flex h-8 w-8 items-center justify-center rounded-sm bg-accent font-display text-base text-bg">
-              {settings.businessName.slice(0, 1)}
-            </span>
+            <>
+              <span className="font-display text-23px leading-none text-paper tracking-display">
+                {settings.shortName ?? settings.businessName}
+              </span>
+              <span className="hidden h-4 w-px bg-paper/25 xl:block" aria-hidden="true" />
+              <span className="kicker hidden whitespace-nowrap text-11 text-paper/60 xl:block">
+                Marble · Tiles · Granite
+              </span>
+            </>
           )}
-          <span className="truncate">
-            {settings.shortName ?? settings.businessName}
-          </span>
         </Link>
 
         {/* Desktop nav */}
         <nav aria-label="Primary" className="hidden flex-1 md:block">
-          <ul className="flex items-center gap-1 text-[15px]">
+          <ul className="flex items-center gap-1 text-15">
             {primaryNav.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="inline-flex h-11 items-center px-3 text-[13px] font-medium text-text-muted transition-colors hover:text-text hover:underline hover:decoration-accent hover:underline-offset-[6px] hover:decoration-1"
+                  className="inline-flex h-11 items-center px-3 text-13 font-medium text-paper/70 transition-colors hover:text-paper hover:underline hover:decoration-accent hover:underline-offset-4 hover:decoration-2"
                 >
                   {item.label}
                 </Link>
@@ -73,7 +77,7 @@ export async function Header() {
             <li>
               <Link
                 href="/brand/varmora"
-                className="inline-flex h-11 items-center px-3 text-[13px] font-medium text-text-muted transition-colors hover:text-text hover:underline hover:decoration-accent hover:underline-offset-[6px] hover:decoration-1"
+                className="inline-flex h-11 items-center px-3 text-13 font-medium text-paper/70 transition-colors hover:text-paper hover:underline hover:decoration-accent hover:underline-offset-4 hover:decoration-2"
               >
                 Varmora
               </Link>
@@ -86,7 +90,7 @@ export async function Header() {
           <SearchButton />
           <a
             href={`tel:${settings.phone}`}
-            className="hidden h-11 items-center gap-2 px-3 text-[13px] font-medium text-text-muted transition-colors hover:text-text lg:inline-flex"
+            className="hidden h-11 items-center gap-2 px-3 text-13 font-medium text-paper/70 transition-colors hover:text-paper lg:inline-flex"
             aria-label="Call showroom"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -97,7 +101,7 @@ export async function Header() {
           <TrackedWhatsAppLink
             href={whatsappHref}
             sourceSurface="header"
-            className="inline-flex h-11 items-center gap-2 rounded-md bg-[#1fa855] px-3 text-[15px] font-medium text-white hover:bg-[#178a45] max-md:w-11 max-md:justify-center max-md:px-0"
+            className="inline-flex h-11 items-center gap-2 rounded-md bg-accent px-3 text-15 font-medium text-white transition-colors hover:bg-accent-hover max-md:w-11 max-md:justify-center max-md:px-0"
             ariaLabel="Chat on WhatsApp"
           >
             <WhatsAppIcon />

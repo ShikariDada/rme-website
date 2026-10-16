@@ -4,6 +4,6 @@
  * Unoptimized mode does not apply basePath, so this loader is the fix.
  */
 export default function imageLoader({ src }: { src: string }): string {
-  if (src.startsWith("http") || src.startsWith("//")) return src;
-  return `/rme-website${src}`;
+ if (src.startsWith("http") || src.startsWith("//")) return src;
+ return `/rme-website${src}`;
 }

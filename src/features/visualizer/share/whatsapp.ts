@@ -5,14 +5,14 @@ import { buildVisualizerShareMessage, buildWhatsAppUrl } from "@/lib/whatsapp";
  * preview and must attach it inside WhatsApp themselves — we say so plainly.
  */
 export function whatsappShareHref(
-  items: { productNames: string[]; skus: string[] },
-  phoneE164: string
+ items: { productNames: string[]; skus: string[] },
+ phoneE164: string
 ): string {
-  return buildWhatsAppUrl({
-    phoneE164,
-    message: buildVisualizerShareMessage(items),
-  });
+ return buildWhatsAppUrl({
+ phoneE164,
+ message: buildVisualizerShareMessage(items),
+ });
 }
 
 export const SHARE_INSTRUCTION =
-  "Attach the saved preview image inside WhatsApp — a chat link cannot attach it automatically.";
+ "Attach the saved preview image inside WhatsApp. A chat link cannot attach it automatically.";

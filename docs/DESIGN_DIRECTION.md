@@ -18,7 +18,7 @@ Sharpened warm-neutral system. Deeper ink, stone-toned muted surface, bronze acc
 | `ink` | `#171512` | Primary text. Near-black warm charcoal — deeper than current `#1E1D1A`. |
 | `ink-muted` | `#6B655C` | Secondary text, captions, meta. |
 | `border` | `#D8D1C3` | Hairline borders only (1px). Never heavier. |
-| `accent` (bronze) | `#7A5C36` | Primary CTA fill, active states, links on hover. Used sparingly — max one accent element per viewport. |
+| `accent` (bronze) | `#7A5C36` | Primary CTA fill, active states, links on hover. Used sparingly, max one accent element per viewport. |
 | `accent-2` (clay) | `#A4634A` | Supporting tone: italic emphasis words in display headlines, small badges, pull-quote marks. Never fills large areas. |
 | `success` | `#4A6741` | In-stock badges only. |
 | `danger` | `#9C3D2E` | Errors, low-stock. |
@@ -32,7 +32,7 @@ Fraunces (display) + Inter (body/UI). Both variable.
 - **Fraunces**: load variable font with `opsz` axis. Display sizes use `font-variation-settings: "opsz" 144; "SOFT" 0; "WONK" 0`. Tracking: `-0.02em` at display sizes, `-0.01em` at subheads. Never uppercase Fraunces — uppercase is reserved for Inter kickers.
 - **Inter**: body `400`, UI labels `500`, kickers `500` uppercase with `letter-spacing: 0.12em`, size `11–12px`.
 - **Scale** (rem, 1rem=16px): display `3.5rem/1.05` (hero), h1 `2.75rem/1.1`, h2 `2rem/1.15`, h3 `1.375rem/1.25`, body `1rem/1.6`, small `0.875rem/1.5`, kicker `0.75rem/1.4`.
-- **Italics**: Fraunces italic (`font-style: italic`, keep opsz 144) used for exactly ONE emphasis word or short phrase per display headline — the material or feeling word. Example: "Surfaces in *natural stone*, made to order." Italic word may take `accent-2` color. Never italicize Inter. Never more than one italic phrase per headline (Clé and Porcelanosa both do this sparingly; it's the single highest-leverage premium signal).
+- **Italics: BANNED** (user constraint, 2026-10). No italic emphasis anywhere. Non-italic Fraunces with a single clay () colored phrase carries the same emphasis.
 - Numbers in stats/prices: Inter `500`, tabular figures (`font-feature-settings: "tnum"`).
 
 ## 3. Hero pattern
@@ -41,7 +41,7 @@ Direction chosen: **full-bleed material texture crop with left-aligned editorial
 
 Layout:
 - Full viewport width, `min-height: 88vh`. Background: one tight procedural texture crop (see §7), no overlay gradient — if text legibility needs it, a solid `bg` panel behind the text block instead.
-- Text block: left-aligned, max-width `560px`, positioned lower-left with `padding: 96px 64px 64px`. Stack: kicker (Inter uppercase, e.g. "PORCELAIN · STONE · TERRACOTTA") → Fraunces display headline with one italic accent word → one sentence subline (Inter, ink-muted, max 40ch) → CTA row.
+- Text block: left-aligned, max-width `560px`, positioned lower-left with `padding: 96px 64px 64px`. Stack: kicker (Inter uppercase, e.g. "PORCELAIN · STONE · TERRACOTTA") → Fraunces display headline with one non-italic clay emphasis phrase → one sentence subline (Inter, ink-muted, max 40ch) → CTA row.
 - CTAs: primary = solid bronze square button ("Browse the collection"); secondary = hairline-bordered square button ("Book a showroom visit"). 12px gap.
 - Bottom-right corner: small caption line (Inter 12px, ink-muted) naming the texture shown, e.g. "Calacatta Viola — honed finish". This is the premium-material cue Clé uses.
 - No stats in the hero. No badge pills. No animated anything.
@@ -106,3 +106,11 @@ Stat bands: only if numbers are real and verifiable (e.g., actual SKU count, yea
 - Rounded-xl cards, pill buttons, soft pastel shadows
 - Emoji in UI, star-rating widgets on the homepage
 - Fake stats, fake review counts, fake "as seen on" logos — every number must trace to OWNER_FACTS.md or real catalog data
+
+
+## 9. Ship rules learned on this build
+
+- Production Turbopack DROPS every bracket arbitrary-value utility (text-[13px] etc.) even in static export; dev looks fine. All spacing/sizes/colors/shadows must be shipped as  tokens,  definitions, or standard utilities. No bracket classes anywhere.
+- Header chrome is INK (#171512) with paper text and a bare Fraunces "RME" wordmark lockup with a tracked "Marble · Tiles · Granite" kicker (xl+ only). Brand green (#1FA855) is reserved for actual WhatsApp contact moments (sticky mobile bar, floating bubble, form rails); the header CTA is walnut bronze.
+- Rendering QA: screenshot home, products, PDP, visualizer, contact at 1440x900 AND 390x844 before shipping.
+- No em dashes in any user-visible copy (search  content/seed, app, components, src).

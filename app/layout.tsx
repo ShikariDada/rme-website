@@ -11,44 +11,44 @@ import "./globals.css";
  * which broke Vercel builds).
  */
 const fraunces = localFont({
-  src: "./fonts/Fraunces-Variable.ttf",
-  variable: "--font-fraunces",
-  display: "swap",
-  weight: "100 900",
+ src: "./fonts/Fraunces-Variable.ttf",
+ variable: "--font-fraunces",
+ display: "swap",
+ weight: "100 900",
 });
 
 const inter = localFont({
-  src: "./fonts/Inter-Variable.ttf",
-  variable: "--font-inter",
-  display: "swap",
-  weight: "100 900",
+ src: "./fonts/Inter-Variable.ttf",
+ variable: "--font-inter",
+ display: "swap",
+ weight: "100 900",
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const settings = await contentSource.getSettings();
-  return pageMetadata({
-    title: settings.seoDefaultTitle,
-    description: settings.seoDefaultDescription,
-    path: "/",
-  });
+ const settings = await contentSource.getSettings();
+ return pageMetadata({
+ title: settings.seoDefaultTitle,
+ description: settings.seoDefaultDescription,
+ path: "/",
+ });
 }
 
 export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  themeColor: "#F6F3ED",
+ width: "device-width",
+ initialScale: 1,
+ themeColor: "#F6F3ED",
 };
 
 export default function RootLayout({
-  children,
+ children,
 }: {
-  children: React.ReactNode;
+ children: React.ReactNode;
 }) {
-  return (
-    <html lang="en-IN" className={`${fraunces.variable} ${inter.variable}`}>
-      <body>
-        <AnalyticsProvider>{children}</AnalyticsProvider>
-      </body>
-    </html>
-  );
+ return (
+ <html lang="en-IN" className={`${fraunces.variable} ${inter.variable}`}>
+  <body>
+  <AnalyticsProvider>{children}</AnalyticsProvider>
+  </body>
+ </html>
+ );
 }

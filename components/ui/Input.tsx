@@ -2,101 +2,101 @@ import { forwardRef, type ComponentProps, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 const fieldBase =
-  "w-full rounded-sm border border-border bg-surface px-3 text-base text-text placeholder:text-text-muted/70 " +
-  "focus-visible:outline-1 focus-visible:outline-offset-0 focus-visible:outline-[var(--color-accent)] focus-visible:border-[var(--color-accent)] " +
-  "disabled:opacity-50";
+ "w-full rounded-sm border border-border bg-surface px-3 text-base text-text placeholder:text-text-muted/70 " +
+ "focus-visible:outline-1 focus-visible:outline-offset-0 focus-visible:outline-accent focus-visible:border-[var(--color-accent)] " +
+ "disabled:opacity-50";
 
 export const Input = forwardRef<HTMLInputElement, ComponentProps<"input">>(
-  function Input({ className, ...props }, ref) {
-    return (
-      <input ref={ref} className={cn(fieldBase, "h-12", className)} {...props} />
-    );
-  }
+ function Input({ className, ...props }, ref) {
+ return (
+  <input ref={ref} className={cn(fieldBase, "h-12", className)} {...props} />
+ );
+ }
 );
 
 export const Textarea = forwardRef<HTMLTextAreaElement, ComponentProps<"textarea">>(
-  function Textarea({ className, ...props }, ref) {
-    return (
-      <textarea
-        ref={ref}
-        className={cn(fieldBase, "min-h-24 py-2", className)}
-        {...props}
-      />
-    );
-  }
+ function Textarea({ className, ...props }, ref) {
+ return (
+  <textarea
+  ref={ref}
+  className={cn(fieldBase, "min-h-24 py-2", className)}
+  {...props}
+  />
+ );
+ }
 );
 
 export const Select = forwardRef<HTMLSelectElement, ComponentProps<"select">>(
-  function Select({ className, children, ...props }, ref) {
-    return (
-      <select
-        ref={ref}
-        className={cn(fieldBase, "h-12 appearance-none bg-[right_0.75rem_center] pr-9", className)}
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B655C' stroke-width='1.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E\")",
-          backgroundRepeat: "no-repeat",
-        }}
-        {...props}
-      >
-        {children}
-      </select>
-    );
-  }
+ function Select({ className, children, ...props }, ref) {
+ return (
+  <select
+  ref={ref}
+  className={cn(fieldBase, "h-12 appearance-none bg-[right_0.75rem_center] pr-9", className)}
+  style={{
+   backgroundImage:
+   "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B655C' stroke-width='1.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E\")",
+   backgroundRepeat: "no-repeat",
+  }}
+  {...props}
+  >
+  {children}
+  </select>
+ );
+ }
 );
 
 export const Checkbox = forwardRef<HTMLInputElement, ComponentProps<"input">>(
-  function Checkbox({ className, ...props }, ref) {
-    return (
-      <input
-        ref={ref}
-        type="checkbox"
-        className={cn(
-          "h-5 w-5 shrink-0 rounded-sm border-border accent-[var(--color-accent)]",
-          className
-        )}
-        {...props}
-      />
-    );
-  }
+ function Checkbox({ className, ...props }, ref) {
+ return (
+  <input
+  ref={ref}
+  type="checkbox"
+  className={cn(
+   "h-5 w-5 shrink-0 rounded-sm border-border accent-accent",
+   className
+  )}
+  {...props}
+  />
+ );
+ }
 );
 
 export function FieldLabel({
-  htmlFor,
-  children,
-  hint,
-  required,
+ htmlFor,
+ children,
+ hint,
+ required,
 }: {
-  htmlFor: string;
-  children: ReactNode;
-  hint?: string;
-  required?: boolean;
+ htmlFor: string;
+ children: ReactNode;
+ hint?: string;
+ required?: boolean;
 }) {
-  return (
-    <label
-      htmlFor={htmlFor}
-      className="mb-1.5 block text-xs font-medium uppercase tracking-[0.12em] text-text"
-    >
-      {children}
-      {required && (
-        <span className="text-danger ml-0.5" aria-hidden="true">
-          *
-        </span>
-      )}
-      {hint && (
-        <span className="mt-0.5 block text-[11px] font-normal normal-case tracking-normal text-text-muted">
-          {hint}
-        </span>
-      )}
-    </label>
-  );
+ return (
+ <label
+  htmlFor={htmlFor}
+  className="mb-1.5 block text-xs font-medium uppercase tracking-kicker text-text"
+ >
+  {children}
+  {required && (
+  <span className="text-danger ml-0.5" aria-hidden="true">
+   *
+  </span>
+  )}
+  {hint && (
+  <span className="mt-0.5 block text-11 font-normal normal-case tracking-normal text-text-muted">
+   {hint}
+  </span>
+  )}
+ </label>
+ );
 }
 
 export function FieldError({ id, message }: { id: string; message?: string }) {
-  if (!message) return null;
-  return (
-    <p id={id} role="alert" className="mt-1 text-sm text-danger">
-      {message}
-    </p>
-  );
+ if (!message) return null;
+ return (
+ <p id={id} role="alert" className="mt-1 text-sm text-danger">
+  {message}
+ </p>
+ );
 }

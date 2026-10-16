@@ -3,7 +3,7 @@
     "id": "guide-tile-size",
     "title": "Tile size guide for Indian rooms",
     "slug": "tile-size-guide-indian-rooms",
-    "excerpt": "Which tile size suits which room, what 2x2 and 2x4 actually mean, and where large formats pay off — and where they don't.",
+    "excerpt": "Which tile size suits which room, what 2x2 and 2x4 actually mean, and where large formats pay off, and where they do not't.",
     "categorySlugs": [
       "tiles"
     ],
@@ -21,7 +21,7 @@
         "style": "normal",
         "children": [
           {
-            "text": "Indian tile shops use a shorthand that confuses everyone the first time. \"2x2\" means 2 feet by 2 feet — 600x600 mm. \"2x4\" is 600x1200 mm. Once you can translate, choosing a size becomes a design and budget question instead of a vocabulary test."
+            "text": "Indian tile shops use a shorthand that confuses everyone the first time. \"2x2\" means 2 feet by 2 feet, which is 600x600 mm. \"2x4\" is 600x1200 mm. Once you can translate, choosing a size becomes a design and budget question instead of a vocabulary test."
           }
         ]
       },
@@ -119,7 +119,7 @@
             "style": "normal",
             "children": [
               {
-                "text": "Diagonal or herringbone layouts increase cutting wastage — plan 12–15% instead of the usual 8–10%."
+                "text": "Diagonal or herringbone layouts increase cutting wastage. Plan 12–15% instead of the usual 8–10%."
               }
             ]
           }
@@ -160,7 +160,7 @@
         "style": "normal",
         "children": [
           {
-            "text": "Customers ask this daily, and the honest answer is: none of the three is universally better — they fail differently. Here is the comparison we draw on the counter."
+            "text": "Customers ask this daily, and the honest answer is: none of the three is universally better, because they fail differently. Here is the comparison we draw on the counter."
           }
         ]
       },
@@ -177,7 +177,7 @@
           [
             "Water absorption",
             "Very low",
-            "Higher — walls mainly",
+            "Higher, mainly on walls",
             "Low but porous without sealing",
             "Very low"
           ],
@@ -185,7 +185,7 @@
             "Scratch behaviour",
             "Good",
             "Moderate",
-            "Soft — will scratch and polish out",
+            "Soft, will scratch and polish out",
             "Excellent"
           ],
           [
@@ -264,7 +264,7 @@
       {
         "_type": "callout",
         "variant": "info",
-        "text": "Technical claims vary by specific product and batch. We publish manufacturer-documented figures only — ask to see the datasheet for anything we quote."
+        "text": "Technical claims vary by specific product and batch. We publish manufacturer-documented figures only. Ask to see the datasheet for anything we quote."
       }
     ]
   },
@@ -337,7 +337,7 @@
             "style": "normal",
             "children": [
               {
-                "text": "Keep one spare box per home after laying — future repairs will not match a new batch."
+                "text": "Keep one spare box per home after laying. Future repairs will not match a new batch."
               }
             ]
           }

@@ -64,7 +64,7 @@ export function MobileNavButton({
         aria-controls="mobile-nav"
         onClick={() => setOpen(true)}
         aria-label="Open menu"
-        className="-ml-2 flex h-11 w-11 items-center justify-center rounded-md text-text hover:bg-surface-muted"
+        className="-ml-2 flex h-11 w-11 items-center justify-center rounded-md text-paper hover:bg-paper/10"
       >
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
           <path d="M4 6h16M4 12h16M4 18h16" />
@@ -84,7 +84,7 @@ export function MobileNavButton({
                     <Link
                       href={link.href}
                       onClick={() => setOpen(false)}
-                      className="flex min-h-[44px] items-center rounded-md px-2 text-base hover:bg-surface-muted"
+                      className="flex min-h-11 items-center rounded-md px-2 text-base hover:bg-surface-muted"
                     >
                       {link.name}
                     </Link>
@@ -101,7 +101,7 @@ export function MobileNavButton({
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-11 flex-1 items-center justify-center rounded-md bg-[#1fa855] font-medium text-white"
+              className="flex h-11 flex-1 items-center justify-center rounded-md bg-wa font-medium text-white"
             >
               WhatsApp
             </a>

@@ -12,7 +12,7 @@ type Props = Omit<ComponentProps<typeof VisualizerLazy>, "initialMaterialId">;
  * Must be wrapped in a Suspense boundary (prerender bailout).
  */
 export function VisualizerClient(props: Props) {
-  const searchParams = useSearchParams();
-  const initialMaterialId = searchParams.get("material") ?? undefined;
-  return <VisualizerLazy {...props} initialMaterialId={initialMaterialId} />;
+ const searchParams = useSearchParams();
+ const initialMaterialId = searchParams.get("material") ?? undefined;
+ return <VisualizerLazy {...props} initialMaterialId={initialMaterialId} />;
 }

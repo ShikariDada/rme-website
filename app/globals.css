@@ -1,4 +1,16 @@
 @import "tailwindcss";
+@import "./tailwind-safelist.css";
+@source inline("text-[13px] min-h-[88vh] tracking-[0.12em]");
+
+/* Explicit sources: automatic detection silently drops arbitrary utilities
+   in static-export builds (verified: text-[13px] and 13 other utilities were
+   missing from the shipped CSS). Force-scan every source tree. */
+@source "../app/**/*.{ts,tsx}";
+@source "../components/**/*.{ts,tsx}";
+@source "../src/**/*.{ts,tsx}";
+@source "../lib/**/*.{ts,tsx}";
+@source "../sanity/**/*.{ts,tsx}";
+@source "./**/*.{ts,tsx}";
 
 /*
  * Design tokens — docs/DESIGN_DIRECTION.md is the single source of truth.
@@ -12,17 +24,61 @@
   --color-text: #171512;
   --color-text-muted: #6B655C;
   --color-border: #D8D1C3;
-  --color-accent: #7A5C36;
-  --color-accent-hover: #6A4F2D;
+  --color-accent: #6E4F28;
+  --color-accent-hover: #573F1D;
   --color-accent-soft: #EDE6D8;
   --color-accent-2: #A4634A;
   --color-danger: #9C3D2E;
   --color-success: #4A6741;
   --color-focus: #4A67A1;
+  --color-ink-soft: #2E2A24;
+  --color-ink: #171512;
 
   --radius-sm: 2px;
   --radius-md: 2px;
   --radius-lg: 4px;
+}
+
+@utility max-w-92pct {
+  max-width: 92%;
+}
+
+@utility grid-cols-calc {
+  grid-template-columns: 1fr 6rem auto;
+}
+@utility grid-cols-calc-rows {
+  grid-template-columns: 1fr 1fr 5.5rem auto;
+}
+
+@theme {
+  /* Static tokens: theme-based utilities SHIP in production builds,
+       unlike bracket utilities (verified). */
+  --text-display: 3.5rem;
+  --text-23px: 1.4375rem;
+  --text-h1: 2.75rem;
+  --text-h2: 2rem;
+  --text-13: 0.8125rem;
+  --aspect-43: 4 / 3;
+  --aspect-45: 4 / 5;
+  --aspect-169: 16 / 9;
+  --tracking-wide2: 0.02em;
+  --text-15: 0.9375rem;
+  --tracking-display: -0.02em;
+  --leading-hero: 1.05;
+  --leading-h2: 1.15;
+  --text-11: 0.6875rem;
+  --text-12: 0.75rem;
+  --text-h3: 1.375rem;
+  --tracking-kicker: 0.12em;
+  --tracking-badge: 0.08em;
+  --shadow-card: 0 2px 8px rgba(23, 21, 18, 0.06);
+  --shadow-dialog: 0 8px 24px rgba(23, 21, 18, 0.12);
+  --color-wa: #1FA855;
+  --color-wa-dark: #178A45;
+  --color-danger-soft: rgba(156, 61, 46, 0.1);
+  --color-paper: #F4F0E8;
+  --color-ink: #171512;
+  --color-ink-soft: #2E2A24;
 }
 
 @theme inline {
@@ -92,7 +148,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, .font-display {
+h1, h2, .font-display, h3.font-display {
   font-family: var(--font-display);
   font-weight: 560;
   letter-spacing: -0.02em;
@@ -108,12 +164,6 @@ h1, h2, h3, .font-display {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-text-muted);
-}
-
-/* One-emphasis-word italic in Fraunces display headlines, clay accent. */
-.display-italic {
-  font-style: italic;
-  color: var(--color-accent-2);
 }
 
 /* Tabular figures for prices / stats. */
@@ -158,4 +208,20 @@ h1, h2, h3, .font-display {
   main:has(> .visualizer-root) {
     padding-bottom: 0;
   }
+}
+
+/* Hide horizontal scrollbars on image rails while keeping scroll. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Full-app pages: footer and spacer never visible under the visualizer root */
+main:has(> .visualizer-root) + footer {
+  display: none;
+}
+main:has(> .visualizer-root) ~ .viz-hide-on-app {
+  display: none;
 }
